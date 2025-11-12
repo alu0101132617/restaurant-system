@@ -70,3 +70,32 @@ The system is between the customer and waiter in the restaurant and it's not a v
  <h2> Classes UML: </h2>
  <img width="468" alt="Picture4" src="https://github.com/user-attachments/assets/829b58be-f702-4479-9cd4-cf9be6285803">
 
+## Configuración de la BBDD (MySQL / MariaDB)
+Antes de ejecutar la aplicación, se debe tener instalado MySQL ó MariaDB y haber creado la base de datos correspondiente.
+0. Asegurarse de que el gestor de base de datos está instalado y ejecutándose:
+```bash
+sudo systemctl status mysql/mariadb
+sudo systemctl start mysql/mariadb
+sudo systemctl enable mysql/mariadb
+```
+1. Iniciar sesión en el gestor de base de datos:
+```bash
+sudo mysql -u root -p
+```
+2. Crear la base de datos del sistema:
+```bash
+CREATE DATABASE project3;
+USE project3;
+```
+3. Importar el script de creación de tablas y datos iniciales (archivo database.sql incluido en el proyecto):
+```bash
+SOURCE ruta/al/proyecto/database.sql;
+```
+4. Verificar que las tablas se hayan creado correctamente:
+```bash
+SHOW TABLES;
+```
+5. Ejecutar el proyecto:
+```bash
+mvn exec:java 
+```
