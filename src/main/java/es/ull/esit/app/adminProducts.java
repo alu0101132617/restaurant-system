@@ -11,26 +11,50 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
+ * Ventana de administración de productos del restaurante Black Plate.
  * 
+ * Esta clase proporciona la interfaz gráfica para que los administradores
+ * puedan gestionar los productos del restaurante mediante operaciones CRUD:
+ * - Agregar nuevos productos (bebidas, aperitivos, platos principales)
+ * - Actualizar precios y nombres de productos existentes
+ * - Visualizar todos los productos en tablas organizadas por categoría
+ * 
+ * La aplicación se conecta a una base de datos MySQL local con tres tablas:
+ * - drinks: bebidas del menú
+ * - appetizers: aperitivos del menú
+ * - maincourse: platos principales del menú
+ * 
+ * Cada tabla contiene columnas: id, name, price
+ * 
+ * @author Sistema de Gestión de Restaurante
+ * @version 1.0
  */
 public class adminProducts extends javax.swing.JFrame {
 
     /**
-     * Creates new form adminProducts
+     * Constructor que crea e inicializa la ventana de administración de productos.
+     * 
+     * Inicializa los modelos de tabla para las tres categorías de productos
+     * y carga los datos desde la base de datos.
      */
     DefaultTableModel modelDrink;
     DefaultTableModel modelappetizers;
     DefaultTableModel modelmaincourse;
     String[] columnNames = {"ID", "Item Name", "Item Price"};
+    
+    /** ID del producto de bebida seleccionado actualmente */
     int selectedDrinkID;
+    /** ID del producto de aperitivo seleccionado actualmente */
     int selectedAppetizerID;
+    /** ID del producto de plato principal seleccionado actualmente */
     int selectedmainCourseID;
        
 
-   
+    /** URL de conexión a la base de datos MySQL */   
         String url = "jdbc:mysql://127.0.0.1:3306/project3?useSSL=false&serverTimezone=UTC";
+        /** Usuario de la base de datos */
         String user = "root";
+        /** Contraseña de la base de datos */
         String password = "";
 
     public adminProducts() {
@@ -47,6 +71,13 @@ public class adminProducts extends javax.swing.JFrame {
         
     }
 
+    /**
+     * Carga todas las bebidas desde la base de datos y las muestra en la tabla.
+     * 
+     * Ejecuta una consulta SQL SELECT para obtener todos los registros
+     * de la tabla "drinks" y los agrega al modelo de tabla correspondiente.
+     * En caso de error, imprime el stack trace de la excepción.
+     */
     void loadDrinks() {
     
         int itemid;
@@ -72,6 +103,13 @@ public class adminProducts extends javax.swing.JFrame {
         jTable1.setModel(modelDrink);
     }
 
+    /**
+     * Carga todos los aperitivos desde la base de datos y los muestra en la tabla.
+     * 
+     * Ejecuta una consulta SQL SELECT para obtener todos los registros
+     * de la tabla "appetizers" y los agrega al modelo de tabla correspondiente.
+     * En caso de error, imprime el stack trace de la excepción.
+     */
     void loadAppetizer() {
            int itemid;
         String itemname;
@@ -97,6 +135,13 @@ public class adminProducts extends javax.swing.JFrame {
         jTable2.setModel(modelappetizers);
     }
 
+    /**
+     * Carga todos los platos principales desde la base de datos y los muestra en la tabla.
+     * 
+     * Ejecuta una consulta SQL SELECT para obtener todos los registros
+     * de la tabla "maincourse" y los agrega al modelo de tabla correspondiente.
+     * En caso de error, imprime el stack trace de la excepción.
+     */
     void loadmainCourse() {
         int itemid;
         String itemname;
@@ -579,12 +624,12 @@ public class adminProducts extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       
+       // Regresa a la ventana principal del administrador
         new AdminLogin().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+       // Agrega una nueva bebida a la base de datos con los valores ingresados
 
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -603,7 +648,7 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-      
+      // Agrega un nuevo aperitivo a la base de datos con los valores ingresados
 
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -622,7 +667,7 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-      
+      // Agrega un nuevo plato principal a la base de datos con los valores ingresados
 
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -645,6 +690,8 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1KeyPressed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // Maneja el evento de clic en la tabla de bebidas
+        // Obtiene el ID de la fila seleccionada y carga sus datos en los campos de texto
         String selectedIDKey = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
         selectedDrinkID = Integer.valueOf(selectedIDKey);
         System.out.println("You select id " + selectedDrinkID + " of Drink to update.");
@@ -667,6 +714,8 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        // Maneja el evento de clic en la tabla de aperitivos
+        // Obtiene el ID de la fila seleccionada y carga sus datos en los campos de texto
         String selectedIDKey = (String) jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString();
         selectedAppetizerID = Integer.valueOf(selectedIDKey);
         System.out.println("You select id " + selectedAppetizerID + " of  appetizers to update.");
@@ -688,6 +737,8 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+        // Maneja el evento de clic en la tabla de platos principales
+        // Obtiene el ID de la fila seleccionada y carga sus datos en los campos de texto
         String selectedIDKey = (String) jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
         selectedmainCourseID = Integer.valueOf(selectedIDKey);
         System.out.println("You select id " + selectedmainCourseID + " of maincourse to update.");
@@ -709,7 +760,7 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable3MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     
+     // Actualiza los datos de la bebida seleccionada en la base de datos
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
              Statement stmt = conn.createStatement();
@@ -717,6 +768,7 @@ public class adminProducts extends javax.swing.JFrame {
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Dirnk updated successfully.");
             conn.close();
+            // Limpia y recarga la tabla con los datos actualizados
             DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
             dtm.setRowCount(0);
             loadDrinks();
@@ -726,7 +778,7 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    
+    // Actualiza los datos del aperitivo seleccionado en la base de datos
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
              Statement stmt = conn.createStatement();
@@ -734,6 +786,7 @@ public class adminProducts extends javax.swing.JFrame {
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Appetizers updated successfully.");
             conn.close();
+            // Limpia y recarga la tabla con los datos actualizados
             DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
             dtm.setRowCount(0);
             loadAppetizer();
@@ -743,7 +796,7 @@ public class adminProducts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      
+      // Actualiza los datos del plato principal seleccionado en la base de datos
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
              Statement stmt = conn.createStatement();
@@ -751,6 +804,7 @@ public class adminProducts extends javax.swing.JFrame {
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Maincourse updated successfully.");
             conn.close();
+            // Limpia y recarga la tabla con los datos actualizados
             DefaultTableModel dtm = (DefaultTableModel) jTable3.getModel();
             dtm.setRowCount(0);
             loadmainCourse();

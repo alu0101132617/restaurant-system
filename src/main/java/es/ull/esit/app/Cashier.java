@@ -6,17 +6,40 @@
 package es.ull.esit.app;
 
 /**
- *
+ * Ventana principal del panel de cajero del sistema Black Plate.
+ * 
+ * Esta clase proporciona la interfaz gráfica para que los cajeros
+ * puedan acceder a las funcionalidades del sistema:
+ * - Ver el menú del restaurante y gestionar pedidos
+ * - Ver información sobre el restaurante (About Us)
+ * - Cerrar sesión y regresar al login
+ * 
+ * La ventana muestra un mensaje de bienvenida personalizado con el nombre
+ * del cajero que ha iniciado sesión.
+ * 
+ * @author Sistema de Gestión de Restaurante
+ * @version 1.0
  */
 public class Cashier extends javax.swing.JFrame {
 
     /**
-     * Creates new form Cashier
+     * Constructor predeterminado que crea la ventana del cajero.
+     * 
+     * Inicializa los componentes y muestra un mensaje de bienvenida genérico.
      */
     public Cashier() {
         initComponents();
          welcomeTxt.setText("Welcome Cashier,");
     }
+    
+    /**
+     * Constructor parametrizado que crea la ventana del cajero con un nombre específico.
+     * 
+     * Inicializa los componentes y muestra un mensaje de bienvenida personalizado
+     * con el nombre del cajero proporcionado.
+     * 
+     * @param name nombre del cajero que ha iniciado sesión
+     */
        public Cashier(String name) {
         initComponents();
          welcomeTxt.setText("Welcome "+name);
@@ -137,17 +160,17 @@ public class Cashier extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
+      // Abre la ventana de información sobre el restaurante
       new Info().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     
+     // Abre la ventana del menú del restaurante
        new Frame1().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+        // Cierra sesión y regresa a la ventana de login
          new Login().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

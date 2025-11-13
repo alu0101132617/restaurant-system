@@ -6,12 +6,27 @@
 package es.ull.esit.app;
 
 /**
- *
+ * Ventana de inicio de sesión del sistema Black Plate.
+ * 
+ * Esta clase proporciona la interfaz gráfica para que los usuarios
+ * (administradores o cajeros) puedan autenticarse en el sistema.
+ * Permite seleccionar el tipo de usuario y valida las credenciales
+ * antes de redirigir a la ventana correspondiente.
+ * 
+ * Credenciales por defecto:
+ * - Admin: usuario="admin", contraseña="admin"
+ * - Cajero: cualquier usuario y contraseña
+ * 
+ * @author Sistema de Gestión de Restaurante
+ * @version 1.0
  */
 public class Login extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
+     * Constructor que crea e inicializa la ventana de inicio de sesión.
+     * 
+     * Inicializa todos los componentes gráficos de la interfaz mediante
+     * el método initComponents() generado por NetBeans Form Editor.
      */
     public Login() {
         initComponents();
@@ -128,12 +143,13 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Valida las credenciales del administrador
         if(usernametxt.getText().equalsIgnoreCase("admin") && jPasswordField1.getText().equalsIgnoreCase("admin") && usertypecmbo.getSelectedItem().toString().equalsIgnoreCase("admin")){
-         
+         // Si las credenciales son correctas, abre la ventana de administrador
         new AdminLogin().setVisible(true);
         }        
         else if(usertypecmbo.getSelectedItem().toString().equalsIgnoreCase("cashier")){
-      
+      // Si el tipo de usuario es cajero, abre la ventana de cajero con el nombre del usuario
         new Cashier(usernametxt.getText()).setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed

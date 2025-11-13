@@ -7,12 +7,27 @@ package es.ull.esit.app;
 
 
 /**
- *
+ * Ventana de información del restaurante Black Plate.
+ * 
+ * Esta clase muestra información sobre el restaurante, incluyendo:
+ * - Historia del restaurante
+ * - Visión y misión
+ * - Año de fundación
+ * - Información de contacto y sugerencias
+ * 
+ * La información se presenta en un área de texto no editable
+ * con scroll para facilitar la lectura.
+ * 
+ * @author Sistema de Gestión de Restaurante
+ * @version 1.0
  */
 public class Info extends javax.swing.JFrame {
 
     /**
-     * Creates new form Info
+     * Constructor que crea e inicializa la ventana de información.
+     * 
+     * Inicializa todos los componentes gráficos de la interfaz mediante
+     * el método initComponents() generado por NetBeans Form Editor.
      */
     public Info() {
         initComponents();
@@ -103,7 +118,7 @@ public class Info extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-      
+      // Regresa a la ventana del cajero
         new Cashier().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

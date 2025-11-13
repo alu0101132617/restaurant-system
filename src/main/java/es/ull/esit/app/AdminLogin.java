@@ -6,12 +6,24 @@
 package es.ull.esit.app;
 
 /**
- *
+ * Ventana principal del panel de administrador del sistema Black Plate.
+ * 
+ * Esta clase proporciona la interfaz gráfica para que los administradores
+ * puedan acceder a las funcionalidades exclusivas del sistema:
+ * - Actualizar precios de productos (bebidas, aperitivos, platos principales)
+ * - Ver el menú completo del restaurante
+ * - Cerrar sesión y regresar al login
+ * 
+ * @author Sistema de Gestión de Restaurante
+ * @version 1.0
  */
 public class AdminLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form AdminLogin
+     * Constructor que crea e inicializa la ventana del administrador.
+     * 
+     * Inicializa todos los componentes gráficos de la interfaz mediante
+     * el método initComponents() generado por NetBeans Form Editor.
      */
     public AdminLogin() {
         initComponents();
@@ -123,17 +135,17 @@ public class AdminLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+       // Abre la ventana de actualización de productos
         new adminProducts().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     
+     // Abre la ventana del menú del restaurante
         new Frame1().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       
+       // Cierra sesión y regresa a la ventana de login
         new Login().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

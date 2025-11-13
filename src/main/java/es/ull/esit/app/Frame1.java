@@ -9,22 +9,62 @@ import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Ventana principal del menú del restaurante Black Plate.
+ * 
+ * Esta clase proporciona la interfaz gráfica completa para gestionar pedidos:
+ * - Selección de productos por categorías (bebidas, aperitivos, platos principales)
+ * - Personalización de platos (opciones picantes, ingredientes adicionales)
+ * - Cálculo automático de precios, subtotales, IVA y totales
+ * - Generación y guardado de recibos en archivos de texto
+ * - Funcionalidad para crear nuevos pedidos y gestionar el carrito
+ * 
+ * El menú incluye:
+ * - Bebidas: Cola, 7up, Mojito, Jugo de naranja
+ * - Aperitivos: Papas Truffel, Chocolate fundido, Mac&Cheese Balls, Camarones Dynamite
+ * - Platos principales: Pizza Buratta, Pasta Rosa, Salmón Rosemary, Spaghetti
+ * 
+ * Cada producto tiene un precio fijo y permite seleccionar cantidad (0-10 unidades).
+ * El IVA se calcula al 15% sobre el subtotal.
+ * 
+ * @author Sistema de Gestión de Restaurante
+ * @version 1.0
  */
 public class Frame1 extends javax.swing.JFrame {
+    // Cantidades seleccionadas para cada producto
     int colaNum , upNum, orangeNum, mojitoNum, friesNum, moltenNum, macNum, shrimpNum, pizzaNum, pastaNum, salmonNum, spaghettiNum; 
-double cola_Price, up_Price, mojito_Price, orange_Price, molten_Price, mac_Price, fries_Price, shrimp_Price, pizza_Price,pasta_Price , salmon_Price, spaghetti_Price;
-final double colaCost=6.0, upCost=6.0, mojitoCost=14.0, orangeCost=10.0, moltenCost=28.0, macCost=39.0, friesCost=32.0, shrimpCost=42.0, pizzaCost=60.0,pastaCost=52.0, salmonCost=71.0, spaghettiCost=55.0;
-double subTotal,vat, total;
-int receiptNo;
-PrintWriter output;
+    
+    // Precios calculados para cada producto según cantidad
+    double cola_Price, up_Price, mojito_Price, orange_Price, molten_Price, mac_Price, fries_Price, shrimp_Price, pizza_Price,pasta_Price , salmon_Price, spaghetti_Price;
+    
+    // Precios unitarios fijos para cada producto (en SR - Saudi Riyal)
+    final double colaCost=6.0, upCost=6.0, mojitoCost=14.0, orangeCost=10.0, moltenCost=28.0, macCost=39.0, friesCost=32.0, shrimpCost=42.0, pizzaCost=60.0,pastaCost=52.0, salmonCost=71.0, spaghettiCost=55.0;
+    
+    // Variables para el cálculo del total del pedido
+    double subTotal,vat, total;
+    
+    // Número del recibo actual
+    int receiptNo;
+    
+    // Objeto para escribir el recibo en un archivo
+    PrintWriter output;
 
     /**
-     * Creates new form Frame1
+     * Constructor que crea e inicializa la ventana del menú.
+     * 
+     * Inicializa todos los componentes gráficos de la interfaz mediante
+     * el método initComponents() generado por NetBeans Form Editor.
      */
     public Frame1() {
         initComponents();
     }
+    
+    /**
+     * Método para cargar precios desde la base de datos (actualmente no implementado).
+     * 
+     * Este método está reservado para una funcionalidad futura que permitiría
+     * cargar precios dinámicamente desde la base de datos en lugar de usar
+     * precios fijos en constantes.
+     */
    void loadPrice(){
    
    }
@@ -718,6 +758,7 @@ PrintWriter output;
     }// </editor-fold>//GEN-END:initComponents
 
     private void colaCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_colaCountSStateChanged
+        // Actualiza la cantidad y precio de Cola cuando cambia el selector
         colaNum =(Integer) colaCountS.getValue();
         cola_Price=colaCost*colaNum;
         colaPriceLbl.setText(cola_Price+ " SR");
@@ -725,6 +766,7 @@ PrintWriter output;
     }//GEN-LAST:event_colaCountSStateChanged
 
     private void upCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_upCountSStateChanged
+        // Actualiza la cantidad y precio de 7up cuando cambia el selector
         upNum =(Integer) upCountS.getValue();
         up_Price=upCost*upNum;
         upPriceLbl.setText(up_Price+ " SR");
@@ -732,66 +774,77 @@ PrintWriter output;
     }//GEN-LAST:event_upCountSStateChanged
 
     private void mojitoCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_mojitoCountSStateChanged
+        // Actualiza la cantidad y precio de Mojito cuando cambia el selector
         mojitoNum =(Integer) mojitoCountS.getValue();
         mojito_Price=mojitoCost*mojitoNum;
         mojitoPriceLbl.setText(mojito_Price+ " SR");
     }//GEN-LAST:event_mojitoCountSStateChanged
 
     private void orangeCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_orangeCountSStateChanged
+        // Actualiza la cantidad y precio de Jugo de naranja cuando cambia el selector
         orangeNum =(Integer) orangeCountS.getValue();
         orange_Price=orangeCost*orangeNum;
         orangePriceLbl.setText(orange_Price+ " SR");
     }//GEN-LAST:event_orangeCountSStateChanged
 
     private void friesCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_friesCountSStateChanged
+        // Actualiza la cantidad y precio de Papas Truffel cuando cambia el selector
         friesNum =(Integer) friesCountS.getValue();
         fries_Price=friesCost*friesNum;
         friesPriceLbl.setText(fries_Price+ " SR");
     }//GEN-LAST:event_friesCountSStateChanged
 
     private void moltenCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_moltenCountSStateChanged
+        // Actualiza la cantidad y precio de Chocolate fundido cuando cambia el selector
         moltenNum =(Integer) moltenCountS.getValue();
         molten_Price=moltenCost*moltenNum;
         moltenPriceLbl.setText(molten_Price+ " SR");
     }//GEN-LAST:event_moltenCountSStateChanged
 
     private void shrimpCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_shrimpCountSStateChanged
+        // Actualiza la cantidad y precio de Camarones Dynamite cuando cambia el selector
         shrimpNum =(Integer) shrimpCountS.getValue();
         shrimp_Price=shrimpCost*shrimpNum;
         shrimpPriceLbl.setText(shrimp_Price+ " SR");
     }//GEN-LAST:event_shrimpCountSStateChanged
 
     private void macCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_macCountSStateChanged
+        // Actualiza la cantidad y precio de Mac&Cheese Balls cuando cambia el selector
         macNum =(Integer) macCountS.getValue();
         mac_Price=macCost*macNum;
         macPriceLbl.setText(mac_Price+ " SR");
     }//GEN-LAST:event_macCountSStateChanged
 
     private void pizzaCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_pizzaCountSStateChanged
+        // Actualiza la cantidad y precio de Pizza Buratta cuando cambia el selector
         pizzaNum =(Integer) pizzaCountS.getValue();
         pizza_Price=pizzaCost*pizzaNum;
         pizzaPriceLbl.setText(pizza_Price+ " SR");
     }//GEN-LAST:event_pizzaCountSStateChanged
 
     private void pastaCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_pastaCountSStateChanged
+        // Actualiza la cantidad y precio de Pasta Rosa cuando cambia el selector
         pastaNum =(Integer) pastaCountS.getValue();
         pasta_Price=pastaCost*pastaNum;
         pastaPriceLbl.setText(pasta_Price+ " SR");
     }//GEN-LAST:event_pastaCountSStateChanged
 
     private void spaghettiCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spaghettiCountSStateChanged
+        // Actualiza la cantidad y precio de Spaghetti cuando cambia el selector
         spaghettiNum =(Integer) spaghettiCountS.getValue();
         spaghetti_Price=spaghettiCost*spaghettiNum;
         spaghettiPriceLbl.setText(spaghetti_Price+ " SR");
     }//GEN-LAST:event_spaghettiCountSStateChanged
 
     private void salmonCountSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_salmonCountSStateChanged
+        // Actualiza la cantidad y precio de Salmón Rosemary cuando cambia el selector
         salmonNum =(Integer) salmonCountS.getValue();
         salmon_Price=salmonCost*salmonNum;
         salmonPriceLbl.setText(salmon_Price+ " SR");
     }//GEN-LAST:event_salmonCountSStateChanged
 
     private void spaghettiSpicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spaghettiSpicyActionPerformed
+        // Agrega o quita 1 SR por cada unidad de spaghetti al seleccionar/deseleccionar la opción picante
         if(spaghettiSpicy.isSelected()){
             spaghetti_Price+=spaghettiNum;
         }else{
@@ -801,6 +854,7 @@ PrintWriter output;
     }//GEN-LAST:event_spaghettiSpicyActionPerformed
 
     private void pizzaSpicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzaSpicyActionPerformed
+        // Agrega o quita 1 SR por cada unidad de pizza al seleccionar/deseleccionar la opción picante
         if(pizzaSpicy.isSelected()){
             pizza_Price+=pizzaNum;
         }else{
@@ -810,6 +864,7 @@ PrintWriter output;
     }//GEN-LAST:event_pizzaSpicyActionPerformed
 
     private void pastaChickenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pastaChickenActionPerformed
+        // Agrega o quita 1 SR por cada unidad de pasta al seleccionar/deseleccionar la opción de pollo
         if(pastaChicken.isSelected()){
             pasta_Price+=pastaNum;
         }else{
@@ -819,6 +874,7 @@ PrintWriter output;
     }//GEN-LAST:event_pastaChickenActionPerformed
 
     private void salmonRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salmonRiceActionPerformed
+        // Agrega o quita 1 SR por cada unidad de salmón al seleccionar/deseleccionar la opción de arroz
         if(salmonRice.isSelected()){
             salmon_Price+=salmonNum;
         }else{
@@ -828,17 +884,20 @@ PrintWriter output;
     }//GEN-LAST:event_salmonRiceActionPerformed
 
     private void payBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payBtnActionPerformed
-
+        // Calcula el subtotal sumando todos los precios de los productos seleccionados
         subTotal=cola_Price+up_Price+ mojito_Price+ orange_Price+ molten_Price+ mac_Price+ fries_Price+ shrimp_Price+ pizza_Price+pasta_Price + salmon_Price+ spaghetti_Price;
 
         subTotalLbl.setText("SubTotal "+subTotal+" SR");
 
+        // Calcula el IVA (15% del subtotal)
         vat=subTotal*0.15;
         vatLbl.setText("VAT included "+vat+" SR");
 
+        // Calcula el total sumando subtotal + IVA
         total=subTotal+vat;
         totalLbl.setText("Total "+total+" SR");
 
+        // Valida que se haya seleccionado al menos un producto antes de procesar el pago
         if (subTotal==0){
             JOptionPane.showMessageDialog(null,"Please select an item first!",null,JOptionPane.INFORMATION_MESSAGE);
         } else {
@@ -847,17 +906,17 @@ PrintWriter output;
     }//GEN-LAST:event_payBtnActionPerformed
 
     private void saveReceiptBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveReceiptBtnActionPerformed
-
+        // Guarda el recibo actual en un archivo de texto en la carpeta "receipts"
         try {
 
             if (total != 0) {
-         
+         // Crea un archivo con el nombre basado en el número de recibo
            output = new PrintWriter("receipts/billNo." + receiptNo + ".txt");
 
-           
+           // Muestra mensaje de confirmación
           JOptionPane.showMessageDialog(null, "Recipt number: " + receiptNo + "  has been saved successfuly" + "");
                
-                
+                // Escribe la información del recibo en el archivo
             output.println(" Bill number is: " + receiptNo);
                 output.println("==============");
                 output.println("--------------");
@@ -878,7 +937,9 @@ PrintWriter output;
     }//GEN-LAST:event_saveReceiptBtnActionPerformed
 
     private void newReceiptBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newReceiptBtnActionPerformed
+        // Reinicia el formulario para crear un nuevo pedido (solo si ya se procesó un pago)
         if (total!=0){
+            // Reinicia todos los selectores de cantidad a 0
             colaCountS.setValue(0);
             upCountS.setValue(0);
             orangeCountS.setValue(0);
@@ -894,19 +955,23 @@ PrintWriter output;
             salmonCountS.setValue(0);
             spaghettiCountS.setValue(0);
 
+            // Deselecciona todas las opciones adicionales (checkboxes)
             pizzaSpicy.setSelected(false);
             pastaChicken.setSelected(false);
             salmonRice.setSelected(false);
             spaghettiSpicy.setSelected(false);
 
+            // Reinicia las etiquetas de totales
             subTotalLbl.setText("SubTotal : 0.0 SR");
             vatLbl.setText("VAT included : 0.0 SR");
             totalLbl.setText("Total : 0.0 SR");
 
+            // Reinicia las variables de cálculo
             subTotal=0;
             vat=0;
             total=0;
 
+            // Incrementa el número de recibo para el siguiente pedido
             receiptNo++;
             receiptNoLbl.setText("ReceiptNo. :"+receiptNo);
 
@@ -914,6 +979,7 @@ PrintWriter output;
     }//GEN-LAST:event_newReceiptBtnActionPerformed
 
     private void goBackMenueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackMenueBtnActionPerformed
+        // Cierra la ventana actual y regresa a la pantalla de login
         this.dispose();
         new Login().setVisible(true);
     }//GEN-LAST:event_goBackMenueBtnActionPerformed
