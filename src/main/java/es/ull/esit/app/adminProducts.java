@@ -11,16 +11,22 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
+ * @file adminProducts.java
+ * @brief Ventana para que el administrador gestione los productos y precios.
  *
- * 
+ * Proporciona tablas para bebidas, aperitivos y platos principales. Permite
+ * cargar desde la base de datos, añadir y actualizar elementos.
+ *
+ * @author Equipo
+ * @version 1.0
  */
 public class adminProducts extends javax.swing.JFrame {
 
-    /**
-     * Creates new form adminProducts
-     */
+    /** Modelo de tabla para bebidas */
     DefaultTableModel modelDrink;
+    /** Modelo de tabla para aperitivos */
     DefaultTableModel modelappetizers;
+    /** Modelo de tabla para platos principales */
     DefaultTableModel modelmaincourse;
     String[] columnNames = {"ID", "Item Name", "Item Price"};
     int selectedDrinkID;
@@ -33,6 +39,11 @@ public class adminProducts extends javax.swing.JFrame {
         String user = "root";
         String password = "";
 
+    /**
+     * @brief Constructor. Inicializa la UI y carga los datos desde BBDD.
+     *
+     * Crea los modelos de tabla y llama a los métodos de carga para poblar las tablas.
+     */
     public adminProducts() {
         initComponents();
         modelDrink = new DefaultTableModel();
@@ -47,6 +58,11 @@ public class adminProducts extends javax.swing.JFrame {
         
     }
 
+    /**
+     * @brief Carga las bebidas desde la tabla `drinks` de la base de datos.
+     *
+     * Recupera id, nombre y precio y los añade al modelo de la tabla.
+     */
     void loadDrinks() {
     
         int itemid;
@@ -72,6 +88,11 @@ public class adminProducts extends javax.swing.JFrame {
         jTable1.setModel(modelDrink);
     }
 
+    /**
+     * @brief Carga los aperitivos desde la tabla `appetizers`.
+     *
+     * Recupera id, nombre y precio y los añade al modelo correspondiente.
+     */
     void loadAppetizer() {
            int itemid;
         String itemname;
@@ -97,6 +118,11 @@ public class adminProducts extends javax.swing.JFrame {
         jTable2.setModel(modelappetizers);
     }
 
+    /**
+     * @brief Carga los platos principales desde la tabla `maincourse`.
+     *
+     * Recupera id, nombre y precio y los añade al modelo correspondiente.
+     */
     void loadmainCourse() {
         int itemid;
         String itemname;
