@@ -6,21 +6,12 @@
 package es.ull.esit.app;
 
 /**
- * @file AdminLogin.java
- * @brief Interfaz de administrador principal.
  *
- * Ventana que permite al administrador navegar hacia la actualización de
- * precios, ver el menú o cerrar sesión.
- *
- * @author Equipo
- * @version 1.0
  */
 public class AdminLogin extends javax.swing.JFrame {
 
     /**
-     * @brief Crea una nueva instancia de AdminLogin y prepara la UI.
-     *
-     * Inicializa los componentes de la interfaz gráfica.
+     * Creates new form AdminLogin
      */
     public AdminLogin() {
         initComponents();
@@ -131,46 +122,23 @@ public class AdminLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @brief Acción al pulsar "Update Prices".
-     *
-     * Abre la ventana de administración de productos para modificar precios.
-     *
-     * @param evt evento de acción del botón
-     */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
         new adminProducts().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @brief Acción al pulsar "Menu".
-     *
-     * Abre la ventana principal del menú.
-     *
-     * @param evt evento de acción del botón
-     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      
         new Frame1().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @brief Acción al pulsar "LogOut".
-     *
-     * Vuelve a la ventana de login.
-     *
-     * @param evt evento de acción del botón
-     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        
         new Login().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
-     * @brief Punto de entrada para ejecutar esta ventana de forma independiente.
-     *
-     * @param args argumentos de línea de comandos (no se usan)
+     * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
