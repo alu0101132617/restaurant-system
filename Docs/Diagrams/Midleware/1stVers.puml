@@ -1,0 +1,13 @@
+@startuml
+class es.ull.esit.app.middleware.ApiClient {
+- HttpClient http
+- String baseUrl
++ String getInfo()
++ String getMenu()
++ String login(String)
+- String escapeJson(String)
++ {static} void main(String[])
+}
+
+
+@enduml

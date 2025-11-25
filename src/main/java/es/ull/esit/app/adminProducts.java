@@ -5,122 +5,106 @@
  */
 package es.ull.esit.app;
 
-import java.sql.*;
+import es.ull.esit.app.middleware.ApiClient;
+import es.ull.esit.app.middleware.model.Appetizer;
+import es.ull.esit.app.middleware.model.Drink;
+import es.ull.esit.app.middleware.model.MainCourse;
+import java.util.List;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * 
- */
 public class adminProducts extends javax.swing.JFrame {
-
-    /**
-     * Creates new form adminProducts
-     */
+    
+    private ApiClient apiClient;
+    
     DefaultTableModel modelDrink;
     DefaultTableModel modelappetizers;
     DefaultTableModel modelmaincourse;
     String[] columnNames = {"ID", "Item Name", "Item Price"};
-    int selectedDrinkID;
-    int selectedAppetizerID;
-    int selectedmainCourseID;
-       
-
-   
-        String url = "jdbc:mysql://127.0.0.1:3306/project3?useSSL=false&serverTimezone=UTC";
-        String user = "root";
-        String password = "";
+    
+    Long selectedDrinkID;
+    Long selectedAppetizerID;
+    Long selectedMainCourseID;
 
     public adminProducts() {
         initComponents();
+        apiClient = new ApiClient("http://localhost:8080"); // Backend URL
+        
         modelDrink = new DefaultTableModel();
         modelDrink.setColumnIdentifiers(columnNames);
         modelappetizers = new DefaultTableModel();
         modelappetizers.setColumnIdentifiers(columnNames);
         modelmaincourse = new DefaultTableModel();
         modelmaincourse.setColumnIdentifiers(columnNames);
+        
         loadDrinks();
         loadAppetizer();
         loadmainCourse();
-        
     }
 
     void loadDrinks() {
-    
-        int itemid;
-        String itemname;
-        String itemprice;
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "Select * from drinks";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            int i = 0;
-            while (rs.next()) {
-                itemid = rs.getInt("id");
-                itemname = rs.getString("name");
-                itemprice = rs.getString("price");
-                modelDrink.addRow(new Object[]{itemid, itemname, itemprice});
+            List<Drink> drinks = apiClient.getAllDrinks();
+            for (Drink drink : drinks) {
+                modelDrink.addRow(new Object[]{
+                    drink.getDrinksId(), 
+                    drink.getItemDrinks(), 
+                    drink.getDrinksPrice()
+                });
             }
-
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            jTable1.setModel(modelDrink);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error loading drinks: " + ex.getMessage());
         }
-        jTable1.setModel(modelDrink);
     }
 
     void loadAppetizer() {
-           int itemid;
-        String itemname;
-        String itemprice;
-
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "Select * from appetizers";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            int i = 0;
-            while (rs.next()) {
-                itemid = rs.getInt("id");
-                itemname = rs.getString("name");
-                itemprice = rs.getString("price");
-                modelappetizers.addRow(new Object[]{itemid, itemname, itemprice});
+            List<Appetizer> appetizers = apiClient.getAllAppetizers();
+            for (Appetizer appetizer : appetizers) {
+                modelappetizers.addRow(new Object[]{
+                    appetizer.getAppetizersId(), 
+                    appetizer.getItemAppetizers(), 
+                    appetizer.getAppetizersPrice()
+                });
             }
-
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            jTable2.setModel(modelappetizers);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error loading appetizers: " + ex.getMessage());
         }
-        jTable2.setModel(modelappetizers);
     }
 
     void loadmainCourse() {
-        int itemid;
-        String itemname;
-        String itemprice;
-       
-
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "Select * from maincourse";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            int i = 0;
-            while (rs.next()) {
-                itemid = rs.getInt("id");
-                itemname = rs.getString("name");
-                itemprice = rs.getString("price");
-                modelmaincourse.addRow(new Object[]{itemid, itemname, itemprice});
+            List<MainCourse> mainCourses = apiClient.getAllMainCourses();
+            for (MainCourse mainCourse : mainCourses) {
+                modelmaincourse.addRow(new Object[]{
+                    mainCourse.getFoodId(), 
+                    mainCourse.getItemFood(), 
+                    mainCourse.getFoodPrice()
+                });
             }
-
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            jTable3.setModel(modelmaincourse);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error loading main courses: " + ex.getMessage());
         }
-        jTable3.setModel(modelmaincourse);
+    }
+
+    // Update button handlers to use ApiClient instead of JDBC
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            Drink newDrink = new Drink(null, itemname.getText(), 
+                Integer.parseInt(itemprice.getText()), null);
+            apiClient.createDrink(newDrink);
+            JOptionPane.showMessageDialog(null, "Drink Added Successfully.");
+            
+            // Refresh table
+            DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
+            dtm.setRowCount(0);
+            loadDrinks();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error adding drink: " + ex.getMessage());
+        }
     }
 
     /**
@@ -583,179 +567,129 @@ public class adminProducts extends javax.swing.JFrame {
         new AdminLogin().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-
-        try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "INSERT INTO drinks (name,price) values (?,?)";
-            PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, itemname.getText());
-            statement.setString(2, itemprice.getText());
-            int row = statement.executeUpdate();
-            if (row > 0) {
-                JOptionPane.showMessageDialog(null, "Drink Added Successfully.");
-            }
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-      
-
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "INSERT INTO appetizers (name,price) values (?,?)";
-            PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, itemname1.getText());
-            statement.setString(2, itemprice1.getText());
-            int row = statement.executeUpdate();
-            if (row > 0) {
-                JOptionPane.showMessageDialog(null, "Appetizer Added Successfully.");
-            }
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            Appetizer newAppetizer = new Appetizer(null, itemname1.getText(), 
+                Integer.parseInt(itemprice1.getText()), null);
+            apiClient.createAppetizer(newAppetizer);
+            JOptionPane.showMessageDialog(null, "Appetizer Added Successfully.");
+            
+            // Refresh table
+            DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
+            dtm.setRowCount(0);
+            loadAppetizer();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error adding appetizer: " + ex.getMessage());
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-      
-
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "INSERT INTO maincourse (name,price) values (?,?)";
-            PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, itemname2.getText());
-            statement.setString(2, itemprice2.getText());
-            int row = statement.executeUpdate();
-            if (row > 0) {
-                JOptionPane.showMessageDialog(null, "Main Course Added Successfully.");
-            }
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            MainCourse newMainCourse = new MainCourse(null, itemname2.getText(), 
+                Integer.parseInt(itemprice2.getText()), null);
+            apiClient.createMainCourse(newMainCourse);
+            JOptionPane.showMessageDialog(null, "Main Course Added Successfully.");
+            
+            // Refresh table
+            DefaultTableModel dtm = (DefaultTableModel) jTable3.getModel();
+            dtm.setRowCount(0);
+            loadmainCourse();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error adding main course: " + ex.getMessage());
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
-
+        // Keep as is - no changes needed
     }//GEN-LAST:event_jTable1KeyPressed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         String selectedIDKey = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
-        selectedDrinkID = Integer.valueOf(selectedIDKey);
+        selectedDrinkID = Long.valueOf(selectedIDKey);
         System.out.println("You select id " + selectedDrinkID + " of Drink to update.");
     
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "Select * from drinks where id = " + selectedIDKey + ";";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            int i = 0;
-            while (rs.next()) {
-                itemname.setText(rs.getString("name"));
-                itemprice.setText(rs.getString("price"));
-            }
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            Drink drink = apiClient.getDrinkById(selectedDrinkID);
+            itemname.setText(drink.getItemDrinks());
+            itemprice.setText(String.valueOf(drink.getDrinksPrice()));
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error loading drink: " + ex.getMessage());
         }
-
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-        String selectedIDKey = (String) jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString();
-        selectedAppetizerID = Integer.valueOf(selectedIDKey);
-        System.out.println("You select id " + selectedAppetizerID + " of  appetizers to update.");
+        String selectedIDKey = jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString();
+        selectedAppetizerID = Long.valueOf(selectedIDKey);
+        System.out.println("You select id " + selectedAppetizerID + " of appetizers to update.");
      
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "Select * from  appetizers where id = " + selectedIDKey + ";";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            int i = 0;
-            while (rs.next()) {
-                itemname1.setText(rs.getString("name"));
-                itemprice1.setText(rs.getString("price"));
-            }
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            Appetizer appetizer = apiClient.getAppetizerById(selectedAppetizerID);
+            itemname1.setText(appetizer.getItemAppetizers());
+            itemprice1.setText(String.valueOf(appetizer.getAppetizersPrice()));
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error loading appetizer: " + ex.getMessage());
         }
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
-        String selectedIDKey = (String) jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
-        selectedmainCourseID = Integer.valueOf(selectedIDKey);
-        System.out.println("You select id " + selectedmainCourseID + " of maincourse to update.");
+        String selectedIDKey = jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
+        selectedMainCourseID = Long.valueOf(selectedIDKey);
+        System.out.println("You select id " + selectedMainCourseID + " of maincourse to update.");
      
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-            String sql = "Select * from maincourse where id = " + selectedIDKey + ";";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            int i = 0;
-            while (rs.next()) {
-                itemname2.setText(rs.getString("name"));
-                itemprice2.setText(rs.getString("price"));
-            }
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            MainCourse mainCourse = apiClient.getMainCourseById(selectedMainCourseID);
+            itemname2.setText(mainCourse.getItemFood());
+            itemprice2.setText(String.valueOf(mainCourse.getFoodPrice()));
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error loading main course: " + ex.getMessage());
         }
     }//GEN-LAST:event_jTable3MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-             Statement stmt = conn.createStatement();
-            String sql = "update drinks set name = '"+itemname.getText()+"' , price = '"+itemprice.getText()+"' where id = " + selectedDrinkID + ";";
-            stmt.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Dirnk updated successfully.");
-            conn.close();
+            Drink updatedDrink = new Drink(selectedDrinkID, itemname.getText(), 
+                Integer.parseInt(itemprice.getText()), null);
+            apiClient.updateDrink(selectedDrinkID, updatedDrink);
+            JOptionPane.showMessageDialog(null, "Drink updated successfully.");
+            
+            // Refresh table
             DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
             dtm.setRowCount(0);
             loadDrinks();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error updating drink: " + ex.getMessage());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-             Statement stmt = conn.createStatement();
-            String sql = "update appetizers set name = '"+itemname1.getText()+"' , price = '"+itemprice1.getText()+"' where id = " + selectedAppetizerID + ";";
-            stmt.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Appetizers updated successfully.");
-            conn.close();
+            Appetizer updatedAppetizer = new Appetizer(selectedAppetizerID, itemname1.getText(), 
+                Integer.parseInt(itemprice1.getText()), null);
+            apiClient.updateAppetizer(selectedAppetizerID, updatedAppetizer);
+            JOptionPane.showMessageDialog(null, "Appetizer updated successfully.");
+            
+            // Refresh table
             DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
             dtm.setRowCount(0);
             loadAppetizer();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error updating appetizer: " + ex.getMessage());
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      
         try {
-            Connection conn = DriverManager.getConnection(url, user, password);
-             Statement stmt = conn.createStatement();
-            String sql = "update maincourse set name = '"+itemname2.getText()+"' , price = '"+itemprice2.getText()+"' where id = " + selectedmainCourseID + ";";
-            stmt.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Maincourse updated successfully.");
-            conn.close();
+            MainCourse updatedMainCourse = new MainCourse(selectedMainCourseID, itemname2.getText(), 
+                Integer.parseInt(itemprice2.getText()), null);
+            apiClient.updateMainCourse(selectedMainCourseID, updatedMainCourse);
+            JOptionPane.showMessageDialog(null, "Main course updated successfully.");
+            
+            // Refresh table
             DefaultTableModel dtm = (DefaultTableModel) jTable3.getModel();
             dtm.setRowCount(0);
             loadmainCourse();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error updating main course: " + ex.getMessage());
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
