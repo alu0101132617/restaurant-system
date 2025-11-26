@@ -15,10 +15,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="7" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="7" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="20" endline="25">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0082ccc8d7b14bb4a6ce30176c3f1f00" compoundref="Drink_8java" startline="27" endline="27">es.ull.esit.app.middleware.model.Drink.getDrinksId</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a938c53857a00a7f139c3ab1f8b599ee5" compoundref="Drink_8java" startline="28" endline="28">es.ull.esit.app.middleware.model.Drink.setDrinksId</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="10" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="30" endline="35">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0082ccc8d7b14bb4a6ce30176c3f1f00" compoundref="Drink_8java" startline="41" endline="41">es.ull.esit.app.middleware.model.Drink.getDrinksId</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a938c53857a00a7f139c3ab1f8b599ee5" compoundref="Drink_8java" startline="47" endline="47">es.ull.esit.app.middleware.model.Drink.setDrinksId</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" prot="private" static="no" mutable="no">
         <type>String</type>
@@ -32,10 +32,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="10" column="20" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="10" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="20" endline="25">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af39848104f2a8088bf1c0675fa7506ed" compoundref="Drink_8java" startline="30" endline="30">es.ull.esit.app.middleware.model.Drink.getItemDrinks</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ae9cf0c1ac5f0bcbae851c62b3110cf14" compoundref="Drink_8java" startline="31" endline="31">es.ull.esit.app.middleware.model.Drink.setItemDrinks</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="13" column="20" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="30" endline="35">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af39848104f2a8088bf1c0675fa7506ed" compoundref="Drink_8java" startline="53" endline="53">es.ull.esit.app.middleware.model.Drink.getItemDrinks</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ae9cf0c1ac5f0bcbae851c62b3110cf14" compoundref="Drink_8java" startline="59" endline="59">es.ull.esit.app.middleware.model.Drink.setItemDrinks</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" prot="private" static="no" mutable="no">
         <type>Integer</type>
@@ -49,10 +49,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="13" column="21" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="13" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="20" endline="25">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a2e72a0fa3bebec58109f6ea6dbfeaf3e" compoundref="Drink_8java" startline="33" endline="33">es.ull.esit.app.middleware.model.Drink.getDrinksPrice</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a5ba0ebf173b5dbc86ceba5c103a4c1f6" compoundref="Drink_8java" startline="34" endline="34">es.ull.esit.app.middleware.model.Drink.setDrinksPrice</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="16" column="21" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="30" endline="35">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a2e72a0fa3bebec58109f6ea6dbfeaf3e" compoundref="Drink_8java" startline="65" endline="65">es.ull.esit.app.middleware.model.Drink.getDrinksPrice</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a5ba0ebf173b5dbc86ceba5c103a4c1f6" compoundref="Drink_8java" startline="71" endline="71">es.ull.esit.app.middleware.model.Drink.setDrinksPrice</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" prot="private" static="no" mutable="no">
         <type>Long</type>
@@ -66,10 +66,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="16" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="16" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="20" endline="25">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ac49b7c12d539d32c96c1ad01fa197273" compoundref="Drink_8java" startline="36" endline="36">es.ull.esit.app.middleware.model.Drink.getReceiptId</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a03b5159a94438b926e9141483aea65b9" compoundref="Drink_8java" startline="37" endline="37">es.ull.esit.app.middleware.model.Drink.setReceiptId</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="19" column="18" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" compoundref="Drink_8java" startline="30" endline="35">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ac49b7c12d539d32c96c1ad01fa197273" compoundref="Drink_8java" startline="77" endline="77">es.ull.esit.app.middleware.model.Drink.getReceiptId</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a03b5159a94438b926e9141483aea65b9" compoundref="Drink_8java" startline="83" endline="83">es.ull.esit.app.middleware.model.Drink.setReceiptId</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -85,9 +85,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="18" column="12" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="18" bodyend="18"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a9b430a67018577794e46f24c91d85c29" compoundref="Drink_8java" startline="18" endline="18">es.ull.esit.app.middleware.model.Drink.Drink</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a9b430a67018577794e46f24c91d85c29" compoundref="Drink_8java" startline="18" endline="18">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="21" column="12" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="21" bodyend="21"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a9b430a67018577794e46f24c91d85c29" compoundref="Drink_8java" startline="21" endline="21">es.ull.esit.app.middleware.model.Drink.Drink</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a9b430a67018577794e46f24c91d85c29" compoundref="Drink_8java" startline="21" endline="21">es.ull.esit.app.middleware.model.Drink.Drink</referencedby>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -112,16 +112,51 @@
           <declname>receiptId</declname>
         </param>
         <briefdescription>
+<para>Constructor with parameters. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drinksId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the drinks ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemDrinks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the drink item name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drinksPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the drink price </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiptId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the receipt ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="20" column="12" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="20" bodyend="25"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" compoundref="Drink_8java" startline="7">es.ull.esit.app.middleware.model.Drink.drinksId</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" compoundref="Drink_8java" startline="13">es.ull.esit.app.middleware.model.Drink.drinksPrice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" compoundref="Drink_8java" startline="10">es.ull.esit.app.middleware.model.Drink.itemDrinks</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" compoundref="Drink_8java" startline="16">es.ull.esit.app.middleware.model.Drink.receiptId</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="30" column="12" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="30" bodyend="35"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" compoundref="Drink_8java" startline="10">es.ull.esit.app.middleware.model.Drink.drinksId</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" compoundref="Drink_8java" startline="16">es.ull.esit.app.middleware.model.Drink.drinksPrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" compoundref="Drink_8java" startline="13">es.ull.esit.app.middleware.model.Drink.itemDrinks</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" compoundref="Drink_8java" startline="19">es.ull.esit.app.middleware.model.Drink.receiptId</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0082ccc8d7b14bb4a6ce30176c3f1f00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Long</type>
@@ -130,13 +165,17 @@
         <name>getDrinksId</name>
         <qualifiedname>es.ull.esit.app.middleware.model.Drink.getDrinksId</qualifiedname>
         <briefdescription>
+<para>Getters and Setters. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>values of the attributes </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="27" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="27" bodyend="27"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" compoundref="Drink_8java" startline="7">es.ull.esit.app.middleware.model.Drink.drinksId</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="41" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="41" bodyend="41"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" compoundref="Drink_8java" startline="10">es.ull.esit.app.middleware.model.Drink.drinksId</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a938c53857a00a7f139c3ab1f8b599ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -149,13 +188,24 @@
           <declname>drinksId</declname>
         </param>
         <briefdescription>
+<para>Set drinks ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drinksId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the drinks ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="28" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="28" bodyend="28"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" compoundref="Drink_8java" startline="7">es.ull.esit.app.middleware.model.Drink.drinksId</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="47" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="47" bodyend="47"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ab8e341db770b09ad79832bb421f3ccaa" compoundref="Drink_8java" startline="10">es.ull.esit.app.middleware.model.Drink.drinksId</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af39848104f2a8088bf1c0675fa7506ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>String</type>
@@ -164,14 +214,18 @@
         <name>getItemDrinks</name>
         <qualifiedname>es.ull.esit.app.middleware.model.Drink.getItemDrinks</qualifiedname>
         <briefdescription>
+<para>Get item drinks. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the drink item name </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="30" column="19" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="30" bodyend="30"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" compoundref="Drink_8java" startline="10">es.ull.esit.app.middleware.model.Drink.itemDrinks</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="606" endline="618">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="53" column="19" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="53" bodyend="53"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" compoundref="Drink_8java" startline="13">es.ull.esit.app.middleware.model.Drink.itemDrinks</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="766" endline="778">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ae9cf0c1ac5f0bcbae851c62b3110cf14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -184,13 +238,24 @@
           <declname>itemDrinks</declname>
         </param>
         <briefdescription>
+<para>Set item drinks. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemDrinks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the drink item name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="31" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="31" bodyend="31"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" compoundref="Drink_8java" startline="10">es.ull.esit.app.middleware.model.Drink.itemDrinks</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="59" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="59" bodyend="59"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1abf940ddfde1cd63a3b83b5e036f6db41" compoundref="Drink_8java" startline="13">es.ull.esit.app.middleware.model.Drink.itemDrinks</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a2e72a0fa3bebec58109f6ea6dbfeaf3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Integer</type>
@@ -199,14 +264,18 @@
         <name>getDrinksPrice</name>
         <qualifiedname>es.ull.esit.app.middleware.model.Drink.getDrinksPrice</qualifiedname>
         <briefdescription>
+<para>Get drinks price. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the drink price </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="33" column="20" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="33" bodyend="33"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" compoundref="Drink_8java" startline="13">es.ull.esit.app.middleware.model.Drink.drinksPrice</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="606" endline="618">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="65" column="20" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="65" bodyend="65"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" compoundref="Drink_8java" startline="16">es.ull.esit.app.middleware.model.Drink.drinksPrice</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="766" endline="778">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a5ba0ebf173b5dbc86ceba5c103a4c1f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -219,13 +288,24 @@
           <declname>drinksPrice</declname>
         </param>
         <briefdescription>
+<para>Set drinks price. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drinksPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the drink price </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="34" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="34" bodyend="34"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" compoundref="Drink_8java" startline="13">es.ull.esit.app.middleware.model.Drink.drinksPrice</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="71" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="71" bodyend="71"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a0f75121a14a3d10636b9b35ff306f07e" compoundref="Drink_8java" startline="16">es.ull.esit.app.middleware.model.Drink.drinksPrice</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1ac49b7c12d539d32c96c1ad01fa197273" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Long</type>
@@ -234,13 +314,17 @@
         <name>getReceiptId</name>
         <qualifiedname>es.ull.esit.app.middleware.model.Drink.getReceiptId</qualifiedname>
         <briefdescription>
+<para>Get receipt ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>the receipt ID </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="36" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="36" bodyend="36"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" compoundref="Drink_8java" startline="16">es.ull.esit.app.middleware.model.Drink.receiptId</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="77" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="77" bodyend="77"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" compoundref="Drink_8java" startline="19">es.ull.esit.app.middleware.model.Drink.receiptId</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a03b5159a94438b926e9141483aea65b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -253,16 +337,28 @@
           <declname>receiptId</declname>
         </param>
         <briefdescription>
+<para>Set receipt ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receiptId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the receipt ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="37" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="37" bodyend="37"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" compoundref="Drink_8java" startline="16">es.ull.esit.app.middleware.model.Drink.receiptId</references>
+        <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="83" column="17" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="83" bodyend="83"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af398c70728e9819f7fb6da1a8ce237ac" compoundref="Drink_8java" startline="19">es.ull.esit.app.middleware.model.Drink.receiptId</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para><ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> model class. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -272,7 +368,7 @@
         <link refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink"/>
       </node>
     </collaborationgraph>
-    <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="5" column="7" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="5" bodyend="38"/>
+    <location file="src/main/java/es/ull/esit/app/middleware/model/Drink.java" line="8" column="7" bodyfile="src/main/java/es/ull/esit/app/middleware/model/Drink.java" bodystart="8" bodyend="84"/>
     <listofallmembers>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a9b430a67018577794e46f24c91d85c29" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::Drink</scope><name>Drink</name></member>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a451a60229feb24cd7cf05083691f28ff" prot="public" virt="non-virtual"><scope>es::ull::esit::app::middleware::model::Drink</scope><name>Drink</name></member>

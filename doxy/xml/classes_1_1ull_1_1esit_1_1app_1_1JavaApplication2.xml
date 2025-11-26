@@ -14,6 +14,7 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>Punto de entrada alternativo usado para lanzar la UI. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -21,7 +22,7 @@
 <parametername>args</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the command line arguments </para>
+<para>argumentos de línea de comandos (no usados). </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -29,15 +30,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/JavaApplication2.java" line="17" column="24" bodyfile="src/main/java/es/ull/esit/app/JavaApplication2.java" bodystart="17" bodyend="19"/>
+        <location file="src/main/java/es/ull/esit/app/JavaApplication2.java" line="21" column="24" bodyfile="src/main/java/es/ull/esit/app/JavaApplication2.java" bodystart="21" bodyend="23"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Behzad Qasim </para>
-</simplesect>
-</para>
     </detaileddescription>
     <collaborationgraph>
       <node id="1">
@@ -45,7 +43,7 @@
         <link refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2"/>
       </node>
     </collaborationgraph>
-    <location file="src/main/java/es/ull/esit/app/JavaApplication2.java" line="12" column="7" bodyfile="src/main/java/es/ull/esit/app/JavaApplication2.java" bodystart="12" bodyend="21"/>
+    <location file="src/main/java/es/ull/esit/app/JavaApplication2.java" line="14" column="7" bodyfile="src/main/java/es/ull/esit/app/JavaApplication2.java" bodystart="14" bodyend="25"/>
     <listofallmembers>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" prot="public" virt="non-virtual"><scope>es::ull::esit::app::JavaApplication2</scope><name>main</name></member>
     </listofallmembers>

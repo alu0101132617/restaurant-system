@@ -5,8 +5,10 @@
     <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" prot="public">es::ull::esit::app::JavaApplication2</innerclass>
     <innernamespace refid="namespacees_1_1ull_1_1esit_1_1app">es::ull::esit::app</innernamespace>
     <briefdescription>
+<para>Clase mínima para arrancar la aplicación (entry-point auxiliar). </para>
     </briefdescription>
     <detaileddescription>
+<para>Lanza la ventana de Login cuando se ejecuta de forma independiente. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
@@ -16,13 +18,13 @@
 <codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">es.ull.esit.app;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" kindref="compound">JavaApplication2</ref><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" kindref="member">main</ref>(String[]<sp/>args)<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref>().setVisible(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14" refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" kindref="compound">JavaApplication2</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2_1a27758840adc17f5545003549b46c3421" kindref="member">main</ref>(String[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref>().setVisible(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/main/java/es/ull/esit/app/JavaApplication2.java"/>
   </compounddef>

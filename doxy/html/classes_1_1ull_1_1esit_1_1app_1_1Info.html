@@ -130,14 +130,19 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a06ade6bb34a1aabb2e9c98433f657491" id="r_a06ade6bb34a1aabb2e9c98433f657491"><td class="memItemLeft" align="right" valign="top">javax.swing.JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06ade6bb34a1aabb2e9c98433f657491">jButton3</a></td></tr>
+<tr class="memdesc:a06ade6bb34a1aabb2e9c98433f657491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón para volver atrás (Go Back).  <br /></td></tr>
 <tr class="memitem:ae547e05ab26bda7bf3f02580c82935ce" id="r_ae547e05ab26bda7bf3f02580c82935ce"><td class="memItemLeft" align="right" valign="top">javax.swing.JLabel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae547e05ab26bda7bf3f02580c82935ce">jLabel1</a></td></tr>
+<tr class="memdesc:ae547e05ab26bda7bf3f02580c82935ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imagen/logo mostrado en la ventana.  <br /></td></tr>
 <tr class="memitem:a12d1313a1324687460ea608ca435a4a0" id="r_a12d1313a1324687460ea608ca435a4a0"><td class="memItemLeft" align="right" valign="top">javax.swing.JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12d1313a1324687460ea608ca435a4a0">jPanel1</a></td></tr>
+<tr class="memdesc:a12d1313a1324687460ea608ca435a4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Panel contenedor principal.  <br /></td></tr>
 <tr class="memitem:adc5ac034a8d5fca89e83e7e8e4923aca" id="r_adc5ac034a8d5fca89e83e7e8e4923aca"><td class="memItemLeft" align="right" valign="top">javax.swing.JScrollPane&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5ac034a8d5fca89e83e7e8e4923aca">jScrollPane1</a></td></tr>
+<tr class="memdesc:adc5ac034a8d5fca89e83e7e8e4923aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scroll pane que contiene el texto 'ourStory'.  <br /></td></tr>
 <tr class="memitem:abf3c62819ed56f14a6e24377b037e391" id="r_abf3c62819ed56f14a6e24377b037e391"><td class="memItemLeft" align="right" valign="top">javax.swing.JTextArea&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf3c62819ed56f14a6e24377b037e391">ourStory</a></td></tr>
+<tr class="memdesc:abf3c62819ed56f14a6e24377b037e391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Área de texto que contiene la historia/información del restaurante.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00012">12</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00018">18</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a50f7380b1701dc5213d64735409a13bd" name="a50f7380b1701dc5213d64735409a13bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50f7380b1701dc5213d64735409a13bd">&#9670;&#160;</a></span>Info()</h2>
@@ -164,11 +169,14 @@ Private Attributes</h2></td></tr>
 
 <p>Creates new form <a class="el" href="classes_1_1ull_1_1esit_1_1app_1_1Info.html">Info</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00017">17</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
-<div class="fragment"></div><!-- fragment -->
-<p class="reference">References <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00023">23</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                  {</div>
+<div class="line"><span class="lineno">   24</span>        initComponents();</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00113">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00128">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -219,12 +227,97 @@ Here is the caller graph for this function:</div>
 
 <p>This method is called from within the constructor to initialize the form. </p>
 <p>WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </p>
+<p>Manejador del botón "Go Back".</p>
+<p>Al pulsar este botón, se cierra la ventana actual y se abre la ventana del cajero (<a class="el" href="classes_1_1ull_1_1esit_1_1app_1_1Cashier.html">Cashier</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>Evento de acción generado por el botón. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00028">28</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
-<div class="fragment"></div><!-- fragment -->
-<p class="reference">References <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>, <a class="el" href="Info_8java_source.html#l00146">jButton3</a>, <a class="el" href="Info_8java_source.html#l00147">jLabel1</a>, <a class="el" href="Info_8java_source.html#l00148">jPanel1</a>, <a class="el" href="Info_8java_source.html#l00149">jScrollPane1</a>, and <a class="el" href="Info_8java_source.html#l00150">ourStory</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00034">34</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>                                  {</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        jPanel1 = <span class="keyword">new</span> javax.swing.JPanel();</div>
+<div class="line"><span class="lineno">   37</span>        jButton3 = <span class="keyword">new</span> javax.swing.JButton();</div>
+<div class="line"><span class="lineno">   38</span>        jScrollPane1 = <span class="keyword">new</span> javax.swing.JScrollPane();</div>
+<div class="line"><span class="lineno">   39</span>        ourStory = <span class="keyword">new</span> javax.swing.JTextArea();</div>
+<div class="line"><span class="lineno">   40</span>        jLabel1 = <span class="keyword">new</span> javax.swing.JLabel();</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</div>
+<div class="line"><span class="lineno">   43</span>        setTitle(<span class="stringliteral">&quot;Info&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>        setResizable(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>        jPanel1.setBackground(<span class="keyword">new</span> java.awt.Color(248, 244, 230));</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>        jButton3.setBackground(<span class="keyword">new</span> java.awt.Color(255, 255, 255));</div>
+<div class="line"><span class="lineno">   49</span>        jButton3.setFont(<span class="keyword">new</span> java.awt.Font(<span class="stringliteral">&quot;Yu Gothic UI&quot;</span>, 1, 18)); <span class="comment">// NOI18N</span></div>
+<div class="line"><span class="lineno">   50</span>        jButton3.setText(<span class="stringliteral">&quot;Go Back&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>        jButton3.addActionListener(<span class="keyword">new</span> java.awt.event.ActionListener() {</div>
+<div class="line"><span class="lineno">   61</span>            public void actionPerformed(java.awt.event.ActionEvent evt) {</div>
+<div class="line"><span class="lineno">   62</span>                jButton3ActionPerformed(evt);</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        });</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>        ourStory.setEditable(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   67</span>        ourStory.setBackground(<span class="keyword">new</span> java.awt.Color(248, 244, 230));</div>
+<div class="line"><span class="lineno">   68</span>        ourStory.setColumns(20);</div>
+<div class="line"><span class="lineno">   69</span>        ourStory.setFont(<span class="keyword">new</span> java.awt.Font(<span class="stringliteral">&quot;Yu Gothic UI Light&quot;</span>, 0, 14)); <span class="comment">// NOI18N</span></div>
+<div class="line"><span class="lineno">   70</span>        ourStory.setRows(5);</div>
+<div class="line"><span class="lineno">   71</span>        ourStory.setText(<span class="stringliteral">&quot;  Our Story |\n  Collecting flavors from all over the world to give everyone a taste of what they love. \n\n  Black Plate came in with this vision in mind, to be more of a home rather than an establishment.\n\n  2021 marked the beginning of the journey of Black Plate, starting from Al Khobar.\n\n  Because your visit means a lot to us, we would love to hear your suggestions and concerns \n\n  so we can improve!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>        ourStory.setBorder(javax.swing.BorderFactory.createLineBorder(<span class="keyword">new</span> java.awt.Color(0, 0, 0)));</div>
+<div class="line"><span class="lineno">   73</span>        jScrollPane1.setViewportView(ourStory);</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        jLabel1.setIcon(<span class="keyword">new</span> javax.swing.ImageIcon(getClass().getResource(<span class="stringliteral">&quot;/javaapplication2/Screen Shot 1443-09-29 at 4.38.37 PM.png&quot;</span>))); <span class="comment">// NOI18N</span></div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        javax.swing.GroupLayout jPanel1Layout = <span class="keyword">new</span> javax.swing.GroupLayout(jPanel1);</div>
+<div class="line"><span class="lineno">   78</span>        jPanel1.setLayout(jPanel1Layout);</div>
+<div class="line"><span class="lineno">   79</span>        jPanel1Layout.setHorizontalGroup(</div>
+<div class="line"><span class="lineno">   80</span>            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</div>
+<div class="line"><span class="lineno">   81</span>            .addGroup(jPanel1Layout.createSequentialGroup()</div>
+<div class="line"><span class="lineno">   82</span>                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</div>
+<div class="line"><span class="lineno">   83</span>                    .addGroup(jPanel1Layout.createSequentialGroup()</div>
+<div class="line"><span class="lineno">   84</span>                        .addGap(55, 55, 55)</div>
+<div class="line"><span class="lineno">   85</span>                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</div>
+<div class="line"><span class="lineno">   86</span>                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)</div>
+<div class="line"><span class="lineno">   87</span>                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1004, javax.swing.GroupLayout.PREFERRED_SIZE)))</div>
+<div class="line"><span class="lineno">   88</span>                    .addGroup(jPanel1Layout.createSequentialGroup()</div>
+<div class="line"><span class="lineno">   89</span>                        .addGap(489, 489, 489)</div>
+<div class="line"><span class="lineno">   90</span>                        .addComponent(jLabel1)))</div>
+<div class="line"><span class="lineno">   91</span>                .addContainerGap(159, Short.MAX_VALUE))</div>
+<div class="line"><span class="lineno">   92</span>        );</div>
+<div class="line"><span class="lineno">   93</span>        jPanel1Layout.setVerticalGroup(</div>
+<div class="line"><span class="lineno">   94</span>            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</div>
+<div class="line"><span class="lineno">   95</span>            .addGroup(jPanel1Layout.createSequentialGroup()</div>
+<div class="line"><span class="lineno">   96</span>                .addContainerGap(71, Short.MAX_VALUE)</div>
+<div class="line"><span class="lineno">   97</span>                .addComponent(jLabel1)</div>
+<div class="line"><span class="lineno">   98</span>                .addGap(67, 67, 67)</div>
+<div class="line"><span class="lineno">   99</span>                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)</div>
+<div class="line"><span class="lineno">  100</span>                .addGap(26, 26, 26)</div>
+<div class="line"><span class="lineno">  101</span>                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)</div>
+<div class="line"><span class="lineno">  102</span>                .addGap(30, 30, 30))</div>
+<div class="line"><span class="lineno">  103</span>        );</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>        javax.swing.GroupLayout layout = <span class="keyword">new</span> javax.swing.GroupLayout(getContentPane());</div>
+<div class="line"><span class="lineno">  106</span>        getContentPane().setLayout(layout);</div>
+<div class="line"><span class="lineno">  107</span>        layout.setHorizontalGroup(</div>
+<div class="line"><span class="lineno">  108</span>            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</div>
+<div class="line"><span class="lineno">  109</span>            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</div>
+<div class="line"><span class="lineno">  110</span>        );</div>
+<div class="line"><span class="lineno">  111</span>        layout.setVerticalGroup(</div>
+<div class="line"><span class="lineno">  112</span>            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</div>
+<div class="line"><span class="lineno">  113</span>            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</div>
+<div class="line"><span class="lineno">  114</span>        );</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>        pack();</div>
+<div class="line"><span class="lineno">  117</span>        setLocationRelativeTo(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  118</span>    }<span class="comment">// &lt;/editor-fold&gt;//GEN-END:initComponents</span></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>, <a class="el" href="Info_8java_source.html#l00162">jButton3</a>, <a class="el" href="Info_8java_source.html#l00164">jLabel1</a>, <a class="el" href="Info_8java_source.html#l00166">jPanel1</a>, <a class="el" href="Info_8java_source.html#l00168">jScrollPane1</a>, and <a class="el" href="Info_8java_source.html#l00170">ourStory</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00017">Info()</a>, and <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00023">Info()</a>, and <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -273,8 +366,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00105">105</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
-<div class="fragment"></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00120">120</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                                         {<span class="comment">//GEN-FIRST:event_jButton3ActionPerformed</span></div>
+<div class="line"><span class="lineno">  121</span>      </div>
+<div class="line"><span class="lineno">  122</span>        <span class="keyword">new</span> Cashier().setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  123</span>    }<span class="comment">//GEN-LAST:event_jButton3ActionPerformed</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4cc916257b3ad16e1490d73d4d1f0ceb" name="a4cc916257b3ad16e1490d73d4d1f0ceb"></a>
@@ -306,9 +403,40 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00113">113</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
-<div class="fragment"></div><!-- fragment -->
-<p class="reference">References <a class="el" href="Info_8java_source.html#l00017">Info()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00128">128</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                                           {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="comment">/* Set the Nimbus look and feel */</span></div>
+<div class="line"><span class="lineno">  130</span>        <span class="comment">//&lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Look and feel setting code (optional) &quot;&gt;</span></div>
+<div class="line"><span class="lineno">  131</span>        <span class="comment">/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.</span></div>
+<div class="line"><span class="lineno">  132</span><span class="comment">         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html </span></div>
+<div class="line"><span class="lineno">  133</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">for</span> (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">if</span> (<span class="stringliteral">&quot;Nimbus&quot;</span>.equals(info.getName())) {</div>
+<div class="line"><span class="lineno">  137</span>                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</div>
+<div class="line"><span class="lineno">  138</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  139</span>                }</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>        } <span class="keywordflow">catch</span> (ClassNotFoundException ex) {</div>
+<div class="line"><span class="lineno">  142</span>            java.util.logging.Logger.getLogger(Info.class.getName()).log(java.util.logging.Level.SEVERE, <span class="keyword">null</span>, ex);</div>
+<div class="line"><span class="lineno">  143</span>        } <span class="keywordflow">catch</span> (InstantiationException ex) {</div>
+<div class="line"><span class="lineno">  144</span>            java.util.logging.Logger.getLogger(Info.class.getName()).log(java.util.logging.Level.SEVERE, <span class="keyword">null</span>, ex);</div>
+<div class="line"><span class="lineno">  145</span>        } <span class="keywordflow">catch</span> (IllegalAccessException ex) {</div>
+<div class="line"><span class="lineno">  146</span>            java.util.logging.Logger.getLogger(Info.class.getName()).log(java.util.logging.Level.SEVERE, <span class="keyword">null</span>, ex);</div>
+<div class="line"><span class="lineno">  147</span>        } <span class="keywordflow">catch</span> (javax.swing.UnsupportedLookAndFeelException ex) {</div>
+<div class="line"><span class="lineno">  148</span>            java.util.logging.Logger.getLogger(Info.class.getName()).log(java.util.logging.Level.SEVERE, <span class="keyword">null</span>, ex);</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>        <span class="comment">//&lt;/editor-fold&gt;</span></div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>        <span class="comment">/* Create and display the form */</span></div>
+<div class="line"><span class="lineno">  153</span>        java.awt.EventQueue.invokeLater(<span class="keyword">new</span> Runnable() {</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keyword">new</span> Info().setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        });</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Info_8java_source.html#l00023">Info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -346,9 +474,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00146">146</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<p>Botón para volver atrás (Go Back). </p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00162">162</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 
 </div>
 </div>
@@ -372,9 +502,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00147">147</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<p>Imagen/logo mostrado en la ventana. </p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00164">164</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 
 </div>
 </div>
@@ -398,9 +530,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00148">148</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<p>Panel contenedor principal. </p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00166">166</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 
 </div>
 </div>
@@ -424,9 +558,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00149">149</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<p>Scroll pane que contiene el texto 'ourStory'. </p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00168">168</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 
 </div>
 </div>
@@ -450,9 +586,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00150">150</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+<p>Área de texto que contiene la historia/información del restaurante. </p>
 
-<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00028">initComponents()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Info_8java_source.html#l00170">170</a> of file <a class="el" href="Info_8java_source.html">Info.java</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Info_8java_source.html#l00034">initComponents()</a>.</p>
 
 </div>
 </div>

@@ -11,22 +11,23 @@
         <name>apiClient</name>
         <qualifiedname>es.ull.esit.app.adminProducts.apiClient</qualifiedname>
         <briefdescription>
+<para>Cliente HTTP para llamadas al backend. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="18" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="18" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" compoundref="adminProducts_8java" startline="29" endline="43">es.ull.esit.app.adminProducts.adminProducts</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="648" endline="662">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="94" endline="108">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="664" endline="678">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="570" endline="584">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="680" endline="694">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="586" endline="600">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="606" endline="618">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="620" endline="632">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="634" endline="646">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="25" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" compoundref="adminProducts_8java" startline="40" endline="54">es.ull.esit.app.adminProducts.adminProducts</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="834" endline="848">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="123" endline="137">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="858" endline="872">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="705" endline="719">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="882" endline="896">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="729" endline="743">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="766" endline="778">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="789" endline="801">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="812" endline="824">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -40,11 +41,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="732" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="732" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="648" endline="662">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="94" endline="108">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="606" endline="618">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="934" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="934" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="834" endline="848">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="123" endline="137">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="766" endline="778">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -58,11 +59,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="733" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="733" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="664" endline="678">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="570" endline="584">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="620" endline="632">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="935" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="935" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="858" endline="872">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="705" endline="719">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="789" endline="801">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -76,11 +77,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="734" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="734" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="680" endline="694">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="586" endline="600">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="634" endline="646">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="936" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="936" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="882" endline="896">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="729" endline="743">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="812" endline="824">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -94,11 +95,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="735" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="735" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="648" endline="662">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="94" endline="108">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="606" endline="618">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="937" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="937" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="834" endline="848">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="123" endline="137">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="766" endline="778">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -112,11 +113,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="736" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="736" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="664" endline="678">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="570" endline="584">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="620" endline="632">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="938" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="938" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="858" endline="872">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="705" endline="719">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="789" endline="801">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -130,11 +131,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="737" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="737" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="680" endline="694">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="586" endline="600">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="634" endline="646">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="939" column="34" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="939" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="882" endline="896">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="729" endline="743">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="812" endline="824">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab56caf5892acf7edb3e609258cc556a9" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -148,8 +149,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="738" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="738" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="940" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="940" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a7058004d3fbcafcb3345da2661015cb7" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -163,8 +164,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="739" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="739" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="941" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="941" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a9eb53de96594bf6b2a2da908faecc893" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -178,8 +179,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="740" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="740" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="942" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="942" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80eae9c31c95845c232314adf302d955" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -193,8 +194,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="741" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="741" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="943" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="943" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a36be785c6d526685f1baf15aa58d0ed1" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -208,8 +209,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="742" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="742" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="944" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="944" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a8fc2124604167c63132b29455c82c1b8" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -223,8 +224,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="743" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="743" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="945" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="945" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ae2d5e0583896ae3aa26ed545d89f1547" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -238,8 +239,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="744" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="744" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="946" column="31" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="946" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a41b67d98122d11db26b9687d33d76c28" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -253,8 +254,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="745" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="745" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="947" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="947" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a919a514359f9e2059d4788c3dfcdb1ef" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -268,8 +269,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="746" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="746" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="948" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="948" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a174390612935a35a581a7833e7bdde8e" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -283,8 +284,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="747" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="747" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="949" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="949" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aab56587bffb3e2ed8de113e6bce85ab8" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -298,8 +299,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="748" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="748" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="950" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="950" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a7155cdfe2ea494b9b2b3d455c264ef68" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -313,8 +314,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="749" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="749" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="951" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="951" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a05b2ff8b7c68ee746894a809d0eea010" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -328,8 +329,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="750" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="750" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="952" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="952" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1d1d9efe444f332401e9376f0357d002" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -343,8 +344,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="751" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="751" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="953" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="953" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ac2463b6b189c210ce1caed57a92dd91a" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -358,8 +359,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="752" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="752" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="954" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="954" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeba498dcb7869d1153c2212af729211f" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -373,8 +374,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="753" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="753" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="955" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="955" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab8f9d1d5058049cc51ac47fbac427a91" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -388,8 +389,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="754" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="754" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="956" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="956" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1af4a2e7a62b0f71a10eee459c3c75ce4a" prot="private" static="no" mutable="no">
         <type>javax.swing.JPanel</type>
@@ -403,8 +404,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="755" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="755" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="957" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="957" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ae9c56a41901f3ff086cd28e7868855a3" prot="private" static="no" mutable="no">
         <type>javax.swing.JPanel</type>
@@ -418,8 +419,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="756" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="756" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="958" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="958" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a412ef5b344b98c553ebc9c1e4f7ace19" prot="private" static="no" mutable="no">
         <type>javax.swing.JPanel</type>
@@ -433,8 +434,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="757" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="757" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="959" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="959" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0aee210b2a9cd3461cf7f0e77c503d60" prot="private" static="no" mutable="no">
         <type>javax.swing.JPanel</type>
@@ -448,8 +449,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="758" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="758" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="960" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="960" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1af17d42475dd9f7be97e7d70eb267ce05" prot="private" static="no" mutable="no">
         <type>javax.swing.JScrollPane</type>
@@ -463,8 +464,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="759" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="759" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="961" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="961" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a572219a046ff83a1c150ee7c0dc088e2" prot="private" static="no" mutable="no">
         <type>javax.swing.JScrollPane</type>
@@ -478,8 +479,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="760" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="760" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="962" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="962" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a46891b6c427e016aba83367022cb5143" prot="private" static="no" mutable="no">
         <type>javax.swing.JScrollPane</type>
@@ -493,8 +494,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="761" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="761" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="963" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="963" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a31899c59ca32113838005a971289de04" prot="private" static="no" mutable="no">
         <type>javax.swing.JTabbedPane</type>
@@ -508,8 +509,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="762" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="762" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="964" column="35" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="964" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" prot="private" static="no" mutable="no">
         <type>javax.swing.JTable</type>
@@ -523,11 +524,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="763" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="763" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="648" endline="662">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="94" endline="108">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="606" endline="618">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="965" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="965" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" compoundref="adminProducts_8java" startline="834" endline="848">es.ull.esit.app.adminProducts.jButton1ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a24e9bfefffaf42264d6e952680055a4a" compoundref="adminProducts_8java" startline="123" endline="137">es.ull.esit.app.adminProducts.jButton2ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" compoundref="adminProducts_8java" startline="766" endline="778">es.ull.esit.app.adminProducts.jTable1MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" prot="private" static="no" mutable="no">
         <type>javax.swing.JTable</type>
@@ -541,11 +542,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="764" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="764" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="664" endline="678">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="570" endline="584">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="620" endline="632">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="966" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="966" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" compoundref="adminProducts_8java" startline="858" endline="872">es.ull.esit.app.adminProducts.jButton4ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" compoundref="adminProducts_8java" startline="705" endline="719">es.ull.esit.app.adminProducts.jButton5ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" compoundref="adminProducts_8java" startline="789" endline="801">es.ull.esit.app.adminProducts.jTable2MouseClicked</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" prot="private" static="no" mutable="no">
         <type>javax.swing.JTable</type>
@@ -559,11 +560,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="765" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="765" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="680" endline="694">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="586" endline="600">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="634" endline="646">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="967" column="30" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="967" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" compoundref="adminProducts_8java" startline="882" endline="896">es.ull.esit.app.adminProducts.jButton6ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" compoundref="adminProducts_8java" startline="729" endline="743">es.ull.esit.app.adminProducts.jButton7ActionPerformed</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" compoundref="adminProducts_8java" startline="812" endline="824">es.ull.esit.app.adminProducts.jTable3MouseClicked</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="package-attrib">
@@ -574,12 +575,13 @@
         <name>modelDrink</name>
         <qualifiedname>es.ull.esit.app.adminProducts.modelDrink</qualifiedname>
         <briefdescription>
+<para>Modelos de tabla para mostrar listas de productos. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="20" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="20" bodyend="-1"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="27" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6ed2b3c0f581b3a99996de6e690e49bd" prot="package" static="no" mutable="no">
         <type>DefaultTableModel</type>
@@ -593,7 +595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="21" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="21" bodyend="-1"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="28" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a9b7f0aee8c0e2aec9321d9ae3cc004db" prot="package" static="no" mutable="no">
         <type>DefaultTableModel</type>
@@ -607,7 +609,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="22" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="22" bodyend="-1"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="29" column="23" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2561edf24be9b4a644bf0458bdfcf318" prot="package" static="no" mutable="no">
         <type>String[]</type>
@@ -617,12 +619,13 @@
         <qualifiedname>es.ull.esit.app.adminProducts.columnNames</qualifiedname>
         <initializer>= {&quot;ID&quot;, &quot;Item Name&quot;, &quot;Item Price&quot;}</initializer>
         <briefdescription>
+<para>Cabeceras comunes de las tablas. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="23" column="12" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="23" bodyend="23"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="31" column="12" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="31" bodyend="31"/>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a72cdf0b2e3165189a5b5da17824e6532" prot="package" static="no" mutable="no">
         <type>Long</type>
@@ -631,12 +634,13 @@
         <name>selectedDrinkID</name>
         <qualifiedname>es.ull.esit.app.adminProducts.selectedDrinkID</qualifiedname>
         <briefdescription>
+<para>IDs seleccionados actualmente en cada tabla (si hay selección). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="25" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="25" bodyend="-1"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="33" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ac9bd16f46bee26f53f05b3855f0da314" prot="package" static="no" mutable="no">
         <type>Long</type>
@@ -650,7 +654,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="26" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="26" bodyend="-1"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="34" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6fd9f25eb1dd01c1c1f2756a9537a792" prot="package" static="no" mutable="no">
         <type>Long</type>
@@ -664,7 +668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="27" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="27" bodyend="-1"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="35" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="35" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -675,15 +679,16 @@
         <name>adminProducts</name>
         <qualifiedname>es.ull.esit.app.adminProducts.adminProducts</qualifiedname>
         <briefdescription>
+<para>Creates new form <ref refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts" kindref="compound">adminProducts</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="29" column="12" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="29" bodyend="43"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a46009bf69bb0859d4e9f92fc978381b4" compoundref="adminProducts_8java" startline="699" endline="729">es.ull.esit.app.adminProducts.main</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="40" column="12" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="40" bodyend="54"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a46009bf69bb0859d4e9f92fc978381b4" compoundref="adminProducts_8java" startline="901" endline="931">es.ull.esit.app.adminProducts.main</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="package-func">
@@ -694,12 +699,14 @@
         <name>loadDrinks</name>
         <qualifiedname>es.ull.esit.app.adminProducts.loadDrinks</qualifiedname>
         <briefdescription>
+<para>Carga la lista de bebidas desde el backend y la vuelca en la tabla. </para>
         </briefdescription>
         <detaileddescription>
+<para>Captura excepciones y muestra un diálogo en caso de error de red. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="45" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="45" bodyend="59"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="61" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="61" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aef39066d00d363543fd6b392838a445a" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -708,12 +715,13 @@
         <name>loadAppetizer</name>
         <qualifiedname>es.ull.esit.app.adminProducts.loadAppetizer</qualifiedname>
         <briefdescription>
+<para>Carga la lista de aperitivos desde el backend y la vuelca en la tabla. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="61" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="61" bodyend="75"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="80" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="80" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a370c0c22b7b6d8eca58db13bb6267eb5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -722,12 +730,13 @@
         <name>loadmainCourse</name>
         <qualifiedname>es.ull.esit.app.adminProducts.loadmainCourse</qualifiedname>
         <briefdescription>
+<para>Carga la lista de platos principales desde el backend y la vuela en la tabla. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="77" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="77" bodyend="91"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="99" column="10" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="99" bodyend="113"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -742,16 +751,28 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Add&quot; (Drinks). </para>
         </briefdescription>
         <detaileddescription>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="94" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="94" bodyend="108"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="732">es.ull.esit.app.adminProducts.itemname</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="735">es.ull.esit.app.adminProducts.itemprice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="763">es.ull.esit.app.adminProducts.jTable1</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="123" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="123" bodyend="137"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="934">es.ull.esit.app.adminProducts.itemname</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="937">es.ull.esit.app.adminProducts.itemprice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="965">es.ull.esit.app.adminProducts.jTable1</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -766,45 +787,175 @@
 <para>WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </para>
         </detaileddescription>
         <inbodydescription>
+<para>Manejador de clics en la tabla de bebidas.</para>
+<para>Al hacer clic en una fila, se captura el ID de la bebida seleccionada para futuras operaciones de actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de ratón generado por el clic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Manejador de teclas presionadas en la tabla de bebidas.</para>
+<para>Permite capturar el ID de la bebida seleccionada al navegar con el teclado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de tecla generado por la acción del usuario. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Manejador del botón &quot;Update&quot; (Drinks).</para>
+<para>Actualiza el precio de la bebida seleccionada en el backend utilizando <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Refresca la tabla tras la actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Manejador del botón &quot;Add&quot; (Drinks).</para>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Manejador de clics en la tabla de aperitivos.</para>
+<para>Al hacer clic en una fila, se captura el ID del aperitivo seleccionado para futuras operaciones de actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de ratón generado por el clic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Manejador del botón &quot;Update&quot; (Appetizers).</para>
+<para>Actualiza el precio del aperitivo seleccionado en el backend utilizando <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Refresca la tabla tras la actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Manejador del botón &quot;Add&quot; (Appetizers).</para>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Manejador de clics en la tabla de platos principales.</para>
+<para>Al hacer clic en una fila, se captura el ID del plato seleccionado para futuras operaciones de actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de ratón generado por el clic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Manejador del botón &quot;Update&quot; (<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref>).</para>
+<para>Actualiza el precio del plato seleccionado en el backend utilizando <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Refresca la tabla tras la actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Manejador del botón &quot;Add&quot; (<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref>).</para>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Manejador del botón &quot;Go Back&quot;.</para>
+<para>Cierra la ventana actual y abre la ventana de inicio de sesión de administrador.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="117" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="117" bodyend="563"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="732">es.ull.esit.app.adminProducts.itemname</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="733">es.ull.esit.app.adminProducts.itemname1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="734">es.ull.esit.app.adminProducts.itemname2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="735">es.ull.esit.app.adminProducts.itemprice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="736">es.ull.esit.app.adminProducts.itemprice1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="737">es.ull.esit.app.adminProducts.itemprice2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab56caf5892acf7edb3e609258cc556a9" compoundref="adminProducts_8java" startline="738">es.ull.esit.app.adminProducts.jButton1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a7058004d3fbcafcb3345da2661015cb7" compoundref="adminProducts_8java" startline="739">es.ull.esit.app.adminProducts.jButton2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a9eb53de96594bf6b2a2da908faecc893" compoundref="adminProducts_8java" startline="740">es.ull.esit.app.adminProducts.jButton3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80eae9c31c95845c232314adf302d955" compoundref="adminProducts_8java" startline="741">es.ull.esit.app.adminProducts.jButton4</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a36be785c6d526685f1baf15aa58d0ed1" compoundref="adminProducts_8java" startline="742">es.ull.esit.app.adminProducts.jButton5</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a8fc2124604167c63132b29455c82c1b8" compoundref="adminProducts_8java" startline="743">es.ull.esit.app.adminProducts.jButton6</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ae2d5e0583896ae3aa26ed545d89f1547" compoundref="adminProducts_8java" startline="744">es.ull.esit.app.adminProducts.jButton7</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a41b67d98122d11db26b9687d33d76c28" compoundref="adminProducts_8java" startline="745">es.ull.esit.app.adminProducts.jLabel1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a919a514359f9e2059d4788c3dfcdb1ef" compoundref="adminProducts_8java" startline="746">es.ull.esit.app.adminProducts.jLabel10</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a174390612935a35a581a7833e7bdde8e" compoundref="adminProducts_8java" startline="747">es.ull.esit.app.adminProducts.jLabel2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aab56587bffb3e2ed8de113e6bce85ab8" compoundref="adminProducts_8java" startline="748">es.ull.esit.app.adminProducts.jLabel3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a7155cdfe2ea494b9b2b3d455c264ef68" compoundref="adminProducts_8java" startline="749">es.ull.esit.app.adminProducts.jLabel4</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a05b2ff8b7c68ee746894a809d0eea010" compoundref="adminProducts_8java" startline="750">es.ull.esit.app.adminProducts.jLabel5</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1d1d9efe444f332401e9376f0357d002" compoundref="adminProducts_8java" startline="751">es.ull.esit.app.adminProducts.jLabel6</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ac2463b6b189c210ce1caed57a92dd91a" compoundref="adminProducts_8java" startline="752">es.ull.esit.app.adminProducts.jLabel7</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeba498dcb7869d1153c2212af729211f" compoundref="adminProducts_8java" startline="753">es.ull.esit.app.adminProducts.jLabel8</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab8f9d1d5058049cc51ac47fbac427a91" compoundref="adminProducts_8java" startline="754">es.ull.esit.app.adminProducts.jLabel9</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1af4a2e7a62b0f71a10eee459c3c75ce4a" compoundref="adminProducts_8java" startline="755">es.ull.esit.app.adminProducts.jPanel1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ae9c56a41901f3ff086cd28e7868855a3" compoundref="adminProducts_8java" startline="756">es.ull.esit.app.adminProducts.jPanel2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a412ef5b344b98c553ebc9c1e4f7ace19" compoundref="adminProducts_8java" startline="757">es.ull.esit.app.adminProducts.jPanel3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0aee210b2a9cd3461cf7f0e77c503d60" compoundref="adminProducts_8java" startline="758">es.ull.esit.app.adminProducts.jPanel4</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1af17d42475dd9f7be97e7d70eb267ce05" compoundref="adminProducts_8java" startline="759">es.ull.esit.app.adminProducts.jScrollPane1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a572219a046ff83a1c150ee7c0dc088e2" compoundref="adminProducts_8java" startline="760">es.ull.esit.app.adminProducts.jScrollPane2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a46891b6c427e016aba83367022cb5143" compoundref="adminProducts_8java" startline="761">es.ull.esit.app.adminProducts.jScrollPane3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a31899c59ca32113838005a971289de04" compoundref="adminProducts_8java" startline="762">es.ull.esit.app.adminProducts.jTabbedPane1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="763">es.ull.esit.app.adminProducts.jTable1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="764">es.ull.esit.app.adminProducts.jTable2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="765">es.ull.esit.app.adminProducts.jTable3</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" compoundref="adminProducts_8java" startline="29" endline="43">es.ull.esit.app.adminProducts.adminProducts</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="117" endline="563">es.ull.esit.app.adminProducts.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="146" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="146" bodyend="682"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="934">es.ull.esit.app.adminProducts.itemname</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="935">es.ull.esit.app.adminProducts.itemname1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="936">es.ull.esit.app.adminProducts.itemname2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="937">es.ull.esit.app.adminProducts.itemprice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="938">es.ull.esit.app.adminProducts.itemprice1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="939">es.ull.esit.app.adminProducts.itemprice2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab56caf5892acf7edb3e609258cc556a9" compoundref="adminProducts_8java" startline="940">es.ull.esit.app.adminProducts.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a7058004d3fbcafcb3345da2661015cb7" compoundref="adminProducts_8java" startline="941">es.ull.esit.app.adminProducts.jButton2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a9eb53de96594bf6b2a2da908faecc893" compoundref="adminProducts_8java" startline="942">es.ull.esit.app.adminProducts.jButton3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80eae9c31c95845c232314adf302d955" compoundref="adminProducts_8java" startline="943">es.ull.esit.app.adminProducts.jButton4</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a36be785c6d526685f1baf15aa58d0ed1" compoundref="adminProducts_8java" startline="944">es.ull.esit.app.adminProducts.jButton5</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a8fc2124604167c63132b29455c82c1b8" compoundref="adminProducts_8java" startline="945">es.ull.esit.app.adminProducts.jButton6</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ae2d5e0583896ae3aa26ed545d89f1547" compoundref="adminProducts_8java" startline="946">es.ull.esit.app.adminProducts.jButton7</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a41b67d98122d11db26b9687d33d76c28" compoundref="adminProducts_8java" startline="947">es.ull.esit.app.adminProducts.jLabel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a919a514359f9e2059d4788c3dfcdb1ef" compoundref="adminProducts_8java" startline="948">es.ull.esit.app.adminProducts.jLabel10</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a174390612935a35a581a7833e7bdde8e" compoundref="adminProducts_8java" startline="949">es.ull.esit.app.adminProducts.jLabel2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aab56587bffb3e2ed8de113e6bce85ab8" compoundref="adminProducts_8java" startline="950">es.ull.esit.app.adminProducts.jLabel3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a7155cdfe2ea494b9b2b3d455c264ef68" compoundref="adminProducts_8java" startline="951">es.ull.esit.app.adminProducts.jLabel4</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a05b2ff8b7c68ee746894a809d0eea010" compoundref="adminProducts_8java" startline="952">es.ull.esit.app.adminProducts.jLabel5</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1d1d9efe444f332401e9376f0357d002" compoundref="adminProducts_8java" startline="953">es.ull.esit.app.adminProducts.jLabel6</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ac2463b6b189c210ce1caed57a92dd91a" compoundref="adminProducts_8java" startline="954">es.ull.esit.app.adminProducts.jLabel7</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeba498dcb7869d1153c2212af729211f" compoundref="adminProducts_8java" startline="955">es.ull.esit.app.adminProducts.jLabel8</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab8f9d1d5058049cc51ac47fbac427a91" compoundref="adminProducts_8java" startline="956">es.ull.esit.app.adminProducts.jLabel9</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1af4a2e7a62b0f71a10eee459c3c75ce4a" compoundref="adminProducts_8java" startline="957">es.ull.esit.app.adminProducts.jPanel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ae9c56a41901f3ff086cd28e7868855a3" compoundref="adminProducts_8java" startline="958">es.ull.esit.app.adminProducts.jPanel2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a412ef5b344b98c553ebc9c1e4f7ace19" compoundref="adminProducts_8java" startline="959">es.ull.esit.app.adminProducts.jPanel3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0aee210b2a9cd3461cf7f0e77c503d60" compoundref="adminProducts_8java" startline="960">es.ull.esit.app.adminProducts.jPanel4</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1af17d42475dd9f7be97e7d70eb267ce05" compoundref="adminProducts_8java" startline="961">es.ull.esit.app.adminProducts.jScrollPane1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a572219a046ff83a1c150ee7c0dc088e2" compoundref="adminProducts_8java" startline="962">es.ull.esit.app.adminProducts.jScrollPane2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a46891b6c427e016aba83367022cb5143" compoundref="adminProducts_8java" startline="963">es.ull.esit.app.adminProducts.jScrollPane3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a31899c59ca32113838005a971289de04" compoundref="adminProducts_8java" startline="964">es.ull.esit.app.adminProducts.jTabbedPane1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="965">es.ull.esit.app.adminProducts.jTable1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="966">es.ull.esit.app.adminProducts.jTable2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="967">es.ull.esit.app.adminProducts.jTable3</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" compoundref="adminProducts_8java" startline="40" endline="54">es.ull.esit.app.adminProducts.adminProducts</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1255f1fdb003346ab9126333f21840fd" compoundref="adminProducts_8java" startline="146" endline="682">es.ull.esit.app.adminProducts.initComponents</referencedby>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6df9d73c3fe2de84d91c7bfd124b08c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -817,12 +968,24 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Add&quot; (Drinks). </para>
         </briefdescription>
         <detaileddescription>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink" kindref="compound">Drink</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="565" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="565" bodyend="568"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="692" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="692" bodyend="695"/>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6c53e7d2f2c7019f6c5f7db6f125797f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -835,16 +998,28 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Add&quot; (Appetizers). </para>
         </briefdescription>
         <detaileddescription>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer" kindref="compound">Appetizer</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="570" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="570" bodyend="584"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="733">es.ull.esit.app.adminProducts.itemname1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="736">es.ull.esit.app.adminProducts.itemprice1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="764">es.ull.esit.app.adminProducts.jTable2</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="705" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="705" bodyend="719"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="935">es.ull.esit.app.adminProducts.itemname1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="938">es.ull.esit.app.adminProducts.itemprice1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="966">es.ull.esit.app.adminProducts.jTable2</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a005d3e5d44632937d31c58ad733526fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -857,16 +1032,28 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Add&quot; (<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref>). </para>
         </briefdescription>
         <detaileddescription>
+<para>Crea un objeto <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref> con los datos del formulario y lo envía al backend mediante <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Tras crear el recurso refresca la tabla.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="586" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="586" bodyend="600"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="734">es.ull.esit.app.adminProducts.itemname2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="737">es.ull.esit.app.adminProducts.itemprice2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="765">es.ull.esit.app.adminProducts.jTable3</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="729" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="729" bodyend="743"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="936">es.ull.esit.app.adminProducts.itemname2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="939">es.ull.esit.app.adminProducts.itemprice2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="967">es.ull.esit.app.adminProducts.jTable3</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a6f64baba8ff274dae64b388d82c0cc56" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -879,12 +1066,26 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador de teclas presionadas en la tabla de bebidas. </para>
         </briefdescription>
         <detaileddescription>
+<para>Permite capturar el ID de la bebida seleccionada al navegar con el teclado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de tecla generado por la acción del usuario. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="602" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="602" bodyend="604"/>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="753" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="753" bodyend="755"/>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a693f113641d7c77824df1131ff369756" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -897,18 +1098,32 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador de clics en la tabla de bebidas. </para>
         </briefdescription>
         <detaileddescription>
+<para>Al hacer clic en una fila, se captura el ID de la bebida seleccionada para futuras operaciones de actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de ratón generado por el clic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="606" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="606" bodyend="618"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a2e72a0fa3bebec58109f6ea6dbfeaf3e" compoundref="Drink_8java" startline="33" endline="33">es.ull.esit.app.middleware.model.Drink.getDrinksPrice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af39848104f2a8088bf1c0675fa7506ed" compoundref="Drink_8java" startline="30" endline="30">es.ull.esit.app.middleware.model.Drink.getItemDrinks</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="732">es.ull.esit.app.adminProducts.itemname</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="735">es.ull.esit.app.adminProducts.itemprice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="763">es.ull.esit.app.adminProducts.jTable1</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="766" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="766" bodyend="778"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1a2e72a0fa3bebec58109f6ea6dbfeaf3e" compoundref="Drink_8java" startline="65" endline="65">es.ull.esit.app.middleware.model.Drink.getDrinksPrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink_1af39848104f2a8088bf1c0675fa7506ed" compoundref="Drink_8java" startline="53" endline="53">es.ull.esit.app.middleware.model.Drink.getItemDrinks</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="934">es.ull.esit.app.adminProducts.itemname</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="937">es.ull.esit.app.adminProducts.itemprice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="965">es.ull.esit.app.adminProducts.jTable1</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab6e4988d840541b7451c5af6167a1a05" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -921,18 +1136,32 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador de clics en la tabla de aperitivos. </para>
         </briefdescription>
         <detaileddescription>
+<para>Al hacer clic en una fila, se captura el ID del aperitivo seleccionado para futuras operaciones de actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de ratón generado por el clic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="620" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="620" bodyend="632"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a8dc18f49db8ccce1e4d6aaa02a29df60" compoundref="Appetizer_8java" startline="33" endline="33">es.ull.esit.app.middleware.model.Appetizer.getAppetizersPrice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1aabc9da4c704778f439bd2d0f45d2732e" compoundref="Appetizer_8java" startline="30" endline="30">es.ull.esit.app.middleware.model.Appetizer.getItemAppetizers</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="733">es.ull.esit.app.adminProducts.itemname1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="736">es.ull.esit.app.adminProducts.itemprice1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="764">es.ull.esit.app.adminProducts.jTable2</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="789" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="789" bodyend="801"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1a8dc18f49db8ccce1e4d6aaa02a29df60" compoundref="Appetizer_8java" startline="65" endline="65">es.ull.esit.app.middleware.model.Appetizer.getAppetizersPrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Appetizer_1aabc9da4c704778f439bd2d0f45d2732e" compoundref="Appetizer_8java" startline="53" endline="53">es.ull.esit.app.middleware.model.Appetizer.getItemAppetizers</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="935">es.ull.esit.app.adminProducts.itemname1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="938">es.ull.esit.app.adminProducts.itemprice1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="966">es.ull.esit.app.adminProducts.jTable2</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1ab77177d353a34875368dcebdd4176150" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -945,18 +1174,32 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador de clics en la tabla de platos principales. </para>
         </briefdescription>
         <detaileddescription>
+<para>Al hacer clic en una fila, se captura el ID del plato seleccionado para futuras operaciones de actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de ratón generado por el clic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="634" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="634" bodyend="646"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1ac0eace190bde7bb6db0bb152cd0b856f" compoundref="MainCourse_8java" startline="33" endline="33">es.ull.esit.app.middleware.model.MainCourse.getFoodPrice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a573bef819713f1ee79ca53ccb1634836" compoundref="MainCourse_8java" startline="30" endline="30">es.ull.esit.app.middleware.model.MainCourse.getItemFood</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="734">es.ull.esit.app.adminProducts.itemname2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="737">es.ull.esit.app.adminProducts.itemprice2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="765">es.ull.esit.app.adminProducts.jTable3</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="812" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="812" bodyend="824"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1ac0eace190bde7bb6db0bb152cd0b856f" compoundref="MainCourse_8java" startline="65" endline="65">es.ull.esit.app.middleware.model.MainCourse.getFoodPrice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse_1a573bef819713f1ee79ca53ccb1634836" compoundref="MainCourse_8java" startline="53" endline="53">es.ull.esit.app.middleware.model.MainCourse.getItemFood</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="936">es.ull.esit.app.adminProducts.itemname2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="939">es.ull.esit.app.adminProducts.itemprice2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="967">es.ull.esit.app.adminProducts.jTable3</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a636f00d551fe1121b88e50ecdd4ec80d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -969,16 +1212,28 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Update&quot; (Drinks). </para>
         </briefdescription>
         <detaileddescription>
+<para>Actualiza el precio de la bebida seleccionada en el backend utilizando <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Refresca la tabla tras la actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="648" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="648" bodyend="662"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="732">es.ull.esit.app.adminProducts.itemname</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="735">es.ull.esit.app.adminProducts.itemprice</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="763">es.ull.esit.app.adminProducts.jTable1</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="834" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="834" bodyend="848"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a2f81908effff7b60d1d78ef6876f6c0e" compoundref="adminProducts_8java" startline="934">es.ull.esit.app.adminProducts.itemname</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a159670e708730ff41c1884c631517331" compoundref="adminProducts_8java" startline="937">es.ull.esit.app.adminProducts.itemprice</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a0d2ac73850d534661ad306dacf734fbd" compoundref="adminProducts_8java" startline="965">es.ull.esit.app.adminProducts.jTable1</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a80b6392141afbe40dc3879f6cd18eb2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -991,16 +1246,28 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Update&quot; (Appetizers). </para>
         </briefdescription>
         <detaileddescription>
+<para>Actualiza el precio del aperitivo seleccionado en el backend utilizando <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Refresca la tabla tras la actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="664" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="664" bodyend="678"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="733">es.ull.esit.app.adminProducts.itemname1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="736">es.ull.esit.app.adminProducts.itemprice1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="764">es.ull.esit.app.adminProducts.jTable2</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="858" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="858" bodyend="872"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a58b9ffd11e8bb19b7c759dace86ceb76" compoundref="adminProducts_8java" startline="935">es.ull.esit.app.adminProducts.itemname1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a23a2d0f0c6aed19a368c4f2f799b3827" compoundref="adminProducts_8java" startline="938">es.ull.esit.app.adminProducts.itemprice1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1aeca925f98999ea746902e7fc57a761c8" compoundref="adminProducts_8java" startline="966">es.ull.esit.app.adminProducts.jTable2</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a3887972aca9bc86ce9ce62756e7c7eae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1013,16 +1280,28 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador del botón &quot;Update&quot; (<ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1MainCourse" kindref="compound">MainCourse</ref>). </para>
         </briefdescription>
         <detaileddescription>
+<para>Actualiza el precio del plato seleccionado en el backend utilizando <ref refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" kindref="compound">ApiClient</ref>. Refresca la tabla tras la actualización.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evento de acción </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="680" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="680" bodyend="694"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="18">es.ull.esit.app.adminProducts.apiClient</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="734">es.ull.esit.app.adminProducts.itemname2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="737">es.ull.esit.app.adminProducts.itemprice2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="765">es.ull.esit.app.adminProducts.jTable3</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="882" column="18" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="882" bodyend="896"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" compoundref="adminProducts_8java" startline="25">es.ull.esit.app.adminProducts.apiClient</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acfc791e31a1e678f94e1437dba9f7ad5" compoundref="adminProducts_8java" startline="936">es.ull.esit.app.adminProducts.itemname2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1acf28c9547ce7b6d4fe09620a9722fded" compoundref="adminProducts_8java" startline="939">es.ull.esit.app.adminProducts.itemprice2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a07f6b670047d448217b00b5172523de8" compoundref="adminProducts_8java" startline="967">es.ull.esit.app.adminProducts.jTable3</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -1053,8 +1332,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="699" column="24" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="699" bodyend="729"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" compoundref="adminProducts_8java" startline="29" endline="43">es.ull.esit.app.adminProducts.adminProducts</references>
+        <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="901" column="24" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="901" bodyend="931"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" compoundref="adminProducts_8java" startline="40" endline="54">es.ull.esit.app.adminProducts.adminProducts</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1090,7 +1369,7 @@
         <label>javax.swing.JFrame</label>
       </node>
     </collaborationgraph>
-    <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="16" column="7" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="16" bodyend="767"/>
+    <location file="src/main/java/es/ull/esit/app/adminProducts.java" line="23" column="7" bodyfile="src/main/java/es/ull/esit/app/adminProducts.java" bodystart="23" bodyend="969"/>
     <listofallmembers>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a141cbf97e3fd70539b3eeb7ea2defcaa" prot="public" virt="non-virtual"><scope>es::ull::esit::app::adminProducts</scope><name>adminProducts</name></member>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts_1a1801f6baf3f389405f9299dd94f1d307" prot="private" virt="non-virtual"><scope>es::ull::esit::app::adminProducts</scope><name>apiClient</name></member>

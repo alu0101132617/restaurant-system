@@ -11,13 +11,14 @@
         <name>jButton1</name>
         <qualifiedname>es.ull.esit.app.AdminLogin.jButton1</qualifiedname>
         <briefdescription>
+<para>Botón que abre la vista del menú. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="208" column="31" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="208" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="224" column="31" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="224" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3ab6e656066fff4431f930c4524a96d3" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -26,13 +27,14 @@
         <name>jButton2</name>
         <qualifiedname>es.ull.esit.app.AdminLogin.jButton2</qualifiedname>
         <briefdescription>
+<para>Botón para actualizar precios. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="209" column="31" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="209" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="226" column="31" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="226" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a6dd5d63e88121aed92f87a9c88a595f6" prot="private" static="no" mutable="no">
         <type>javax.swing.JButton</type>
@@ -41,13 +43,14 @@
         <name>jButton3</name>
         <qualifiedname>es.ull.esit.app.AdminLogin.jButton3</qualifiedname>
         <briefdescription>
+<para>Botón para cerrar sesión (LogOut). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="210" column="31" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="210" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="228" column="31" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="228" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3be6b0e2d8fe205a93e9de5e55e4cdc3" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -56,13 +59,14 @@
         <name>jLabel1</name>
         <qualifiedname>es.ull.esit.app.AdminLogin.jLabel1</qualifiedname>
         <briefdescription>
+<para>Imagen/logo mostrado en la ventana. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="211" column="30" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="211" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="230" column="30" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="230" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a7dbe3860da5b19ac66ef3d5141889c9b" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -71,13 +75,14 @@
         <name>jLabel3</name>
         <qualifiedname>es.ull.esit.app.AdminLogin.jLabel3</qualifiedname>
         <briefdescription>
+<para>Título/etiqueta de bienvenida. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="212" column="30" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="212" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="232" column="30" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="232" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adfd6dd18df9e2c6646afe4c668eed71b" prot="private" static="no" mutable="no">
         <type>javax.swing.JPanel</type>
@@ -86,13 +91,14 @@
         <name>jPanel1</name>
         <qualifiedname>es.ull.esit.app.AdminLogin.jPanel1</qualifiedname>
         <briefdescription>
+<para>Panel contenedor principal. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="213" column="30" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="213" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="234" column="30" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="234" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -111,8 +117,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="25" column="12" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="25" bodyend="27"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a085e3bf140f8b75cf6831a55ca23a272" compoundref="AdminLogin_8java" startline="175" endline="205">es.ull.esit.app.AdminLogin.main</referencedby>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a085e3bf140f8b75cf6831a55ca23a272" compoundref="AdminLogin_8java" startline="190" endline="220">es.ull.esit.app.AdminLogin.main</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -129,17 +135,51 @@
 <para>WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </para>
         </detaileddescription>
         <inbodydescription>
+<para>Acción al pulsar &quot;Update Prices&quot;. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción generado por el botón. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Acción al pulsar &quot;Menu&quot;. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción generado por el botón. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Acción al pulsar &quot;LogOut&quot;. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción generado por el botón. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+</para>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="36" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="36" bodyend="132"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a1fd1b9bda001daa4cb53ebe2d056388a" compoundref="AdminLogin_8java" startline="208">es.ull.esit.app.AdminLogin.jButton1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3ab6e656066fff4431f930c4524a96d3" compoundref="AdminLogin_8java" startline="209">es.ull.esit.app.AdminLogin.jButton2</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a6dd5d63e88121aed92f87a9c88a595f6" compoundref="AdminLogin_8java" startline="210">es.ull.esit.app.AdminLogin.jButton3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3be6b0e2d8fe205a93e9de5e55e4cdc3" compoundref="AdminLogin_8java" startline="211">es.ull.esit.app.AdminLogin.jLabel1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a7dbe3860da5b19ac66ef3d5141889c9b" compoundref="AdminLogin_8java" startline="212">es.ull.esit.app.AdminLogin.jLabel3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adfd6dd18df9e2c6646afe4c668eed71b" compoundref="AdminLogin_8java" startline="213">es.ull.esit.app.AdminLogin.jPanel1</references>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="36" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="36" bodyend="147"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a1fd1b9bda001daa4cb53ebe2d056388a" compoundref="AdminLogin_8java" startline="224">es.ull.esit.app.AdminLogin.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3ab6e656066fff4431f930c4524a96d3" compoundref="AdminLogin_8java" startline="226">es.ull.esit.app.AdminLogin.jButton2</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a6dd5d63e88121aed92f87a9c88a595f6" compoundref="AdminLogin_8java" startline="228">es.ull.esit.app.AdminLogin.jButton3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a3be6b0e2d8fe205a93e9de5e55e4cdc3" compoundref="AdminLogin_8java" startline="230">es.ull.esit.app.AdminLogin.jLabel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a7dbe3860da5b19ac66ef3d5141889c9b" compoundref="AdminLogin_8java" startline="232">es.ull.esit.app.AdminLogin.jLabel3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adfd6dd18df9e2c6646afe4c668eed71b" compoundref="AdminLogin_8java" startline="234">es.ull.esit.app.AdminLogin.jPanel1</references>
         <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a04d4cf7c783e2a555360abfcd60484e8" compoundref="AdminLogin_8java" startline="25" endline="27">es.ull.esit.app.AdminLogin.AdminLogin</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="132">es.ull.esit.app.AdminLogin.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" compoundref="AdminLogin_8java" startline="36" endline="147">es.ull.esit.app.AdminLogin.initComponents</referencedby>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a71d55a0641291c96791f29a62a6faf06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -169,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="141" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="141" bodyend="144"/>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="156" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="156" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ae34fccb6624928acaf61464fc7239f22" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -199,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="153" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="153" bodyend="156"/>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="168" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="168" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1adbe42fbdb4e39f21afebcfbd99360206" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -229,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="165" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="165" bodyend="168"/>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="180" column="18" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="180" bodyend="183"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -261,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="175" column="24" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="175" bodyend="205"/>
+        <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="190" column="24" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="190" bodyend="220"/>
         <references refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a04d4cf7c783e2a555360abfcd60484e8" compoundref="AdminLogin_8java" startline="25" endline="27">es.ull.esit.app.AdminLogin.AdminLogin</references>
       </memberdef>
     </sectiondef>
@@ -291,7 +331,7 @@
         <label>javax::swing::JFrame</label>
       </node>
     </collaborationgraph>
-    <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="18" column="7" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="18" bodyend="215"/>
+    <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="18" column="7" bodyfile="src/main/java/es/ull/esit/app/AdminLogin.java" bodystart="18" bodyend="236"/>
     <listofallmembers>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1a04d4cf7c783e2a555360abfcd60484e8" prot="public" virt="non-virtual"><scope>es::ull::esit::app::AdminLogin</scope><name>AdminLogin</name></member>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin_1ad0adf02c285046ac1f7593fa25edf289" prot="private" virt="non-virtual"><scope>es::ull::esit::app::AdminLogin</scope><name>initComponents</name></member>

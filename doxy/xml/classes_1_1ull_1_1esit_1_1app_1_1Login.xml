@@ -11,13 +11,14 @@
         <name>jButton1</name>
         <qualifiedname>es.ull.esit.app.Login.jButton1</qualifiedname>
         <briefdescription>
+<para>Botón para iniciar sesión (Log In). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="181" column="31" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="181" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="243" column="31" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="243" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -26,13 +27,14 @@
         <name>jLabel1</name>
         <qualifiedname>es.ull.esit.app.Login.jLabel1</qualifiedname>
         <briefdescription>
+<para>Imagen/logo mostrado en la ventana. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="182" column="30" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="182" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="245" column="30" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="245" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" prot="private" static="no" mutable="no">
         <type>javax.swing.JLabel</type>
@@ -41,13 +43,14 @@
         <name>jLabel3</name>
         <qualifiedname>es.ull.esit.app.Login.jLabel3</qualifiedname>
         <briefdescription>
+<para>Título de la ventana (User <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref>). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="183" column="30" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="183" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="247" column="30" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="247" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" prot="private" static="no" mutable="no">
         <type>javax.swing.JPanel</type>
@@ -56,13 +59,14 @@
         <name>jPanel1</name>
         <qualifiedname>es.ull.esit.app.Login.jPanel1</qualifiedname>
         <briefdescription>
+<para>Panel contenedor principal. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="184" column="30" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="184" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="249" column="30" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="249" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" prot="private" static="no" mutable="no">
         <type>javax.swing.JPasswordField</type>
@@ -71,14 +75,15 @@
         <name>jPasswordField1</name>
         <qualifiedname>es.ull.esit.app.Login.jPasswordField1</qualifiedname>
         <briefdescription>
+<para>Campo de entrada para la contraseña. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="185" column="38" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="185" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="130" endline="139">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="251" column="38" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="251" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="181" endline="190">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" prot="private" static="no" mutable="no">
         <type>javax.swing.JTextField</type>
@@ -87,14 +92,15 @@
         <name>usernametxt</name>
         <qualifiedname>es.ull.esit.app.Login.usernametxt</qualifiedname>
         <briefdescription>
+<para>Campo de entrada para el nombre de usuario. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="186" column="34" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="186" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="130" endline="139">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="253" column="34" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="253" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="181" endline="190">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" prot="private" static="no" mutable="no">
         <type>javax.swing.JComboBox&lt; String &gt;</type>
@@ -103,14 +109,15 @@
         <name>usertypecmbo</name>
         <qualifiedname>es.ull.esit.app.Login.usertypecmbo</qualifiedname>
         <briefdescription>
+<para>Combo que permite seleccionar el tipo de usuario (admin/cashier). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="187" column="33" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="187" bodyend="-1"/>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="130" endline="139">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="255" column="33" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="255" bodyend="-1"/>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" compoundref="Login_8java" startline="181" endline="190">es.ull.esit.app.Login.jButton1ActionPerformed</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -124,12 +131,15 @@
 <para>Creates new form <ref refid="classes_1_1ull_1_1esit_1_1app_1_1Login" kindref="compound">Login</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="16" column="12" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="16" bodyend="18"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1adf82dc7301d9e1b9ad0a081d8cfeff51" compoundref="Login_8java" startline="148" endline="178">es.ull.esit.app.Login.main</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="29" column="12" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="29" bodyend="31"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1adf82dc7301d9e1b9ad0a081d8cfeff51" compoundref="Login_8java" startline="209" endline="239">es.ull.esit.app.Login.main</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -140,24 +150,57 @@
         <name>initComponents</name>
         <qualifiedname>es.ull.esit.app.Login.initComponents</qualifiedname>
         <briefdescription>
-<para>This method is called from within the constructor to initialize the form. </para>
+<para>Initializes GUI components. </para>
         </briefdescription>
         <detaileddescription>
-<para>WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </para>
+<para>This method is called from within the constructor to initialize the form <simplesect kind="warning"><para>Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </para>
+</simplesect>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Initializes GUI components <simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
+<para>Manejador de cambios en el combo de tipo de usuario.</para>
+<para>Método generado por el editor. Actualmente no realiza ninguna acción, pero queda como punto de extensión si se quiere cambiar el comportamiento cuando el usuario selecciona un tipo diferente.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción generado por el combo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+Acción del botón &quot;Log In&quot;.</para>
+<para>Comprueba si las credenciales corresponden a un administrador (usuario y contraseña &quot;admin&quot;) y, si es así, abre la ventana de administración. Si el tipo de usuario seleccionado es &quot;cashier&quot;, abre la ventana de cajero pasando el nombre de usuario.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción asociado al botón. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+</para>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="27" column="18" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="27" bodyend="128"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" compoundref="Login_8java" startline="181">es.ull.esit.app.Login.jButton1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" compoundref="Login_8java" startline="182">es.ull.esit.app.Login.jLabel1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" compoundref="Login_8java" startline="183">es.ull.esit.app.Login.jLabel3</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" compoundref="Login_8java" startline="184">es.ull.esit.app.Login.jPanel1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" compoundref="Login_8java" startline="185">es.ull.esit.app.Login.jPasswordField1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" compoundref="Login_8java" startline="186">es.ull.esit.app.Login.usernametxt</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" compoundref="Login_8java" startline="187">es.ull.esit.app.Login.usertypecmbo</references>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="27" endline="128">es.ull.esit.app.Login.initComponents</referencedby>
-        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" compoundref="Login_8java" startline="16" endline="18">es.ull.esit.app.Login.Login</referencedby>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="46" column="18" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="46" bodyend="168"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" compoundref="Login_8java" startline="243">es.ull.esit.app.Login.jButton1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a822fa6426790c6c44c7fad789bddfcfa" compoundref="Login_8java" startline="245">es.ull.esit.app.Login.jLabel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a9225931135e2f0f0c6488d3fc204ad4c" compoundref="Login_8java" startline="247">es.ull.esit.app.Login.jLabel3</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a30279203310c1bc8fcc9e6d15edeac13" compoundref="Login_8java" startline="249">es.ull.esit.app.Login.jPanel1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" compoundref="Login_8java" startline="251">es.ull.esit.app.Login.jPasswordField1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" compoundref="Login_8java" startline="253">es.ull.esit.app.Login.usernametxt</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" compoundref="Login_8java" startline="255">es.ull.esit.app.Login.usertypecmbo</references>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" compoundref="Login_8java" startline="46" endline="168">es.ull.esit.app.Login.initComponents</referencedby>
+        <referencedby refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" compoundref="Login_8java" startline="29" endline="31">es.ull.esit.app.Login.Login</referencedby>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4466f2f88c125b3f609314a421381778" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -170,15 +213,29 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Acción del botón &quot;Log In&quot;. </para>
         </briefdescription>
         <detaileddescription>
+<para>Comprueba si las credenciales corresponden a un administrador (usuario y contraseña &quot;admin&quot;) y, si es así, abre la ventana de administración. Si el tipo de usuario seleccionado es &quot;cashier&quot;, abre la ventana de cajero pasando el nombre de usuario.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción asociado al botón. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="130" column="18" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="130" bodyend="139"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" compoundref="Login_8java" startline="185">es.ull.esit.app.Login.jPasswordField1</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" compoundref="Login_8java" startline="186">es.ull.esit.app.Login.usernametxt</references>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" compoundref="Login_8java" startline="187">es.ull.esit.app.Login.usertypecmbo</references>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="181" column="18" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="181" bodyend="190"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a6709769133ef85f8201d86e6e436338a" compoundref="Login_8java" startline="251">es.ull.esit.app.Login.jPasswordField1</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a36e0d5c6df8e50615b96fbb67f855c8c" compoundref="Login_8java" startline="253">es.ull.esit.app.Login.usernametxt</references>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a981cc276ccd95ea19d12d7ad8c2d57cc" compoundref="Login_8java" startline="255">es.ull.esit.app.Login.usertypecmbo</references>
       </memberdef>
       <memberdef kind="function" id="classes_1_1ull_1_1esit_1_1app_1_1Login_1aca803b0cc42ac57cac851a869f6b129c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -191,12 +248,26 @@
           <declname>evt</declname>
         </param>
         <briefdescription>
+<para>Manejador de cambios en el combo de tipo de usuario. </para>
         </briefdescription>
         <detaileddescription>
+<para>Método generado por el editor. Actualmente no realiza ninguna acción, pero queda como punto de extensión si se quiere cambiar el comportamiento cuando el usuario selecciona un tipo diferente.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Evento de acción generado por el combo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="141" column="18" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="141" bodyend="143"/>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="202" column="18" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="202" bodyend="204"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -227,8 +298,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main/java/es/ull/esit/app/Login.java" line="148" column="24" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="148" bodyend="178"/>
-        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" compoundref="Login_8java" startline="16" endline="18">es.ull.esit.app.Login.Login</references>
+        <location file="src/main/java/es/ull/esit/app/Login.java" line="209" column="24" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="209" bodyend="239"/>
+        <references refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a4991bf057499a53e77492291ee9ec66a" compoundref="Login_8java" startline="29" endline="31">es.ull.esit.app.Login.Login</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -257,7 +328,7 @@
         <label>javax.swing.JFrame</label>
       </node>
     </collaborationgraph>
-    <location file="src/main/java/es/ull/esit/app/Login.java" line="11" column="7" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="11" bodyend="189"/>
+    <location file="src/main/java/es/ull/esit/app/Login.java" line="23" column="7" bodyfile="src/main/java/es/ull/esit/app/Login.java" bodystart="23" bodyend="257"/>
     <listofallmembers>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1ae61fa95fab1880d2e48d4b52948f51f6" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>initComponents</name></member>
       <member refid="classes_1_1ull_1_1esit_1_1app_1_1Login_1a7b0063f113a10a332dc9961392fd0628" prot="private" virt="non-virtual"><scope>es::ull::esit::app::Login</scope><name>jButton1</name></member>
