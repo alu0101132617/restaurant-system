@@ -1,0 +1,308 @@
+\chapter{📮 Peticiones de Ejemplo para Postman }
+\hypertarget{md_POSTMAN-EXAMPLES}{}\label{md_POSTMAN-EXAMPLES}\index{📮 Peticiones de Ejemplo para Postman@{📮 Peticiones de Ejemplo para Postman}}
+\label{md_POSTMAN-EXAMPLES_autotoc_md15}%
+\Hypertarget{md_POSTMAN-EXAMPLES_autotoc_md15}%
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md16}{}\doxysection{\texorpdfstring{Base URL}{Base URL}}\label{md_POSTMAN-EXAMPLES_autotoc_md16}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{http://localhost:8080}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md18}{}\doxysection{\texorpdfstring{1️⃣ GET -\/ Información del Restaurante}{1️⃣ GET -\/ Información del Restaurante}}\label{md_POSTMAN-EXAMPLES_autotoc_md18}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md19}{}\doxysubsection{\texorpdfstring{Request}{Request}}\label{md_POSTMAN-EXAMPLES_autotoc_md19}
+{\bfseries{Method\+:}} {\ttfamily GET} ~\newline
+ {\bfseries{URL\+:}} {\ttfamily \href{http://localhost:8080/api/info}{\texttt{http\+://localhost\+:8080/api/info}}} ~\newline
+ {\bfseries{Headers\+:}} Ninguno necesario\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md20}{}\doxysubsection{\texorpdfstring{Response esperada (200 OK)}{Response esperada (200 OK)}}\label{md_POSTMAN-EXAMPLES_autotoc_md20}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}Mi\ Restaurante"{},}
+\DoxyCodeLine{\ \ \ \ "{}address"{}:\ "{}Calle\ Falsa\ 123"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md22}{}\doxysection{\texorpdfstring{2️⃣ GET -\/ Obtener Menú Completo}{2️⃣ GET -\/ Obtener Menú Completo}}\label{md_POSTMAN-EXAMPLES_autotoc_md22}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md23}{}\doxysubsection{\texorpdfstring{Request}{Request}}\label{md_POSTMAN-EXAMPLES_autotoc_md23}
+{\bfseries{Method\+:}} {\ttfamily GET} ~\newline
+ {\bfseries{URL\+:}} {\ttfamily \href{http://localhost:8080/api/menu}{\texttt{http\+://localhost\+:8080/api/menu}}} ~\newline
+ {\bfseries{Headers\+:}} Ninguno necesario\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md24}{}\doxysubsection{\texorpdfstring{Response esperada (200 OK)}{Response esperada (200 OK)}}\label{md_POSTMAN-EXAMPLES_autotoc_md24}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}mains"{}:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Buratta\ Pizza"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 54}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 2,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Pink\ Pasta"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 12}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Rosemary\ Salmon"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 30}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Spaghetti"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 8}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Crown\ Pizza"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 50}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ "{}appetizers"{}:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Truffel\ Fries"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 23}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 2,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Molten\ Chocolate"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 12}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Mac\&Cheese\ Balls"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 12}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Dynamite\ Shrimp"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 32}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Kheera"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 10}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ "{}drinks"{}:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}cola"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 6}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 2,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}7up"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 6}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}orange\ juice"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 10}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}mojito"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 14}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}id"{}:\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}:\ "{}Red\ Bull"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}price"{}:\ 8}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md26}{}\doxysection{\texorpdfstring{3️⃣ POST -\/ Login de Cajero (Éxito)}{3️⃣ POST -\/ Login de Cajero (Éxito)}}\label{md_POSTMAN-EXAMPLES_autotoc_md26}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md27}{}\doxysubsection{\texorpdfstring{Request}{Request}}\label{md_POSTMAN-EXAMPLES_autotoc_md27}
+{\bfseries{Method\+:}} {\ttfamily POST} ~\newline
+ {\bfseries{URL\+:}} {\ttfamily \href{http://localhost:8080/api/login}{\texttt{http\+://localhost\+:8080/api/login}}} ~\newline
+ {\bfseries{Headers\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+
+\end{DoxyCode}
+
+
+{\bfseries{Body (raw JSON)\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}abdualmajeed"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md28}{}\doxysubsection{\texorpdfstring{Response esperada (200 OK)}{Response esperada (200 OK)}}\label{md_POSTMAN-EXAMPLES_autotoc_md28}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}ok"{},}
+\DoxyCodeLine{\ \ \ \ "{}welcome"{}:\ "{}Welcome\ abdualmajeed"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md30}{}\doxysection{\texorpdfstring{4️⃣ POST -\/ Login de Cajero (Cajero No Existente)}{4️⃣ POST -\/ Login de Cajero (Cajero No Existente)}}\label{md_POSTMAN-EXAMPLES_autotoc_md30}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md31}{}\doxysubsection{\texorpdfstring{Request}{Request}}\label{md_POSTMAN-EXAMPLES_autotoc_md31}
+{\bfseries{Method\+:}} {\ttfamily POST} ~\newline
+ {\bfseries{URL\+:}} {\ttfamily \href{http://localhost:8080/api/login}{\texttt{http\+://localhost\+:8080/api/login}}} ~\newline
+ {\bfseries{Headers\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+
+\end{DoxyCode}
+
+
+{\bfseries{Body (raw JSON)\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}usuario\_falso"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md32}{}\doxysubsection{\texorpdfstring{Response esperada (200 OK)}{Response esperada (200 OK)}}\label{md_POSTMAN-EXAMPLES_autotoc_md32}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}error"{},}
+\DoxyCodeLine{\ \ \ \ "{}message"{}:\ "{}unknown\ cashier"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md34}{}\doxysection{\texorpdfstring{5️⃣ POST -\/ Login de Cajero (Otro cajero válido)}{5️⃣ POST -\/ Login de Cajero (Otro cajero válido)}}\label{md_POSTMAN-EXAMPLES_autotoc_md34}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md35}{}\doxysubsection{\texorpdfstring{Request}{Request}}\label{md_POSTMAN-EXAMPLES_autotoc_md35}
+{\bfseries{Method\+:}} {\ttfamily POST} ~\newline
+ {\bfseries{URL\+:}} {\ttfamily \href{http://localhost:8080/api/login}{\texttt{http\+://localhost\+:8080/api/login}}} ~\newline
+ {\bfseries{Headers\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+
+\end{DoxyCode}
+
+
+{\bfseries{Body (raw JSON)\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}abdualrahman"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md36}{}\doxysubsection{\texorpdfstring{Response esperada (200 OK)}{Response esperada (200 OK)}}\label{md_POSTMAN-EXAMPLES_autotoc_md36}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}ok"{},}
+\DoxyCodeLine{\ \ \ \ "{}welcome"{}:\ "{}Welcome\ abdualrahman"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md38}{}\doxysection{\texorpdfstring{6️⃣ POST -\/ Login sin nombre (Error de validación)}{6️⃣ POST -\/ Login sin nombre (Error de validación)}}\label{md_POSTMAN-EXAMPLES_autotoc_md38}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md39}{}\doxysubsection{\texorpdfstring{Request}{Request}}\label{md_POSTMAN-EXAMPLES_autotoc_md39}
+{\bfseries{Method\+:}} {\ttfamily POST} ~\newline
+ {\bfseries{URL\+:}} {\ttfamily \href{http://localhost:8080/api/login}{\texttt{http\+://localhost\+:8080/api/login}}} ~\newline
+ {\bfseries{Headers\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+
+\end{DoxyCode}
+
+
+{\bfseries{Body (raw JSON)\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md40}{}\doxysubsection{\texorpdfstring{Response esperada (400 Bad Request)}{Response esperada (400 Bad Request)}}\label{md_POSTMAN-EXAMPLES_autotoc_md40}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}error"{},}
+\DoxyCodeLine{\ \ \ \ "{}message"{}:\ "{}missing\ name"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md42}{}\doxysection{\texorpdfstring{📝 Notas para Postman}{📝 Notas para Postman}}\label{md_POSTMAN-EXAMPLES_autotoc_md42}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md43}{}\doxysubsection{\texorpdfstring{Cómo crear las peticiones\+:}{Cómo crear las peticiones\+:}}\label{md_POSTMAN-EXAMPLES_autotoc_md43}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Crear una nueva Collection}} llamada "{}\+Restaurant API"{}
+\item {\bfseries{Para peticiones GET\+:}}
+\begin{DoxyItemize}
+\item Click en "{}\+New Request"{}
+\item Selecciona método {\ttfamily GET}
+\item Pega la URL
+\item Click en "{}\+Send"{}
+\end{DoxyItemize}
+\item {\bfseries{Para peticiones POST\+:}}
+\begin{DoxyItemize}
+\item Click en "{}\+New Request"{}
+\item Selecciona método {\ttfamily POST}
+\item Pega la URL
+\item Ve a la pestaña "{}\+Headers"{} y añade\+:
+\begin{DoxyItemize}
+\item Key\+: {\ttfamily Content-\/\+Type}
+\item Value\+: {\ttfamily application/json}
+\end{DoxyItemize}
+\item Ve a la pestaña "{}\+Body"{}
+\item Selecciona "{}raw"{} y "{}\+JSON"{}
+\item Pega el JSON del body
+\item Click en "{}\+Send"{}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md44}{}\doxysubsection{\texorpdfstring{Cashiers válidos en la BD\+:}{Cashiers válidos en la BD\+:}}\label{md_POSTMAN-EXAMPLES_autotoc_md44}
+
+\begin{DoxyItemize}
+\item {\ttfamily abdualmajeed} (ID\+: 4231, Salary\+: 7000)
+\item {\ttfamily abdualrahman} (ID\+: 4232, Salary\+: 7000)
+\end{DoxyItemize}\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md45}{}\doxysubsection{\texorpdfstring{Variables de entorno (Opcional)\+:}{Variables de entorno (Opcional)\+:}}\label{md_POSTMAN-EXAMPLES_autotoc_md45}
+Puedes crear una variable de entorno en Postman\+:
+\begin{DoxyItemize}
+\item Variable\+: {\ttfamily base\+\_\+url}
+\item Value\+: {\ttfamily \href{http://localhost:8080}{\texttt{http\+://localhost\+:8080}}}
+\end{DoxyItemize}
+
+Luego usar\+: {\ttfamily \{\{base\+\_\+url\}\}/api/info}
+
+\DoxyHorRuler{0}
+\hypertarget{md_POSTMAN-EXAMPLES_autotoc_md47}{}\doxysection{\texorpdfstring{🔍 Verificación de la Base de Datos}{🔍 Verificación de la Base de Datos}}\label{md_POSTMAN-EXAMPLES_autotoc_md47}
+Si quieres verificar los datos directamente en My\+SQL\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{-\/-\/\ Ver\ todos\ los\ cashiers}}
+\DoxyCodeLine{\textcolor{keyword}{SELECT}\ *\ \textcolor{keyword}{FROM}\ Cashier;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{-\/-\/\ Ver\ el\ menú\ completo}}
+\DoxyCodeLine{\textcolor{keyword}{SELECT}\ *\ \textcolor{keyword}{FROM}\ maincourse;}
+\DoxyCodeLine{\textcolor{keyword}{SELECT}\ *\ \textcolor{keyword}{FROM}\ appetizers;}
+\DoxyCodeLine{\textcolor{keyword}{SELECT}\ *\ \textcolor{keyword}{FROM}\ drinks;}
+
+\end{DoxyCode}
+
+
+Ejecuta con\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{docker\ exec\ -\/it\ restaurant-\/mysql\ mysql\ -\/uroot\ -\/prootpass\ -\/e\ "{}USE\ project3;\ SELECT\ *\ FROM\ Cashier;"{}}
+
+\end{DoxyCode}
+ 

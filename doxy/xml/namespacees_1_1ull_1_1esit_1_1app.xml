@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacees_1_1ull_1_1esit_1_1app" kind="namespace" language="Java">
+    <compoundname>es::ull::esit::app</compoundname>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1AdminLogin" prot="public">es::ull::esit::app::AdminLogin</innerclass>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1adminProducts" prot="public">es::ull::esit::app::adminProducts</innerclass>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1Cashier" prot="public">es::ull::esit::app::Cashier</innerclass>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1Frame1" prot="public">es::ull::esit::app::Frame1</innerclass>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1Info" prot="public">es::ull::esit::app::Info</innerclass>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1JavaApplication2" prot="public">es::ull::esit::app::JavaApplication2</innerclass>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1Login" prot="public">es::ull::esit::app::Login</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware">es::ull::esit::app::middleware</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/es/ull/esit/app/AdminLogin.java" line="6" column="15"/>
+  </compounddef>
+</doxygen>

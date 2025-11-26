@@ -18,7 +18,6 @@
   <packaging>jar</packaging>                  <!-- Tipo de empaquetado (jar/war) -->
 
   <name>RestaurantSystem</name>               <!-- Nombre visible del proyecto -->
-  <url>http://localhost:9000/dashboard?id=RestaurantSystem</url>  <!-- URL dek proyecto (SonarQube) -->
   <description>Sistema de gestión de restaurante</description>
 
   <!-- ======================== PROPIEDADES ======================= -->
@@ -29,9 +28,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Versión de Java para compilación -->
-    <maven.compiler.release>17</maven.compiler.release>               
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <!-- (Optimizado: solo release es necesario) -->
+    <maven.compiler.release>17</maven.compiler.release>
+
+    <!-- Versión de JaCoCo usada tanto en build como en reports -->
+    <jacoco.version>0.8.12</jacoco.version>
   </properties>
 
   <!-- ====================== DEPENDENCIAS ======================== -->
@@ -40,7 +41,7 @@
   <dependencyManagement>
     <dependencies>
       <!-- BOM (Bill of Materials) de JUnit 5 -->
-      <!-- Centraliza versiones de dependecias de JUnit -->
+      <!-- Centraliza versiones de dependencias de JUnit -->
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
@@ -67,25 +68,27 @@
       <version>8.4.0</version>
     </dependency>
 
-
     <!-- JaCoCo Agent: mide la cobertura de las pruebas (cuánto código se ejecuta al testear) -->
     <dependency>
       <groupId>org.jacoco</groupId>
       <artifactId>org.jacoco.agent</artifactId>
-      <version>0.8.12</version>
+      <version>${jacoco.version}</version>
       <scope>test</scope>
     </dependency>
 
+    <!-- Jackson JSON -->
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.17.0</version> </dependency>
+        <version>2.17.0</version>
+    </dependency>
 
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>2.17.0</version> 
+        <version>2.17.0</version>
     </dependency>
+
   </dependencies>
 
   <!-- ================== CONSTRUCCIÓN (BUILD) =================== -->
@@ -98,30 +101,28 @@
       <!--  Compila el código fuente Java con la versión configurada -->
       <!-- Se ejecuta en la fase: compile -->
       <plugin>
-
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.13.0</version>
-
         <configuration>
           <!-- Configura la versión de Java para compilación -->
           <release>17</release>
         </configuration>
-
       </plugin>
 
       <!-- Maven surefire plugin (Testeo) -->
       <!-- Ejecuta automáticamente las pruebas unitarias con JUnit 5 -->
       <!-- Fase: test -->
+      <!-- (Optimizado con reportsDirectory para SonarCloud) -->
       <plugin>
-
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.3.0</version>
-
         <configuration>
           <!-- Desactiva el uso del módulo path (necesario para algunos IDEs) -->
           <useModulePath>false</useModulePath>
-        </configuration>
 
+          <!-- Output estandarizado para SonarCloud -->
+          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+        </configuration>
       </plugin>
 
       <!-- Maven jar plugin (Creación del ejecutable .jar) -->
@@ -129,17 +130,14 @@
       <!-- Fase: package -->
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
-
         <version>3.4.2</version>
         <configuration>
-
           <archive>
             <manifest>
               <!-- Define la clase principal que contiene el método main() -->
               <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
             </manifest>
           </archive>
-          
         </configuration>
       </plugin>
 
@@ -147,22 +145,18 @@
       <!-- Permite ejecutar la aplicación desde la línea de comandos con Maven -->
       <!-- Fase: no automática (se ejecuta manualmente con 'mvn exec:java') -->
       <plugin>
-
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.3.0</version>
-
         <configuration>
           <!-- Indica la clase con el método main() que se ejecutará -->
           <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
         </configuration>
-
       </plugin>
 
       <!-- Maven Checkstyle plugin (Análisis de estilo del código) -->
       <!-- Verifica estilo de código según reglas de estilo predeterminadas - Google Java Style -->
       <plugin>
-
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>3.6.0</version>
@@ -170,30 +164,31 @@
         <configuration>
           <!-- Especifica el archivo de configuración de reglas de estilo -->
           <configLocation>google_checks.xml</configLocation>
-          <!-- Configura la codificación de archivos de código fuente -->
-          <encoding>UTF-8</encoding>
           <!-- Muestra la salida en consola -->
           <consoleOutput>true</consoleOutput>
           <!-- No detiene el build si hay errores de estilo -->
-          <failsOnError>false</failsOnError>
+          <!-- <failsOnError>false</failsOnError> -->
+
+          <!-- NUEVO: necesario para SonarCloud -->
+          <outputFile>${project.build.directory}/checkstyle-result.xml</outputFile>
+          <outputFileFormat>xml</outputFileFormat>
         </configuration>
 
         <executions>
           <execution>
-            <phase>verify</phase>   
+            <phase>verify</phase>
             <goals>
-              <goal>check</goal>    
+              <goal>check</goal>
             </goals>
           </execution>
         </executions>
       </plugin>
 
-
       <!-- Maven PMD plugin -->
       <!-- Analiza código en busca de patrones de error, malas prácticas y código duplicado -->
       <!-- Fase: verify -->
+      <!-- (Optimizado para generar reportes que SonarCloud indexa) -->
       <plugin>
-
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
         <version>3.28.0</version>
@@ -201,6 +196,9 @@
         <configuration>
           <!-- No detiene el build si detecta problemas -->
           <failOnViolation>false</failOnViolation>
+
+          <!-- NUEVO: Generación de reportes analizables -->
+          <outputDirectory>${project.build.directory}/pmd</outputDirectory>
         </configuration>
 
         <executions>
@@ -215,15 +213,14 @@
       </plugin>
 
       <!-- Dependecy Check plugin de OWASP -->
-      <!-- Escanea las dependencias del proyecto  en busca de vulnerabilidades conocidas (CVE) -->
-      <!-- Genera un ingorme HTML y XML en target/dependency-check-report -->
-      <!-- Fase: verify -->
+      <!-- Escanea dependencias en busca de vulnerabilidades conocidas -->
+      <!-- Mantiene informes en HTML/XML -->
+      <!-- SonarCloud NO lee este plugin, pero los informes se mantienen -->
       <plugin>
         <groupId>org.owasp</groupId>
         <artifactId>dependency-check-maven</artifactId>
         <version>12.1.8</version>
         <executions>
-
           <execution>
             <phase>verify</phase>
             <goals>
@@ -233,30 +230,26 @@
         </executions>
 
         <configuration>
-          <!-- Específica el directorio de salida del informe -->
+          <!-- Directorio de informes -->
           <outputDirectory>${project.build.directory}</outputDirectory>
-          <!-- Especifica los formatos de informe a generar -->
+          <!-- Formatos -->
           <formats>
             <format>HTML</format>
             <format>XML</format>
           </formats>
-
-           <!-- No falla la build a menos que haya vulnerabilidades críticas (CVSS >= 11) -->
-          <failBuildOnCVSS>11</failBuildOnCVSS> 
-          <failOnError>false</failOnError> 
-          
+          <!-- Reglas de fallo -->
+          <failBuildOnCVSS>11</failBuildOnCVSS>
+          <failOnError>false</failOnError>
         </configuration>
       </plugin>
 
       <!-- JaCoCo Maven plugin (Cobertura de código) -->
-      <!-- Genera informes de cobertura de pruebas (HTML y XML) -->
-      <!-- Muestra qué porcentaje del código se cubre con tests -->
-      <!-- Fases: test (inserta agente) y verify (genera reporte) -->
+      <!-- Genera informes de cobertura de pruebas -->
+      <!-- NUEVO: incluye XML obligatorio para SonarCloud -->
       <plugin>
-
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.12</version>
+        <version>${jacoco.version}</version>
 
         <executions>
           <!-- Inserta el agente antes de ejecutar los tests -->
@@ -265,6 +258,7 @@
               <goal>prepare-agent</goal>
             </goals>
           </execution>
+
           <!-- Genera informe después de ejecutar los tests -->
           <execution>
             <id>report</id>
@@ -278,19 +272,26 @@
       </plugin>
 
       <!-- Maven Site plugin (Documentación del proyecto) -->
-      <!-- Genera sitio web HTML con toda la información del proyecto (documentación, reportes, etc.) -->
-      <!-- Fase: site -->
+      <!-- Genera sitio web HTML con toda la información del proyecto -->
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <version>3.12.1</version>
       </plugin>
 
-      <!-- Maven Project Info Reports Plugin (Generación de informes) -->
-      <!-- Genera informes automáticos: dependencias, cobertura, checkstyle, etc. -->
-      <!-- Se integra con el Maven Site Plugin -->
+      <!-- Maven Project Info Reports Plugin -->
+      <!-- Crea informes de dependencias, plugins, etc -->
       <plugin>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>3.6.1</version>
+      </plugin>
+
+      <!-- Sonar Maven plugin (Análisis en SonarQube / SonarCloud) -->
+      <!-- Permite enviar el análisis del código y los informes generados -->
+      <!-- Se ejecuta con: mvn sonar:sonar -->
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.11.0.3922</version>
       </plugin>
 
     </plugins>
@@ -320,23 +321,23 @@
 
   </build>
 
-    <!-- ============================ REPORTES ============================= -->
-    <!-- Configura reportes adicionales, como el de JaCoCo para el sitio web -->
-    <reporting>
-      <plugins>
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.12</version>
-          <reportSets>
-            <reportSet>
-              <reports>
-                <report>report</report>
-              </reports>
-            </reportSet>
-          </reportSets>
-        </plugin>
-      </plugins>
-    </reporting>
+  <!-- ============================ REPORTES ============================= -->
+  <!-- Configura reportes adicionales, como el de JaCoCo para el sitio web -->
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco.version}</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>

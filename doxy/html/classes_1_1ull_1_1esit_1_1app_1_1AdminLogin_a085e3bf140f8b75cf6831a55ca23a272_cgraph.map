@@ -1,0 +1,8 @@
+<map id="es.ull.esit.app.AdminLogin.main" name="es.ull.esit.app.AdminLogin.main">
+<area shape="rect" id="Node000001" title="Punto de entrada para ejecutar esta ventana de forma independiente." alt="" coords="5,37,236,62"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1AdminLogin.html#a04d4cf7c783e2a555360abfcd60484e8" title="Crea una nueva instancia de AdminLogin y prepara la UI." alt="" coords="284,29,483,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,47,270,47,270,52,236,52"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1AdminLogin.html#ad0adf02c285046ac1f7593fa25edf289" title="This method is called from within the constructor to initialize the form." alt="" coords="531,29,749,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,47,517,47,517,52,483,52"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="592,30,590,20,597,10,614,5,640,3,670,6,686,13,684,18,668,11,640,8,615,10,600,15,595,21,598,28"/>
+</map>

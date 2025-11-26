@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacees_1_1ull_1_1esit_1_1app_1_1middleware" kind="namespace" language="Java">
+    <compoundname>es::ull::esit::app::middleware</compoundname>
+    <innerclass refid="classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient" prot="public">es::ull::esit::app::middleware::ApiClient</innerclass>
+    <innernamespace refid="namespacees_1_1ull_1_1esit_1_1app_1_1middleware_1_1model">es::ull::esit::app::middleware::model</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/es/ull/esit/app/middleware/ApiClient.java" line="1" column="15"/>
+  </compounddef>
+</doxygen>

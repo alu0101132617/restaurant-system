@@ -1,0 +1,197 @@
+\chapter{🚀 SERVIDOR LANZADO -\/ Guía Rápida de Testing }
+\hypertarget{md_QUICK-START}{}\label{md_QUICK-START}\index{🚀 SERVIDOR LANZADO -\/ Guía Rápida de Testing@{🚀 SERVIDOR LANZADO -\/ Guía Rápida de Testing}}
+\label{md_QUICK-START_autotoc_md48}%
+\Hypertarget{md_QUICK-START_autotoc_md48}%
+\hypertarget{md_QUICK-START_autotoc_md49}{}\doxysection{\texorpdfstring{✅ Estado del Servidor}{✅ Estado del Servidor}}\label{md_QUICK-START_autotoc_md49}
+El servidor Spring Boot debería estar arrancándose en\+: {\bfseries{\href{http://localhost:8080}{\texttt{http\+://localhost\+:8080}}}}
+
+Espera a ver este mensaje en la consola\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Started\ RestaurantApplication\ in\ X.XXX\ seconds}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md51}{}\doxysection{\texorpdfstring{📮 PETICIONES RÁ\+PIDAS PARA POSTMAN}{📮 PETICIONES RÁ\+PIDAS PARA POSTMAN}}\label{md_QUICK-START_autotoc_md51}
+\hypertarget{md_QUICK-START_autotoc_md52}{}\doxysubsection{\texorpdfstring{🔹 Opción 1\+: Importar Colección (MÁS FÁ\+CIL)}{🔹 Opción 1\+: Importar Colección (MÁS FÁ\+CIL)}}\label{md_QUICK-START_autotoc_md52}
+
+\begin{DoxyEnumerate}
+\item Abre Postman
+\item Click en "{}\+Import"{}
+\item Selecciona el archivo\+: {\ttfamily Restaurant-\/\+API.\+postman\+\_\+collection.\+json}
+\item ¡\+Listo! Tendrás 6 peticiones pre-\/configuradas
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md54}{}\doxysubsection{\texorpdfstring{🔹 Opción 2\+: Crear Manualmente}{🔹 Opción 2\+: Crear Manualmente}}\label{md_QUICK-START_autotoc_md54}
+\hypertarget{md_QUICK-START_autotoc_md55}{}\doxysubsubsection{\texorpdfstring{1️⃣ GET -\/ Info del Restaurante}{1️⃣ GET -\/ Info del Restaurante}}\label{md_QUICK-START_autotoc_md55}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GET\ http://localhost:8080/api/info}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md56}{}\doxysubsubsection{\texorpdfstring{2️⃣ GET -\/ Menú Completo}{2️⃣ GET -\/ Menú Completo}}\label{md_QUICK-START_autotoc_md56}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GET\ http://localhost:8080/api/menu}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md57}{}\doxysubsubsection{\texorpdfstring{3️⃣ POST -\/ Login Exitoso}{3️⃣ POST -\/ Login Exitoso}}\label{md_QUICK-START_autotoc_md57}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{POST\ http://localhost:8080/api/login}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+\DoxyCodeLine{}
+\DoxyCodeLine{Body:}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}abdualmajeed"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md58}{}\doxysubsubsection{\texorpdfstring{4️⃣ POST -\/ Login con Otro Cajero}{4️⃣ POST -\/ Login con Otro Cajero}}\label{md_QUICK-START_autotoc_md58}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{POST\ http://localhost:8080/api/login}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+\DoxyCodeLine{}
+\DoxyCodeLine{Body:}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}abdualrahman"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md59}{}\doxysubsubsection{\texorpdfstring{5️⃣ POST -\/ Login Fallido (Usuario No Existe)}{5️⃣ POST -\/ Login Fallido (Usuario No Existe)}}\label{md_QUICK-START_autotoc_md59}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{POST\ http://localhost:8080/api/login}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+\DoxyCodeLine{}
+\DoxyCodeLine{Body:}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}usuario\_falso"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md60}{}\doxysubsubsection{\texorpdfstring{6️⃣ POST -\/ Error de Validación (Nombre Vacío)}{6️⃣ POST -\/ Error de Validación (Nombre Vacío)}}\label{md_QUICK-START_autotoc_md60}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{POST\ http://localhost:8080/api/login}
+\DoxyCodeLine{Content-\/Type:\ application/json}
+\DoxyCodeLine{}
+\DoxyCodeLine{Body:}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md62}{}\doxysection{\texorpdfstring{📊 Respuestas Esperadas}{📊 Respuestas Esperadas}}\label{md_QUICK-START_autotoc_md62}
+\hypertarget{md_QUICK-START_autotoc_md63}{}\doxysubsection{\texorpdfstring{✅ GET /api/info}{✅ GET /api/info}}\label{md_QUICK-START_autotoc_md63}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}:\ "{}Mi\ Restaurante"{},}
+\DoxyCodeLine{\ \ \ \ "{}address"{}:\ "{}Calle\ Falsa\ 123"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md64}{}\doxysubsection{\texorpdfstring{✅ GET /api/menu}{✅ GET /api/menu}}\label{md_QUICK-START_autotoc_md64}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}mains"{}:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{"{}id"{}:\ 1,\ "{}name"{}:\ "{}Buratta\ Pizza"{},\ "{}price"{}:\ 54\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{"{}id"{}:\ 2,\ "{}name"{}:\ "{}Pink\ Pasta"{},\ "{}price"{}:\ 12\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ...más\ items}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ "{}appetizers"{}:\ [...],}
+\DoxyCodeLine{\ \ \ \ "{}drinks"{}:\ [...]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md65}{}\doxysubsection{\texorpdfstring{✅ POST /api/login (Éxito)}{✅ POST /api/login (Éxito)}}\label{md_QUICK-START_autotoc_md65}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}ok"{},}
+\DoxyCodeLine{\ \ \ \ "{}welcome"{}:\ "{}Welcome\ abdualmajeed"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md66}{}\doxysubsection{\texorpdfstring{❌ POST /api/login (Error -\/ Usuario No Existe)}{❌ POST /api/login (Error -\/ Usuario No Existe)}}\label{md_QUICK-START_autotoc_md66}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}error"{},}
+\DoxyCodeLine{\ \ \ \ "{}message"{}:\ "{}unknown\ cashier"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_QUICK-START_autotoc_md67}{}\doxysubsection{\texorpdfstring{❌ POST /api/login (Error -\/ Validación)}{❌ POST /api/login (Error -\/ Validación)}}\label{md_QUICK-START_autotoc_md67}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}status"{}:\ "{}error"{},}
+\DoxyCodeLine{\ \ \ \ "{}message"{}:\ "{}missing\ name"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md69}{}\doxysection{\texorpdfstring{🎯 Cajeros Válidos en la BD}{🎯 Cajeros Válidos en la BD}}\label{md_QUICK-START_autotoc_md69}
+Los únicos cajeros que existen en la tabla {\ttfamily Cashier}\+:
+\begin{DoxyItemize}
+\item ✅ {\ttfamily abdualmajeed} (ID\+: 4231)
+\item ✅ {\ttfamily abdualrahman} (ID\+: 4232)
+\end{DoxyItemize}
+
+Cualquier otro nombre retornará error.
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md71}{}\doxysection{\texorpdfstring{🔧 Troubleshooting}{🔧 Troubleshooting}}\label{md_QUICK-START_autotoc_md71}
+\hypertarget{md_QUICK-START_autotoc_md72}{}\doxysubsection{\texorpdfstring{❌ Error "{}\+Connection refused"{}}{❌ Error "{}\+Connection refused"{}}}\label{md_QUICK-START_autotoc_md72}
+
+\begin{DoxyItemize}
+\item Verifica que el servidor esté corriendo
+\item Busca el mensaje "{}\+Started Restaurant\+Application"{} en la consola
+\end{DoxyItemize}\hypertarget{md_QUICK-START_autotoc_md73}{}\doxysubsection{\texorpdfstring{❌ Error "{}\+Unknown database \textquotesingle{}project3\textquotesingle{}"{}}{❌ Error "{}\+Unknown database \textquotesingle{}project3\textquotesingle{}"{}}}\label{md_QUICK-START_autotoc_md73}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{docker\ compose\ down\ -\/v}
+\DoxyCodeLine{docker\ compose\ up\ -\/d}
+
+\end{DoxyCode}
+ Espera 15 segundos y vuelve a arrancar el servidor.\hypertarget{md_QUICK-START_autotoc_md74}{}\doxysubsection{\texorpdfstring{❌ Error de compilación}{❌ Error de compilación}}\label{md_QUICK-START_autotoc_md74}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mvn\ -\/f\ server\(\backslash\)pom.xml\ clean\ package\ -\/DskipTests}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md76}{}\doxysection{\texorpdfstring{📁 Archivos de Referencia}{📁 Archivos de Referencia}}\label{md_QUICK-START_autotoc_md76}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{POSTMAN-EXAMPLES_8md}{POSTMAN-\/\+EXAMPLES.\+md}} -\/ Documentación detallada de cada endpoint
+\item {\ttfamily Restaurant-\/\+API.\+postman\+\_\+collection.\+json} -\/ Colección importable de Postman
+\item {\ttfamily \doxylink{TEST-INSTRUCTIONS_8md}{TEST-\/\+INSTRUCTIONS.\+md}} -\/ Guía completa de testing
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_QUICK-START_autotoc_md78}{}\doxysection{\texorpdfstring{🎉 ¡\+Todo Listo!}{🎉 ¡\+Todo Listo!}}\label{md_QUICK-START_autotoc_md78}
+El middleware está funcionando con\+:
+\begin{DoxyItemize}
+\item ✅ Spring Boot
+\item ✅ Hibernate/\+JPA
+\item ✅ My\+SQL en Docker
+\item ✅ Conexión segura a la BD
+\item ✅ Repositorios y Entidades JPA
+\item ✅ Endpoints REST funcionales
+\end{DoxyItemize}
+
+{\bfseries{¡\+Empieza a probar en Postman!}} 🚀 

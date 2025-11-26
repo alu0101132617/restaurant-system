@@ -1,0 +1,8 @@
+<map id="es.ull.esit.app.Info.main" name="es.ull.esit.app.Info.main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,184,62"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Info.html#a50f7380b1701dc5213d64735409a13bd" title="Creates new form Info." alt="" coords="232,37,403,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,47,218,47,218,52,184,52"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1Info.html#a3767cf2f3f5442608e038f7a0857bc49" title="This method is called from within the constructor to initialize the form." alt="" coords="451,29,617,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,47,437,47,437,52,403,52"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="493,30,491,20,498,10,512,5,534,3,559,6,573,13,571,18,558,11,534,8,513,10,501,15,496,21,499,28"/>
+</map>

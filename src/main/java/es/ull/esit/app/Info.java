@@ -7,7 +7,13 @@ package es.ull.esit.app;
 
 
 /**
+ * @file Info.java
+ * @brief Ventana "About us" que muestra la historia y la información del restaurante.
  *
+ * Clase simple que muestra un texto estático con la historia del proyecto y
+ * un botón para volver a la pantalla anterior.
+ *
+ * @version 1.0
  */
 public class Info extends javax.swing.JFrame {
 
@@ -43,6 +49,15 @@ public class Info extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         jButton3.setText("Go Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
+            /**
+             * @brief Manejador del botón "Go Back".
+             *
+             * Al pulsar este botón, se cierra la ventana actual y se abre la ventana
+             * del cajero (Cashier).
+             *
+             * @param evt Evento de acción generado por el botón.
+             * @return void
+             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
@@ -143,10 +158,15 @@ public class Info extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    /** @brief Botón para volver atrás (Go Back). */
     private javax.swing.JButton jButton3;
+    /** @brief Imagen/logo mostrado en la ventana. */
     private javax.swing.JLabel jLabel1;
+    /** @brief Panel contenedor principal. */
     private javax.swing.JPanel jPanel1;
+    /** @brief Scroll pane que contiene el texto 'ourStory'. */
     private javax.swing.JScrollPane jScrollPane1;
+    /** @brief Área de texto que contiene la historia/información del restaurante. */
     private javax.swing.JTextArea ourStory;
     // End of variables declaration//GEN-END:variables
 }
