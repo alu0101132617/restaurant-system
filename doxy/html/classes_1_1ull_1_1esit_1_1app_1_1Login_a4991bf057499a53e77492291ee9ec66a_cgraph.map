@@ -1,6 +1,0 @@
-<map id="es.ull.esit.app.Login.Login" name="es.ull.esit.app.Login.Login">
-<area shape="rect" id="Node000001" title="Creates new form Login." alt="" coords="5,37,196,62"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Login.html#ae61fa95fab1880d2e48d4b52948f51f6" title="Initializes GUI components." alt="" coords="244,29,421,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,47,230,47,230,52,197,52"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="289,30,287,20,294,10,309,5,333,3,360,6,374,13,372,18,358,11,333,8,310,10,297,15,292,21,294,28"/>
-</map>

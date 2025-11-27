@@ -1,6 +1,0 @@
-<map id="es.ull.esit.app.Cashier.initComponents" name="es.ull.esit.app.Cashier.initComponents">
-<area shape="rect" id="Node000001" title="This method is called from within the constructor to initialize the form." alt="" coords="223,29,413,69"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="356,18,343,11,318,8,296,10,283,15,278,21,281,28,276,30,273,20,280,10,295,5,318,3,344,6,359,13"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1Cashier.html#add843e6ad04c8b8e13fe4c1a3ff107e1" title="Constructor que recibe un ApiClient y opcionalmente el nombre del cajero." alt="" coords="5,29,175,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,52,175,52,175,47,209,47"/>
-</map>

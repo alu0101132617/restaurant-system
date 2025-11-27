@@ -1,7 +1,0 @@
-<map id="es.ull.esit.app.adminProducts.jTable1MouseClicked" name="es.ull.esit.app.adminProducts.jTable1MouseClicked">
-<area shape="rect" id="Node000001" title="Manejador de clics en la tabla de bebidas." alt="" coords="5,37,228,77"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink.html#a2e72a0fa3bebec58109f6ea6dbfeaf3e" title="Get drinks price." alt="" coords="276,5,519,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,42,262,38,263,43,229,47"/>
-<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1model_1_1Drink.html#af39848104f2a8088bf1c0675fa7506ed" title="Get item drinks." alt="" coords="276,69,519,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,67,263,71,262,77,228,73"/>
-</map>

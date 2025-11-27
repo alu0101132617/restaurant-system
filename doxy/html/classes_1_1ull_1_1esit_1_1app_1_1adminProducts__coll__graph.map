@@ -1,7 +1,0 @@
-<map id="es.ull.esit.app.adminProducts" name="es.ull.esit.app.adminProducts">
-<area shape="rect" id="Node000001" title=" " alt="" coords="67,456,274,1181"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,163,147,228"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,242,118,455,113,456,80,242"/>
-<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1app_1_1middleware_1_1ApiClient.html" title="ApiClient is a middleware class that handles HTTP requests to a RESTful API." alt="" coords="171,5,362,385"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,386,232,440,226,439,235,385"/>
-</map>
