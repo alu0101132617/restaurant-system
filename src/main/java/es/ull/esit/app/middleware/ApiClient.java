@@ -22,6 +22,17 @@ public class ApiClient {
     private final String baseUrl;
     private final ObjectMapper mapper;
 
+    // Constants
+    static final String APPLICATION_JSON = "application/json";
+    static final String CONTENT_TYPE = "Content-Type";
+
+    static final String APPETIZER_API = "/api/appetizers";
+    static final String CASHIER_API = "/api/cashiers";
+    static final String DRINK_API = "/api/drinks";
+    static final String MAINCOURSE_API = "/api/maincourses";
+
+    
+
     /**
      * Constructs an ApiClient with the specified base URL.
      *
@@ -40,7 +51,7 @@ public class ApiClient {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + path))
                 .GET()
-                .header("Accept", "application/json")
+                .header("Accept", APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), responseType);
@@ -59,7 +70,7 @@ public class ApiClient {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + path))
                 .GET()
-                .header("Accept", "application/json")
+                .header("Accept", APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), typeRef);
@@ -80,7 +91,7 @@ public class ApiClient {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + path))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
+                .header(CONTENT_TYPE, APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), responseType);
@@ -92,7 +103,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public List<Appetizer> getAllAppetizers() throws Exception {
-        return getList("/api/appetizers", new TypeReference<List<Appetizer>>() {});
+        return getList(APPETIZER_API, new TypeReference<List<Appetizer>>() {});
     }
 
     /**
@@ -102,7 +113,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public Appetizer getAppetizerById(Long id) throws Exception {
-        return get("/api/appetizers/" + id, Appetizer.class);
+        return get(APPETIZER_API + "/" + id, Appetizer.class);
     }
 
     /**
@@ -112,7 +123,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public Appetizer createAppetizer(Appetizer appetizer) throws Exception {
-        return post("/api/appetizers", appetizer, Appetizer.class);
+        return post(APPETIZER_API, appetizer, Appetizer.class);
     }
 
     /**
@@ -125,9 +136,9 @@ public class ApiClient {
     public Appetizer updateAppetizer(Long id, Appetizer appetizer) throws Exception {
         String json = mapper.writeValueAsString(appetizer);
         HttpRequest req = HttpRequest.newBuilder()
-                .uri(URI.create(baseUrl + "/api/appetizers/" + id))
+                .uri(URI.create(baseUrl + APPETIZER_API + "/" + id))
                 .PUT(HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
+                .header(CONTENT_TYPE, APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), Appetizer.class);
@@ -136,11 +147,12 @@ public class ApiClient {
     /**
      * DELETE appetizer.
      * @param id the appetizer ID
-     * @throws Exception if an error occurs during the request
+     * @throws IOException if an I/O error occurs when sending or receiving
+     * @throws InterruptedException if the operation is interrupted
      */
-    public void deleteAppetizer(Long id) throws Exception {
+    public void deleteAppetizer(Long id) throws IOException, InterruptedException {
         HttpRequest req = HttpRequest.newBuilder()
-                .uri(URI.create(baseUrl + "/api/appetizers/" + id))
+                .uri(URI.create(baseUrl + APPETIZER_API + "/" + id))
                 .DELETE()
                 .build();
         http.send(req, HttpResponse.BodyHandlers.ofString());
@@ -151,7 +163,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public List<Cashier> getAllCashiers() throws Exception {
-        return getList("/api/cashiers", new TypeReference<List<Cashier>>() {});
+        return getList(CASHIER_API, new TypeReference<List<Cashier>>() {});
     }
 
     /** GET cashier by ID
@@ -160,7 +172,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public Cashier getCashierById(Long id) throws Exception {
-        return get("/api/cashiers/" + id, Cashier.class);
+        return get(CASHIER_API + "/" + id, Cashier.class);
     }
 
     /** POST create new cashier
@@ -169,7 +181,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public Cashier createCashier(Cashier cashier) throws Exception {
-        return post("/api/cashiers", cashier, Cashier.class);
+        return post(CASHIER_API, cashier, Cashier.class);
     }
 
     /** PUT update cashier
@@ -183,7 +195,7 @@ public class ApiClient {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + "/api/cashiers/" + id))
                 .PUT(HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
+                .header(CONTENT_TYPE, APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), Cashier.class);
@@ -191,9 +203,10 @@ public class ApiClient {
 
     /** DELETE cashier
      * @param id the cashier ID
-     * @throws Exception if an error occurs during the request
+     * @throws IOException if an I/O error occurs when sending or receiving
+     * @throws InterruptedException if the operation is interrupted
      */
-    public void deleteCashier(Long id) throws Exception {
+    public void deleteCashier(Long id) throws IOException, InterruptedException {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + "/api/cashiers/" + id))
                 .DELETE()
@@ -206,7 +219,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public List<Drink> getAllDrinks() throws Exception {
-        return getList("/api/drinks", new TypeReference<List<Drink>>() {});
+        return getList(DRINK_API, new TypeReference<List<Drink>>() {});
     }
 
     /**
@@ -216,7 +229,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public Drink getDrinkById(Long id) throws Exception {
-        return get("/api/drinks/" + id, Drink.class);
+        return get(DRINK_API + "/" + id, Drink.class);
     }
 
     /** POST create new drink
@@ -225,7 +238,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public Drink createDrink(Drink drink) throws Exception {
-        return post("/api/drinks", drink, Drink.class);
+        return post(DRINK_API, drink, Drink.class);
     }
 
     /** PUT update drink
@@ -239,7 +252,7 @@ public class ApiClient {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + "/api/drinks/" + id))
                 .PUT(HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
+                .header(CONTENT_TYPE, APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), Drink.class);
@@ -247,9 +260,10 @@ public class ApiClient {
 
     /** DELETE drink
      * @param id the drink ID
-     * @throws Exception if an error occurs during the request
+     * @throws IOException if an I/O error occurs when sending or receiving
+     * @throws InterruptedException if the operation is interrupted
      */
-    public void deleteDrink(Long id) throws Exception {
+    public void deleteDrink(Long id) throws IOException, InterruptedException {
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + "/api/drinks/" + id))
                 .DELETE()
@@ -262,7 +276,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public List<MainCourse> getAllMainCourses() throws Exception {
-        return getList("/api/maincourses", new TypeReference<List<MainCourse>>() {});
+        return getList(MAINCOURSE_API, new TypeReference<List<MainCourse>>() {});
     }
 
     /** GET maincourse by ID
@@ -271,7 +285,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public MainCourse getMainCourseById(Long id) throws Exception {
-        return get("/api/maincourses/" + id, MainCourse.class);
+        return get(MAINCOURSE_API + "/" + id, MainCourse.class);
     }
 
     /** POST create new maincourse
@@ -280,7 +294,7 @@ public class ApiClient {
      * @throws Exception if an error occurs during the request
      */
     public MainCourse createMainCourse(MainCourse mainCourse) throws Exception {
-        return post("/api/maincourses", mainCourse, MainCourse.class);
+        return post(MAINCOURSE_API, mainCourse, MainCourse.class);
     }
 
     /** PUT update maincourse
@@ -292,9 +306,9 @@ public class ApiClient {
     public MainCourse updateMainCourse(Long id, MainCourse mainCourse) throws Exception {
         String json = mapper.writeValueAsString(mainCourse);
         HttpRequest req = HttpRequest.newBuilder()
-                .uri(URI.create(baseUrl + "/api/maincourses/" + id))
+                .uri(URI.create(baseUrl + MAINCOURSE_API + "/" + id))
                 .PUT(HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
+                .header(CONTENT_TYPE, APPLICATION_JSON)
                 .build();
         HttpResponse<String> res = http.send(req, HttpResponse.BodyHandlers.ofString());
         return mapper.readValue(res.body(), MainCourse.class);
@@ -302,20 +316,26 @@ public class ApiClient {
 
     /** DELETE maincourse
      * @param id the maincourse ID
-     * @throws Exception if an error occurs during the request
+     * @throws IOException if an I/O error occurs when sending or receiving
+     * @throws InterruptedException if the operation is interrupted
      */
-    public void deleteMainCourse(Long id) throws Exception {
+    public void deleteMainCourse(Long id) throws IOException, InterruptedException {
         HttpRequest req = HttpRequest.newBuilder()
-                .uri(URI.create(baseUrl + "/api/maincourses/" + id))
+                .uri(URI.create(baseUrl + MAINCOURSE_API + "/" + id))
                 .DELETE()
                 .build();
         http.send(req, HttpResponse.BodyHandlers.ofString());
     }
 
-    // Placeholder login/ping method
-    // Algunas clases del front llaman a `api.login(String)` como ping/logout.
-    // Implementamos un método vacío para mantener compatibilidad con la UI.
-    public void login(String ignored) throws Exception {
+    /**
+     * Placeholder login/ping method.
+     * Some frontend classes call `api.login(String)` as a ping/logout.
+     * This is an empty implementation to maintain compatibility with the UI.
+     * @param ignored ignored parameter
+     * @throws IOException if an I/O error occurs when sending or receiving
+     * @throws InterruptedException if the operation is interrupted
+     */
+    public void login(String ignored) throws IOException, InterruptedException {
         // No-op: si en el futuro se añade autenticación, aquí se puede implementar.
     }
 }
