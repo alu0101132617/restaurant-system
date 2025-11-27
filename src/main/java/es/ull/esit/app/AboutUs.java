@@ -134,7 +134,7 @@ public class AboutUs extends javax.swing.JFrame {
           break;
         }
       }
-    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | java.swing.UnsupportedLookAndFeelException ex) {
+    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
       java.util.logging.Logger.getLogger(AboutUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     // </editor-fold>

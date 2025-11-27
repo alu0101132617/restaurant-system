@@ -150,7 +150,7 @@
         <version>3.3.0</version>
         <configuration>
           <!-- Indica la clase con el método main() que se ejecutará -->
-          <mainClass>es.ull.esit.app.JavaApplication2</mainClass>
+          <mainClass>es.ull.esit.app.Main</mainClass>
         </configuration>
       </plugin>
 

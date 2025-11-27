@@ -17,6 +17,10 @@ package es.ull.esit.app;
  * @version 1.0
  */
 public class Login extends javax.swing.JFrame {
+  /** Login identifier for admin users. */
+  private static final String LOGIN_ADMIN = "admin";
+  /** Login identifier for cashier users. */
+  private static final String LOGIN_CASHIER = "cashier";
 
   /**
    * @brief Creates new form Login
@@ -46,9 +50,7 @@ public class Login extends javax.swing.JFrame {
     /** Font name used in the UI. */
     final String FONT_NAME = "Yu Gothic UI";
     /** Login identifier for admin users. */
-    final String LOGIN_ADMIN = "admin";
-    /** Login identifier for cashier users. */
-    final String LOGIN_CASHIER = "cashier";
+
 
     /** Main container panel. */
     javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
@@ -177,7 +179,8 @@ public class Login extends javax.swing.JFrame {
    * @return void
    */
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-    if (usernametxt.getText().equalsIgnoreCase(LOGIN_ADMIN) && jPasswordField1.getTText().equalsIgnoreCase(LOGIN_ADMIN)
+    String password = new String(jPasswordField1.getPassword());
+    if (usernametxt.getText().equalsIgnoreCase(LOGIN_ADMIN) && password.equalsIgnoreCase(LOGIN_ADMIN)
         && usertypecmbo.getSelectedItem().toString().equalsIgnoreCase(LOGIN_ADMIN)) {
 
       new AdminLogin().setVisible(true);

@@ -218,14 +218,14 @@ public class AdminProducts extends javax.swing.JFrame {
     itemname.setBorder(javax.swing.BorderFactory.createTitledBorder(
         new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), COL_ITEM_NAME,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font(FONT_NAME, 0, 18))); // NOI18N
+        new java.awt.Font(PRINCIPAL_FONT_NAME, 0, 18))); // NOI18N
 
     itemprice.setFont(new java.awt.Font(PRINCIPAL_FONT_NAME, 0, 18)); // NOI18N
     itemprice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     itemprice.setBorder(javax.swing.BorderFactory.createTitledBorder(
         new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), COL_ITEM_PRICE,
         javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP,
-        new java.awt.Font(FONT_NAME, 0, 18))); // NOI18N
+        new java.awt.Font(PRINCIPAL_FONT_NAME, 0, 18))); // NOI18N
     jTable1.setFont(new java.awt.Font(PRINCIPAL_FONT_NAME, 0, 14)); // NOI18N
     jTable1.setModel(new javax.swing.table.DefaultTableModel(
         new Object[][] {
@@ -740,7 +740,7 @@ public class AdminProducts extends javax.swing.JFrame {
    *
    * @return void
    */
-  private void jTable1KeyPressed() {// GEN-FIRST:event_jTable1KeyPressed
+  private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_jTable1KeyPressed
     // Keep as is - no changes needed
   }// GEN-LAST:event_jTable1KeyPressed
 
@@ -752,7 +752,7 @@ public class AdminProducts extends javax.swing.JFrame {
    *
    * @return void
    */
-  private void jTable1MouseClicked() {// GEN-FIRST:event_jTable1MouseClicked
+  private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTable1MouseClicked
     String selectedIDKey = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
     selectedDrinkID = Long.valueOf(selectedIDKey);
     logger.info("You select id " + selectedDrinkID + " of Drink to update.");
@@ -775,7 +775,7 @@ public class AdminProducts extends javax.swing.JFrame {
    *
    * @return void
    */
-  private void jTable2MouseClicked() {// GEN-FIRST:event_jTable2MouseClicked
+  private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTable2MouseClicked
     String selectedIDKey = jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString();
     selectedAppetizerID = Long.valueOf(selectedIDKey);
     logger.info("You select id " + selectedAppetizerID + " of appetizers to update.");
@@ -797,7 +797,7 @@ public class AdminProducts extends javax.swing.JFrame {
    *
    * @return void
    */
-  private void jTable3MouseClicked() {// GEN-FIRST:event_jTable3MouseClicked
+  private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTable3MouseClicked
     String selectedIDKey = jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
     selectedMainCourseID = Long.valueOf(selectedIDKey);
     logger.info("You select id " + selectedMainCourseID + " of maincourse to update.");
@@ -818,7 +818,7 @@ public class AdminProducts extends javax.swing.JFrame {
    *        refreshes the table after the update.
    *
    */
-  private void jButton1ActionPerformed() {// GEN-FIRST:event_jButton1ActionPerformed
+  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
     try {
       Drink updatedDrink = new Drink(selectedDrinkID, itemname.getText(),
           Integer.parseInt(itemprice.getText()), null);

@@ -6,6 +6,7 @@ import java.net.http.*;
 import java.net.URI;
 import java.time.Duration;
 import java.util.List;
+import java.io.IOException;
 
 import es.ull.esit.app.middleware.model.Appetizer;
 import es.ull.esit.app.middleware.model.Cashier;
