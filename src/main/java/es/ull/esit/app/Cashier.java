@@ -185,7 +185,7 @@ public class Cashier extends javax.swing.JFrame {
         logger.severe("Error getting cashiers: " + ex.getMessage());
       }
       javax.swing.SwingUtilities.invokeLater(() -> {
-        new Info().setVisible(true);
+        new AboutUs().setVisible(true);
         dispose();
       });
     }).start();
@@ -205,7 +205,7 @@ public class Cashier extends javax.swing.JFrame {
         logger.severe("Error loading menu: " + ex.getMessage());
       }
       javax.swing.SwingUtilities.invokeLater(() -> {
-        new Frame1().setVisible(true);
+        new OrderMenu().setVisible(true);
         dispose();
       });
     }).start();

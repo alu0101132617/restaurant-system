@@ -5,14 +5,14 @@ import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 /**
- * @file Frame1.java
+ * @file OrderMenu.java
  * @brief Main menu window and receipt management (order UI).
  *
  *        Contains controls to select item quantities (drinks, appetizers,
  *        and main courses), compute subtotals, VAT and total, and provides
  *        basic functionality to save and create receipts.
  */
-public class Frame1 extends javax.swing.JFrame {
+public class OrderMenu extends javax.swing.JFrame {
 
   /** Font names used in the UI. */
   static final String FONT_NAME = "Yu Gothic UI";
@@ -73,9 +73,9 @@ public class Frame1 extends javax.swing.JFrame {
   transient PrintWriter output;
 
   /**
-   * Creates new form Frame1
+   * Creates new form OrderMenu
    */
-  public Frame1() {
+  public OrderMenu() {
     initComponents();
   }
 
@@ -1193,12 +1193,12 @@ public class Frame1 extends javax.swing.JFrame {
       }
     } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
         | javax.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(Frame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(OrderMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     // </editor-fold>
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> new Frame1().setVisible(true));
+    java.awt.EventQueue.invokeLater(() -> new OrderMenu().setVisible(true));
   }
 
 // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
 import java.util.logging.Logger;
 
 /**
- * @file adminProducts.java
+ * @file AdminProducts.java
  * @brief Administrative screen to manage products and prices.
  *
  *        Allows listing drinks, appetizers and main courses retrieved from the
@@ -45,9 +45,9 @@ public class AdminProducts extends javax.swing.JFrame {
   private transient Logger logger = Logger.getLogger(getClass().getName());
 
   /**
-     * Creates new form adminProducts
+     * Creates new form AdminProducts
      */
-    public adminProducts() {
+    public AdminProducts() {
         initComponents();
         apiClient = new ApiClient("http://localhost:8080"); // Backend URL
         
@@ -906,12 +906,12 @@ public class AdminProducts extends javax.swing.JFrame {
       }
     } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
         | javax.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(adminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(AdminProducts.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     // </editor-fold>
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> new adminProducts().setVisible(true));
+    java.awt.EventQueue.invokeLater(() -> new AdminProducts().setVisible(true));
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables

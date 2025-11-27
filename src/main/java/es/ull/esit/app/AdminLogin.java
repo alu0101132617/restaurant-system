@@ -133,7 +133,7 @@ public class AdminLogin extends javax.swing.JFrame {
      */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
-        new adminProducts().setVisible(true);
+        new AdminProducts().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -145,7 +145,7 @@ public class AdminLogin extends javax.swing.JFrame {
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      
-        new Frame1().setVisible(true);
+        new OrderMenu().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

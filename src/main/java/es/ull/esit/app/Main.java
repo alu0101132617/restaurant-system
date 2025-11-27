@@ -2,12 +2,12 @@
 package es.ull.esit.app;
 
 /**
- * @file JavaApplication2.java
+ * @file Main.java
  * @brief Minimal class to start the application (auxiliary entry-point).
  *
  * Launches the Login window when run independently.
  */
-public class JavaApplication2 {
+public class Main {
 
     /**
      * @brief Alternative entry point used to launch the UI.

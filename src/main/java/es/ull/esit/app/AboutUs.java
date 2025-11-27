@@ -2,7 +2,7 @@
 package es.ull.esit.app;
 
 /**
- * @file Info.java
+ * @file AboutUs.java
  * @brief "About us" window that shows the history and information of the
  *       restaurant.
  * 
@@ -11,12 +11,12 @@ package es.ull.esit.app;
  * 
  * @version 1.0
  */
-public class Info extends javax.swing.JFrame {
+public class AboutUs extends javax.swing.JFrame {
 
   /**
-   * Creates new form Info
+   * Creates new form AboutUs
    */
-  public Info() {
+  public AboutUs() {
     initComponents();
   }
 
@@ -135,11 +135,11 @@ public class Info extends javax.swing.JFrame {
         }
       }
     } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | java.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(Info.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(AboutUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     // </editor-fold>
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> new Info().setVisible(true));
+    java.awt.EventQueue.invokeLater(() -> new AboutUs().setVisible(true));
   }
 }
