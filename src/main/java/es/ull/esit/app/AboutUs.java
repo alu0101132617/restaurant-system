@@ -3,13 +3,12 @@ package es.ull.esit.app;
 
 /**
  * @file Info.java
- * @brief Ventana "About us" que muestra la historia y la información del
- *        restaurante.
- *
- *        Clase simple que muestra un texto estático con la historia del
- *        proyecto y
- *        un botón para volver a la pantalla anterior.
- *
+ * @brief "About us" window that shows the history and information of the
+ *       restaurant.
+ * 
+ * Simple class that displays static text with the project's story and
+ * a button to return to the previous screen.
+ * 
  * @version 1.0
  */
 public class Info extends javax.swing.JFrame {

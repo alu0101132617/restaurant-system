@@ -8,7 +8,6 @@ package es.ull.esit.app;
  * Window that allows the administrator to navigate to the price update
  * screen, view the menu, or log out.
  *
- * @author Team
  * @version 1.0
  */
 public class AdminLogin extends javax.swing.JFrame {

@@ -30,3 +30,8 @@ database.sql
 *.jar
 *.war
 *.ear
+
+# Archivos temporales
+*.tmp
+*.swp
+*~    
