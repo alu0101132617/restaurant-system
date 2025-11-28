@@ -9,8 +9,10 @@ import es.ull.esit.app.middleware.ApiClient;
 import es.ull.esit.app.middleware.model.Appetizer;
 import es.ull.esit.app.middleware.model.Drink;
 import es.ull.esit.app.middleware.model.MainCourse;
+import es.ull.esit.app.middleware.service.ProductService;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -21,14 +23,18 @@ import javax.swing.table.DefaultTableModel;
  * REST middleware and performing basic CRUD operations (add/update).
  */
 public class adminProducts extends javax.swing.JFrame {
-    /** HTTP client for backend calls. */
-    private ApiClient apiClient;
+
+    /** Service to handle business logic and API calls. */
+    private final ProductService productService;
+    
     /** Table models used to display product lists. */
     DefaultTableModel modelDrink;
     DefaultTableModel modelappetizers;
     DefaultTableModel modelmaincourse;
+    
     /** Common headers used by the tables. */
     String[] columnNames = {"ID", "Item Name", "Item Price"};
+    
     /** Currently selected IDs in each table (if any). */
     Long selectedDrinkID;
     Long selectedAppetizerID;
@@ -39,7 +45,10 @@ public class adminProducts extends javax.swing.JFrame {
      */
     public adminProducts() {
         initComponents();
-        apiClient = new ApiClient("http://localhost:8080"); // Backend URL
+        
+        // Initialize the Service Layer
+        ApiClient client = new ApiClient("http://localhost:8080"); 
+        this.productService = new ProductService(client);
         
         modelDrink = new DefaultTableModel();
         modelDrink.setColumnIdentifiers(columnNames);
@@ -48,92 +57,95 @@ public class adminProducts extends javax.swing.JFrame {
         modelmaincourse = new DefaultTableModel();
         modelmaincourse.setColumnIdentifiers(columnNames);
         
+        // Link models to tables
+        jTable1.setModel(modelDrink);
+        jTable2.setModel(modelappetizers);
+        jTable3.setModel(modelmaincourse);
+        
+        // Load initial data
+        refreshAllTables();
+    }
+
+    /** Helper to refresh all data tables asynchronously. */
+    private void refreshAllTables() {
         loadDrinks();
         loadAppetizer();
         loadmainCourse();
     }
 
     /**
-     * @brief Loads the list of drinks from the backend and populates the table.
-     *
-     * Catches exceptions and shows a dialog in case of network or backend error.
+     * @brief Loads the list of drinks from the backend asynchronously.
      */
     void loadDrinks() {
-        try {
-            List<Drink> drinks = apiClient.getAllDrinks();
-            for (Drink drink : drinks) {
-                modelDrink.addRow(new Object[]{
-                    drink.getDrinksId(), 
-                    drink.getItemDrinks(), 
-                    drink.getDrinksPrice()
+        new Thread(() -> {
+            try {
+                List<Drink> drinks = productService.getAllDrinks();
+                SwingUtilities.invokeLater(() -> {
+                    modelDrink.setRowCount(0);
+                    for (Drink drink : drinks) {
+                        modelDrink.addRow(new Object[]{
+                            drink.getDrinksId(), 
+                            drink.getItemDrinks(), 
+                            drink.getDrinksPrice()
+                        });
+                    }
                 });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(null, "Error loading drinks: " + ex.getMessage())
+                );
             }
-            jTable1.setModel(modelDrink);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error loading drinks: " + ex.getMessage());
-        }
+        }).start();
     }
 
     /**
-     * @brief Loads the list of appetizers from the backend and populates the table.
+     * @brief Loads the list of appetizers from the backend asynchronously.
      */
     void loadAppetizer() {
-        try {
-            List<Appetizer> appetizers = apiClient.getAllAppetizers();
-            for (Appetizer appetizer : appetizers) {
-                modelappetizers.addRow(new Object[]{
-                    appetizer.getAppetizersId(), 
-                    appetizer.getItemAppetizers(), 
-                    appetizer.getAppetizersPrice()
+        new Thread(() -> {
+            try {
+                List<Appetizer> appetizers = productService.getAllAppetizers();
+                SwingUtilities.invokeLater(() -> {
+                    modelappetizers.setRowCount(0);
+                    for (Appetizer appetizer : appetizers) {
+                        modelappetizers.addRow(new Object[]{
+                            appetizer.getAppetizersId(), 
+                            appetizer.getItemAppetizers(), 
+                            appetizer.getAppetizersPrice()
+                        });
+                    }
                 });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(null, "Error loading appetizers: " + ex.getMessage())
+                );
             }
-            jTable2.setModel(modelappetizers);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error loading appetizers: " + ex.getMessage());
-        }
+        }).start();
     }
 
     /**
-     * @brief Loads the list of main courses from the backend and populates the table.
+     * @brief Loads the list of main courses from the backend asynchronously.
      */
     void loadmainCourse() {
-        try {
-            List<MainCourse> mainCourses = apiClient.getAllMainCourses();
-            for (MainCourse mainCourse : mainCourses) {
-                modelmaincourse.addRow(new Object[]{
-                    mainCourse.getFoodId(), 
-                    mainCourse.getItemFood(), 
-                    mainCourse.getFoodPrice()
+        new Thread(() -> {
+            try {
+                List<MainCourse> mainCourses = productService.getAllMainCourses();
+                SwingUtilities.invokeLater(() -> {
+                    modelmaincourse.setRowCount(0);
+                    for (MainCourse mainCourse : mainCourses) {
+                        modelmaincourse.addRow(new Object[]{
+                            mainCourse.getFoodId(), 
+                            mainCourse.getItemFood(), 
+                            mainCourse.getFoodPrice()
+                        });
+                    }
                 });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(null, "Error loading main courses: " + ex.getMessage())
+                );
             }
-            jTable3.setModel(modelmaincourse);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error loading main courses: " + ex.getMessage());
-        }
-    }
-
-    /**
-     * @brief Handler for the "Add" button (Drinks).
-     *
-     * Creates a Drink object from the form data and sends it to the backend
-     * using ApiClient. After creating the resource the table is refreshed.
-     *
-     * @param evt action event
-     */
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        try {
-            Drink newDrink = new Drink(null, itemname.getText(), 
-                Integer.parseInt(itemprice.getText()), null);
-            apiClient.createDrink(newDrink);
-            JOptionPane.showMessageDialog(null, "Drink Added Successfully.");
-            
-            // Refresh table
-            DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
-            dtm.setRowCount(0);
-            loadDrinks();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error adding drink: " + ex.getMessage());
-        }
+        }).start();
     }
 
     /**
@@ -222,29 +234,11 @@ public class adminProducts extends javax.swing.JFrame {
         jTable1.getTableHeader().setResizingAllowed(false);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
-            /**
-             * @brief Handler for clicks on the drinks table.
-             *
-             * When a row is clicked, the ID of the selected drink is captured
-             * for future update operations.
-             *
-             * @param evt mouse event generated by the click.
-             * @return void
-             */
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);
             }
         });
         jTable1.addKeyListener(new java.awt.event.KeyAdapter() {
-            /**
-             * @brief Handler for key presses on the drinks table.
-             *
-             * Allows capturing the ID of the selected drink when navigating
-             * with the keyboard.
-             *
-             * @param evt key event generated by the user's action.
-             * @return void
-             */
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTable1KeyPressed(evt);
             }
@@ -255,14 +249,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
         jButton1.setText("Update");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Update" button (Drinks).
-             *
-             * Updates the selected drink's price on the backend using ApiClient
-             * and refreshes the table after the update.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
@@ -272,15 +258,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Add" button (Drinks).
-             *
-             * Creates a Drink object from the form data and sends it to the
-             * backend using ApiClient. After creating the resource the table is
-             * refreshed.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
@@ -375,15 +352,6 @@ public class adminProducts extends javax.swing.JFrame {
             }
         ));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            /**
-             * @brief Handler for clicks on the appetizers table.
-             *
-             * When a row is clicked, the ID of the selected appetizer is captured
-             * for future update operations.
-             *
-             * @param evt mouse event generated by the click.
-             * @return void
-             */
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable2MouseClicked(evt);
             }
@@ -402,14 +370,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
         jButton4.setText("Update");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Update" button (Appetizers).
-             *
-             * Updates the selected appetizer price on the backend using ApiClient
-             * and refreshes the table after the update.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
@@ -419,15 +379,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
         jButton5.setText("Add");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Add" button (Appetizers).
-             *
-             * Creates an Appetizer object from the form data and sends it to the
-             * backend using ApiClient. After creating the resource the table is
-             * refreshed.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
@@ -513,15 +464,6 @@ public class adminProducts extends javax.swing.JFrame {
             }
         ));
         jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
-            /**
-             * @brief Handler for clicks on the main course table.
-             *
-             * When a row is clicked, the ID of the selected main course is
-             * captured for subsequent update operations.
-             *
-             * @param evt mouse event generated by the click.
-             * @return void
-             */
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable3MouseClicked(evt);
             }
@@ -540,14 +482,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
         jButton6.setText("Update");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Update" button (MainCourse).
-             *
-             * Updates the selected main course price on the backend using ApiClient
-             * and refreshes the table after the update.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
@@ -557,15 +491,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Thonburi", 0, 18)); // NOI18N
         jButton7.setText("Add");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Add" button (MainCourse).
-             *
-             * Creates a MainCourse object from the form data and sends it to the
-             * backend using ApiClient. After creating the resource the table is
-             * refreshed.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
@@ -628,13 +553,6 @@ public class adminProducts extends javax.swing.JFrame {
         jButton3.setText("Go Back");
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
-            /**
-             * @brief Handler for the "Go Back" button.
-             *
-             * Closes the current window and opens the admin login window.
-             *
-             * @param evt action event
-             */
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
@@ -693,59 +611,95 @@ public class adminProducts extends javax.swing.JFrame {
      *
      * @param evt action event
      */
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String name = itemname.getText();
+        String price = itemprice.getText();
+        
+        new Thread(() -> {
+            try {
+                productService.addDrink(name, price);
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Drink Added Successfully.");
+                    itemname.setText("");
+                    itemprice.setText("");
+                    loadDrinks();
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(this, "Error adding drink: " + ex.getMessage())
+                );
+            }
+        }).start();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    /**
+     * @brief Handler for the "Go Back" button.
+     *
+     * Closes the current window and opens the admin login window.
+     *
+     * @param evt action event
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       
         new AdminLogin().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @brief Handler for the "Add" button (Appetizers).
      *
      * Creates an Appetizer object from the form data and sends it to the
-     * backend using ApiClient. After creating the resource the table is
-     * refreshed.
+     * backend.
      *
      * @param evt action event
      */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        try {
-            Appetizer newAppetizer = new Appetizer(null, itemname1.getText(), 
-                Integer.parseInt(itemprice1.getText()), null);
-            apiClient.createAppetizer(newAppetizer);
-            JOptionPane.showMessageDialog(null, "Appetizer Added Successfully.");
-            
-            // Refresh table
-            DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
-            dtm.setRowCount(0);
-            loadAppetizer();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error adding appetizer: " + ex.getMessage());
-        }
+        String name = itemname1.getText();
+        String price = itemprice1.getText();
+        
+        new Thread(() -> {
+            try {
+                productService.addAppetizer(name, price);
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Appetizer Added Successfully.");
+                    itemname1.setText("");
+                    itemprice1.setText("");
+                    loadAppetizer();
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(this, "Error adding appetizer: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @brief Handler for the "Add" button (MainCourse).
      *
      * Creates a MainCourse object from the form data and sends it to the
-     * backend using ApiClient. After creating the resource the table is
-     * refreshed.
+     * backend.
      *
      * @param evt action event
      */
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        try {
-            MainCourse newMainCourse = new MainCourse(null, itemname2.getText(), 
-                Integer.parseInt(itemprice2.getText()), null);
-            apiClient.createMainCourse(newMainCourse);
-            JOptionPane.showMessageDialog(null, "Main Course Added Successfully.");
-            
-            // Refresh table
-            DefaultTableModel dtm = (DefaultTableModel) jTable3.getModel();
-            dtm.setRowCount(0);
-            loadmainCourse();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error adding main course: " + ex.getMessage());
-        }
+        String name = itemname2.getText();
+        String price = itemprice2.getText();
+        
+        new Thread(() -> {
+            try {
+                productService.addMainCourse(name, price);
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Main Course Added Successfully.");
+                    itemname2.setText("");
+                    itemprice2.setText("");
+                    loadmainCourse();
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(this, "Error adding main course: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
@@ -755,10 +709,9 @@ public class adminProducts extends javax.swing.JFrame {
      * keyboard.
      *
      * @param evt key event generated by the user's action.
-     * @return void
      */
     private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
-        // Keep as is - no changes needed
+        // No action needed for key press in this version
     }//GEN-LAST:event_jTable1KeyPressed
 
     /**
@@ -768,20 +721,28 @@ public class adminProducts extends javax.swing.JFrame {
      * subsequent update operations.
      *
      * @param evt mouse event generated by the click.
-     * @return void
      */
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-        String selectedIDKey = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
-        selectedDrinkID = Long.valueOf(selectedIDKey);
-        System.out.println("You select id " + selectedDrinkID + " of Drink to update.");
+        int row = jTable1.getSelectedRow();
+        if (row == -1) return;
+        
+        String idStr = jTable1.getValueAt(row, 0).toString();
+        selectedDrinkID = Long.valueOf(idStr);
+        System.out.println("Selected Drink ID: " + selectedDrinkID);
     
-        try {
-            Drink drink = apiClient.getDrinkById(selectedDrinkID);
-            itemname.setText(drink.getItemDrinks());
-            itemprice.setText(String.valueOf(drink.getDrinksPrice()));
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error loading drink: " + ex.getMessage());
-        }
+        new Thread(() -> {
+            try {
+                Drink drink = productService.getDrinkById(selectedDrinkID);
+                SwingUtilities.invokeLater(() -> {
+                    itemname.setText(drink.getItemDrinks());
+                    itemprice.setText(String.valueOf(drink.getDrinksPrice()));
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(null, "Error loading drink details: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jTable1MouseClicked
 
     /**
@@ -791,20 +752,28 @@ public class adminProducts extends javax.swing.JFrame {
      * subsequent update operations.
      *
      * @param evt mouse event generated by the click.
-     * @return void
      */
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-        String selectedIDKey = jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString();
-        selectedAppetizerID = Long.valueOf(selectedIDKey);
-        System.out.println("You select id " + selectedAppetizerID + " of appetizers to update.");
+        int row = jTable2.getSelectedRow();
+        if (row == -1) return;
+        
+        String idStr = jTable2.getValueAt(row, 0).toString();
+        selectedAppetizerID = Long.valueOf(idStr);
+        System.out.println("Selected Appetizer ID: " + selectedAppetizerID);
      
-        try {
-            Appetizer appetizer = apiClient.getAppetizerById(selectedAppetizerID);
-            itemname1.setText(appetizer.getItemAppetizers());
-            itemprice1.setText(String.valueOf(appetizer.getAppetizersPrice()));
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error loading appetizer: " + ex.getMessage());
-        }
+        new Thread(() -> {
+            try {
+                Appetizer appetizer = productService.getAppetizerById(selectedAppetizerID);
+                SwingUtilities.invokeLater(() -> {
+                    itemname1.setText(appetizer.getItemAppetizers());
+                    itemprice1.setText(String.valueOf(appetizer.getAppetizersPrice()));
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(null, "Error loading appetizer details: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jTable2MouseClicked
 
     /**
@@ -814,92 +783,115 @@ public class adminProducts extends javax.swing.JFrame {
      * for subsequent update operations.
      *
      * @param evt mouse event generated by the click.
-     * @return void
      */
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
-        String selectedIDKey = jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
-        selectedMainCourseID = Long.valueOf(selectedIDKey);
-        System.out.println("You select id " + selectedMainCourseID + " of maincourse to update.");
+        int row = jTable3.getSelectedRow();
+        if (row == -1) return;
+        
+        String idStr = jTable3.getValueAt(row, 0).toString();
+        selectedMainCourseID = Long.valueOf(idStr);
+        System.out.println("Selected Main Course ID: " + selectedMainCourseID);
      
-        try {
-            MainCourse mainCourse = apiClient.getMainCourseById(selectedMainCourseID);
-            itemname2.setText(mainCourse.getItemFood());
-            itemprice2.setText(String.valueOf(mainCourse.getFoodPrice()));
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error loading main course: " + ex.getMessage());
-        }
+        new Thread(() -> {
+            try {
+                MainCourse mainCourse = productService.getMainCourseById(selectedMainCourseID);
+                SwingUtilities.invokeLater(() -> {
+                    itemname2.setText(mainCourse.getItemFood());
+                    itemprice2.setText(String.valueOf(mainCourse.getFoodPrice()));
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(null, "Error loading main course details: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jTable3MouseClicked
 
     /**
      * @brief Handler for the "Update" button (Drinks).
      *
-     * Updates the selected drink's price on the backend using ApiClient and
-     * refreshes the table after the update.
+     * Updates the selected drink's price on the backend.
      *
      * @param evt action event
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try {
-            Drink updatedDrink = new Drink(selectedDrinkID, itemname.getText(), 
-                Integer.parseInt(itemprice.getText()), null);
-            apiClient.updateDrink(selectedDrinkID, updatedDrink);
-            JOptionPane.showMessageDialog(null, "Drink updated successfully.");
-            
-            // Refresh table
-            DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
-            dtm.setRowCount(0);
-            loadDrinks();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error updating drink: " + ex.getMessage());
-        }
+        String name = itemname.getText();
+        String price = itemprice.getText();
+        
+        new Thread(() -> {
+            try {
+                productService.updateDrink(selectedDrinkID, name, price);
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Drink updated successfully.");
+                    itemname.setText("");
+                    itemprice.setText("");
+                    selectedDrinkID = null;
+                    loadDrinks();
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(this, "Error updating drink: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @brief Handler for the "Update" button (Appetizers).
      *
-     * Updates the selected appetizer's price on the backend using ApiClient and
-     * refreshes the table after the update.
+     * Updates the selected appetizer's price on the backend.
      *
      * @param evt action event
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        try {
-            Appetizer updatedAppetizer = new Appetizer(selectedAppetizerID, itemname1.getText(), 
-                Integer.parseInt(itemprice1.getText()), null);
-            apiClient.updateAppetizer(selectedAppetizerID, updatedAppetizer);
-            JOptionPane.showMessageDialog(null, "Appetizer updated successfully.");
-            
-            // Refresh table
-            DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
-            dtm.setRowCount(0);
-            loadAppetizer();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error updating appetizer: " + ex.getMessage());
-        }
+        String name = itemname1.getText();
+        String price = itemprice1.getText();
+        
+        new Thread(() -> {
+            try {
+                productService.updateAppetizer(selectedAppetizerID, name, price);
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Appetizer updated successfully.");
+                    itemname1.setText("");
+                    itemprice1.setText("");
+                    selectedAppetizerID = null;
+                    loadAppetizer();
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(this, "Error updating appetizer: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @brief Handler for the "Update" button (MainCourse).
      *
-     * Updates the selected main course's price on the backend using ApiClient
-     * and refreshes the table after the update.
+     * Updates the selected main course's price on the backend.
      *
      * @param evt action event
      */
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        try {
-            MainCourse updatedMainCourse = new MainCourse(selectedMainCourseID, itemname2.getText(), 
-                Integer.parseInt(itemprice2.getText()), null);
-            apiClient.updateMainCourse(selectedMainCourseID, updatedMainCourse);
-            JOptionPane.showMessageDialog(null, "Main course updated successfully.");
-            
-            // Refresh table
-            DefaultTableModel dtm = (DefaultTableModel) jTable3.getModel();
-            dtm.setRowCount(0);
-            loadmainCourse();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error updating main course: " + ex.getMessage());
-        }
+        String name = itemname2.getText();
+        String price = itemprice2.getText();
+        
+        new Thread(() -> {
+            try {
+                productService.updateMainCourse(selectedMainCourseID, name, price);
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(this, "Main course updated successfully.");
+                    itemname2.setText("");
+                    itemprice2.setText("");
+                    selectedMainCourseID = null;
+                    loadmainCourse();
+                });
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() -> 
+                    JOptionPane.showMessageDialog(this, "Error updating main course: " + ex.getMessage())
+                );
+            }
+        }).start();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
