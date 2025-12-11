@@ -19,7 +19,7 @@ public class ApplicationLauncher {
   public static void main(String[] args) {
     // Use a factory so tests can inject a mock Login instance and avoid
     // creating real GUI components (which can fail in headless CI).
-    java.awt.EventQueue.invokeLater(() -> getLoginFactory().get().setVisible(true));
+    getEventDispatcher().accept(() -> getLoginFactory().get().setVisible(true));
   }
 
   // ---------------------------------------------------------------------------
@@ -28,6 +28,7 @@ public class ApplicationLauncher {
   // returns a mock to avoid UI creation.
   // ---------------------------------------------------------------------------
   private static java.util.function.Supplier<Login> loginFactory = Login::new;
+  private static java.util.function.Consumer<Runnable> eventDispatcher = java.awt.EventQueue::invokeLater;
 
   /**
    * Package-visible to allow tests in the same package to override the
@@ -39,5 +40,13 @@ public class ApplicationLauncher {
 
   static java.util.function.Supplier<Login> getLoginFactory() {
     return loginFactory;
+  }
+
+  static void setEventDispatcher(java.util.function.Consumer<Runnable> dispatcher) {
+    eventDispatcher = dispatcher;
+  }
+
+  static java.util.function.Consumer<Runnable> getEventDispatcher() {
+    return eventDispatcher;
   }
 }

@@ -19,6 +19,7 @@ public class ApplicationLauncherTest {
   void tearDown() {
     // Reset factory to default to avoid interfering with other tests
     ApplicationLauncher.setLoginFactory(Login::new);
+    ApplicationLauncher.setEventDispatcher(java.awt.EventQueue::invokeLater);
   }
 
   @Test
@@ -28,6 +29,7 @@ public class ApplicationLauncherTest {
 
     // Inject the mock via the factory
     ApplicationLauncher.setLoginFactory(() -> mockLogin);
+    ApplicationLauncher.setEventDispatcher(Runnable::run);
 
     // Run the launcher
     ApplicationLauncher.main(new String[0]);
