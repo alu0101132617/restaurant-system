@@ -44,6 +44,31 @@ public class Order extends javax.swing.JFrame {
   /** Logger for this class. Replaces printStackTrace() debug output. */
   private static final Logger LOGGER = LoggerFactory.getLogger(Order.class);
 
+  /** Simple indirection over JOptionPane so tests can skip modal dialogs. */
+  interface MessageDialog {
+    void showMessage(java.awt.Component parent, Object message);
+
+    void showMessage(java.awt.Component parent, Object message, String title, int messageType);
+  }
+
+  private transient MessageDialog messageDialog = new MessageDialog() {
+    @Override
+    public void showMessage(java.awt.Component parent, Object message) {
+      JOptionPane.showMessageDialog(parent, message);
+    }
+
+    @Override
+    public void showMessage(java.awt.Component parent, Object message, String title, int messageType) {
+      JOptionPane.showMessageDialog(parent, message, title, messageType);
+    }
+  };
+
+  void setMessageDialog(MessageDialog customDialog) {
+    if (customDialog != null) {
+      this.messageDialog = customDialog;
+    }
+  }
+
   /** Table models for the three product categories. */
   private DefaultTableModel drinksModel;
   private DefaultTableModel appetizersModel;
@@ -209,11 +234,11 @@ public class Order extends javax.swing.JFrame {
 
   } catch (Exception ex) {
     LOGGER.error("Error loading menu from backend", ex);
-    SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(
-    this,
-    "Error loading menu from backend:\n" + ex.getMessage(),
-    "Menu loading error",
-    JOptionPane.ERROR_MESSAGE));
+    SwingUtilities.invokeLater(() -> messageDialog.showMessage(
+      this,
+      "Error loading menu from backend:\n" + ex.getMessage(),
+      "Menu loading error",
+      JOptionPane.ERROR_MESSAGE));
   }
     }).start();
   }
@@ -637,7 +662,7 @@ public class Order extends javax.swing.JFrame {
     itemsTotal += sumFromModel(mainsModel);
 
     if (itemsTotal == 0.0) {
-      JOptionPane.showMessageDialog(
+        messageDialog.showMessage(
           this,
           "Please select at least one item (Qty > 0).",
           "No items selected",
@@ -656,7 +681,7 @@ public class Order extends javax.swing.JFrame {
     vatLbl.setText("VAT included: " + vat + " SR");
     totalLbl.setText("Total: " + total + " SR");
 
-    JOptionPane.showMessageDialog(this, "Paid successfully");
+    messageDialog.showMessage(this, "Paid successfully");
   }// GEN-LAST:event_payBtnActionPerformed
 
   /**
@@ -675,7 +700,7 @@ public class Order extends javax.swing.JFrame {
   private void saveReceiptBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_saveReceiptBtnActionPerformed
     try {
       if (lastBill == null || lastBill.getTotal() == 0.0) {
-        JOptionPane.showMessageDialog(
+        messageDialog.showMessage(
             this,
             "There is no paid bill to save.\nPlease press Pay first.",
             "No bill",
@@ -685,7 +710,7 @@ public class Order extends javax.swing.JFrame {
 
       orderService.generateReceiptFile(receiptNo, lastBill);
 
-      JOptionPane.showMessageDialog(
+      messageDialog.showMessage(
           this,
           "Receipt number: " + receiptNo + " has been saved successfully.",
           "Receipt saved",
@@ -693,7 +718,7 @@ public class Order extends javax.swing.JFrame {
 
     } catch (Exception ex) {
       LOGGER.error("Error saving receipt", ex);
-      JOptionPane.showMessageDialog(
+      messageDialog.showMessage(
           this,
           "Error saving receipt:\n" + ex.getMessage(),
           "Error",

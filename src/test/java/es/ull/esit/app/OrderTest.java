@@ -35,12 +35,25 @@ public class OrderTest {
     }
   }
 
+  private static final Order.MessageDialog NO_OP_DIALOG = new Order.MessageDialog() {
+    @Override
+    public void showMessage(java.awt.Component parent, Object message) {
+      // no-op for headless tests
+    }
+
+    @Override
+    public void showMessage(java.awt.Component parent, Object message, String title, int messageType) {
+      // no-op for headless tests
+    }
+  };
+
   @Test
   public void testFillSumPayAndNewReceipt() throws Exception {
     StubProductService stub = new StubProductService();
 
     // Use package-private constructor that avoids asynchronous loading
     Order order = new Order(stub, false);
+    order.setMessageDialog(NO_OP_DIALOG);
 
     // Call private fill methods to populate models
     Method fillDrinks = Order.class.getDeclaredMethod("fillDrinks", List.class);
@@ -117,6 +130,7 @@ public class OrderTest {
   public void testSumFromModelStringFallbackAndResetQty() throws Exception {
     StubProductService stub = new StubProductService();
     Order order = new Order(stub, false);
+    order.setMessageDialog(NO_OP_DIALOG);
 
     // Prepare a model with string values to force the fallback parsing
     DefaultTableModel model = new DefaultTableModel(new Object[] {"ID","Item","Price (SR)","Qty"}, 0);
@@ -138,6 +152,7 @@ public class OrderTest {
   public void testSaveReceiptNoBillDoesNotThrow() throws Exception {
     StubProductService stub = new StubProductService();
     Order order = new Order(stub, false);
+    order.setMessageDialog(NO_OP_DIALOG);
 
     // Ensure lastBill is null
     Field lastBillField = Order.class.getDeclaredField("lastBill");
