@@ -5,8 +5,12 @@ import es.ull.esit.app.middleware.model.Drink;
 import es.ull.esit.app.middleware.model.MainCourse;
 import es.ull.esit.app.middleware.service.ProductService;
 import java.awt.event.MouseEvent;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.util.Arrays;
 import java.util.List;
+import com.sun.net.httpserver.HttpServer;
+import java.net.BindException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,6 +51,118 @@ class AdminProductsTest {
     public MainCourse getMainCourseById(Long id) {
       return new MainCourse(id, "Steak", 1000, null);
     }
+  }
+
+  @Test
+  void testDefaultConstructorInitializesModelsAndLoadsData() throws Exception {
+    // Start a tiny embedded HTTP server on port 8080 to satisfy ApiClient calls
+    HttpServer server = null;
+    try {
+      server = HttpServer.create(new InetSocketAddress(8080), 0);
+      server.createContext("/api/drinks", exchange -> {
+      String body = "[{\"drinksId\":1,\"itemDrinks\":\"Tea\",\"drinksPrice\":50}]";
+      exchange.sendResponseHeaders(200, body.getBytes().length);
+      try (OutputStream os = exchange.getResponseBody()) { os.write(body.getBytes()); }
+      });
+      server.createContext("/api/appetizers", exchange -> {
+      String body = "[{\"appetizersId\":1,\"itemAppetizers\":\"Olives\",\"appetizersPrice\":5}]";
+      exchange.sendResponseHeaders(200, body.getBytes().length);
+      try (OutputStream os = exchange.getResponseBody()) { os.write(body.getBytes()); }
+      });
+      server.createContext("/api/maincourses", exchange -> {
+      String body = "[{\"foodId\":1,\"itemFood\":\"Steak\",\"foodPrice\":150}]";
+      exchange.sendResponseHeaders(200, body.getBytes().length);
+      try (OutputStream os = exchange.getResponseBody()) { os.write(body.getBytes()); }
+      });
+      server.start();
+    } catch (BindException be) {
+      // Port 8080 already in use by other test/server; fall through and try using existing server
+      server = null;
+    }
+    try {
+      // Constructing AdminProducts() will create an ApiClient pointed to localhost:8080
+      AdminProducts window = new AdminProducts();
+
+      // Poll for async loads to finish (loadDrinks/loadAppetizer/loadmainCourse spawn threads)
+      for (int i = 0; i < 50 && window.modelDrink.getRowCount() == 0; i++) Thread.sleep(100);
+  assertTrue(window.modelDrink.getRowCount() > 0, "Drinks table should be populated after constructor");
+  assertNotNull(window.modelDrink.getValueAt(0, 1));
+  assertTrue(window.modelDrink.getValueAt(0, 1).toString().length() > 0);
+
+      for (int i = 0; i < 50 && window.modelappetizers.getRowCount() == 0; i++) Thread.sleep(100);
+  assertTrue(window.modelappetizers.getRowCount() > 0, "Appetizers table should be populated after constructor");
+  assertNotNull(window.modelappetizers.getValueAt(0, 1));
+  assertTrue(window.modelappetizers.getValueAt(0, 1).toString().length() > 0);
+
+      for (int i = 0; i < 50 && window.modelmaincourse.getRowCount() == 0; i++) Thread.sleep(100);
+  assertTrue(window.modelmaincourse.getRowCount() > 0, "MainCourse table should be populated after constructor");
+  assertNotNull(window.modelmaincourse.getValueAt(0, 1));
+  assertTrue(window.modelmaincourse.getValueAt(0, 1).toString().length() > 0);
+
+      // Ensure the tables are linked to the created models
+      assertSame(window.modelDrink, window.jTable1.getModel());
+      assertSame(window.modelappetizers, window.jTable2.getModel());
+      assertSame(window.modelmaincourse, window.jTable3.getModel());
+    } finally {
+      if (server != null) {
+        server.stop(0);
+      }
+    }
+  }
+
+  static class ExceptionProductService extends StubProductService {
+    @Override
+    public List<Drink> getAllDrinks() {
+      throw new RuntimeException("drinks-failure");
+    }
+
+    @Override
+    public List<Appetizer> getAllAppetizers() {
+      throw new RuntimeException("apps-failure");
+    }
+
+    @Override
+    public List<MainCourse> getAllMainCourses() {
+      throw new RuntimeException("mains-failure");
+    }
+  }
+
+  @Test
+  void testLoadDrinksAsyncHandlesException() throws Exception {
+    ExceptionProductService exc = new ExceptionProductService();
+    AdminProducts window = new AdminProducts(exc, false);
+
+    // Ensure model initially empty
+    assertEquals(0, window.modelDrink.getRowCount());
+
+    // Call async loader which should catch exceptions and not propagate
+    window.loadDrinks();
+
+    // Wait a short time for background thread to run
+    Thread.sleep(300);
+
+    // Model should remain unchanged (no rows added)
+    assertEquals(0, window.modelDrink.getRowCount());
+  }
+
+  @Test
+  void testLoadAppetizerAsyncHandlesException() throws Exception {
+    ExceptionProductService exc = new ExceptionProductService();
+    AdminProducts window = new AdminProducts(exc, false);
+    assertEquals(0, window.modelappetizers.getRowCount());
+    window.loadAppetizer();
+    Thread.sleep(300);
+    assertEquals(0, window.modelappetizers.getRowCount());
+  }
+
+  @Test
+  void testLoadMainCourseAsyncHandlesException() throws Exception {
+    ExceptionProductService exc = new ExceptionProductService();
+    AdminProducts window = new AdminProducts(exc, false);
+    assertEquals(0, window.modelmaincourse.getRowCount());
+    window.loadmainCourse();
+    Thread.sleep(300);
+    assertEquals(0, window.modelmaincourse.getRowCount());
   }
 
   @Test
