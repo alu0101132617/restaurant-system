@@ -1,5 +1,8 @@
 package es.ull.esit.app;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import es.ull.esit.app.middleware.ApiClient;
 import es.ull.esit.app.middleware.model.Appetizer;
 import es.ull.esit.app.middleware.model.BillResult;
@@ -37,6 +40,9 @@ public class Order extends javax.swing.JFrame {
 
   /** Service used to calculate bill totals and generate receipt files. */
   private final transient OrderService orderService = new OrderService();
+
+  /** Logger for this class. Replaces printStackTrace() debug output. */
+  private static final Logger LOGGER = LoggerFactory.getLogger(Order.class);
 
   /** Table models for the three product categories. */
   private DefaultTableModel drinksModel;
@@ -83,6 +89,36 @@ public class Order extends javax.swing.JFrame {
 
     // Load menu items from database via REST API.
     loadMenuFromDatabase();
+  }
+
+  /**
+   * Package-private constructor used by tests to inject a fake ProductService
+   * and optionally skip the asynchronous loading of the menu.
+   *
+   * @param productService ProductService instance to use (may be a stub in tests)
+   * @param loadMenu whether to invoke loadMenuFromDatabase() (tests may pass false)
+   */
+  Order(es.ull.esit.app.middleware.service.ProductService productService, boolean loadMenu) {
+    initComponents();
+    this.productService = productService;
+
+    // Initialize receipt number label.
+    receiptNoLbl.setText("Receipt No. : " + receiptNo);
+
+    // Configure tables and models.
+    setupTables();
+
+    if (loadMenu) {
+      loadMenuFromDatabase();
+    }
+  }
+
+  /**
+   * Package-private convenience constructor for tests that inject a ProductService
+   * and perform the normal menu loading.
+   */
+  Order(es.ull.esit.app.middleware.service.ProductService productService) {
+    this(productService, true);
   }
 
   /**
@@ -171,14 +207,14 @@ public class Order extends javax.swing.JFrame {
           fillMains(mains);
         });
 
-      } catch (Exception ex) {
-        ex.printStackTrace();
-        SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(
-            this,
-            "Error loading menu from backend:\n" + ex.getMessage(),
-            "Menu loading error",
-            JOptionPane.ERROR_MESSAGE));
-      }
+  } catch (Exception ex) {
+    LOGGER.error("Error loading menu from backend", ex);
+    SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(
+    this,
+    "Error loading menu from backend:\n" + ex.getMessage(),
+    "Menu loading error",
+    JOptionPane.ERROR_MESSAGE));
+  }
     }).start();
   }
 
@@ -656,7 +692,7 @@ public class Order extends javax.swing.JFrame {
           JOptionPane.INFORMATION_MESSAGE);
 
     } catch (Exception ex) {
-      ex.printStackTrace();
+      LOGGER.error("Error saving receipt", ex);
       JOptionPane.showMessageDialog(
           this,
           "Error saving receipt:\n" + ex.getMessage(),

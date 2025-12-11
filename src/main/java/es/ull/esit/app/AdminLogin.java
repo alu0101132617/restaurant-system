@@ -1,5 +1,9 @@
 package es.ull.esit.app;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.util.function.Supplier;
+
 /**
  * @brief Login window for authenticating administrators.
  * 
@@ -13,6 +17,18 @@ public class AdminLogin extends javax.swing.JFrame {
 
   /** Primary font used in the UI components. */
   private static final String PRIMARY_FONT = "Yu Gothic UI";
+
+  /** Logger for the class. Replaces use of printStackTrace for production-safe logging. */
+  private static final Logger LOGGER = LoggerFactory.getLogger(AdminLogin.class);
+
+    /*
+     * Package-private suppliers used to create dependent windows. Tests may
+     * override these to inject lightweight stubs without needing to shadow
+     * the production classes. They default to creating the real windows.
+     */
+    static Supplier<java.awt.Window> adminProductsSupplier = () -> new AdminProducts();
+    static Supplier<java.awt.Window> orderSupplier = () -> new Order();
+    static Supplier<java.awt.Window> loginSupplier = () -> new Login();
 
   /**
    * @brief Constructor.
@@ -135,11 +151,11 @@ public class AdminLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
-    try {
-        new AdminProducts().setVisible(true);
-        this.dispose();
-    } catch (Exception ex) {
-        ex.printStackTrace();
+  try {
+    adminProductsSupplier.get().setVisible(true);
+    this.dispose();
+  } catch (Exception ex) {
+        LOGGER.error("Error opening product admin window", ex);
         javax.swing.JOptionPane.showMessageDialog(
             this,
             "Error opening product admin window:\n" + ex.getMessage(),
@@ -158,11 +174,11 @@ public class AdminLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-    try {
-        new Order().setVisible(true);
-        this.dispose();
-    } catch (Exception ex) {
-        ex.printStackTrace();
+  try {
+    orderSupplier.get().setVisible(true);
+    this.dispose();
+  } catch (Exception ex) {
+        LOGGER.error("Error opening menu window", ex);
         javax.swing.JOptionPane.showMessageDialog(
             this,
             "Error opening menu window:\n" + ex.getMessage(),
@@ -181,8 +197,8 @@ public class AdminLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton3ActionPerformed
-    new Login().setVisible(true);
-    this.dispose();
+  loginSupplier.get().setVisible(true);
+  this.dispose();
   }// GEN-LAST:event_jButton3ActionPerformed
 
   /**

@@ -80,6 +80,16 @@ public class ApiClient {
   }
 
   /**
+   * Package-private constructor to allow injecting a custom HttpClient and
+   * ObjectMapper for tests.
+   */
+  ApiClient(String baseUrl, HttpClient http, ObjectMapper mapper) {
+    this.baseUrl = baseUrl.endsWith("/") ? baseUrl.substring(0, baseUrl.length() - 1) : baseUrl;
+    this.http = http;
+    this.mapper = mapper == null ? new ObjectMapper() : mapper;
+  }
+
+  /**
    * Functional interface for lambdas that may throw InterruptedException or IOException.
    */
   @FunctionalInterface

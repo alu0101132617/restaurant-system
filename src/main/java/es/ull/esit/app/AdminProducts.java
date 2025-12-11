@@ -94,6 +94,37 @@ public class AdminProducts extends javax.swing.JFrame {
     // Load initial data from backend.
     refreshAllTables();
   }
+  
+  /**
+   * Package-private constructor used for tests to inject a stubbed
+   * ProductService and optionally avoid starting the asynchronous loaders.
+   *
+   * @param productService [ProductService] injected service (test stub)
+   * @param startLoading   [boolean] if true, triggers refreshAllTables()
+   */
+  AdminProducts(ProductService productService, boolean startLoading) {
+    initComponents();
+
+    // Use injected service instead of creating a new ApiClient.
+    this.productService = productService;
+
+    // Initialize table models and set shared headers.
+    modelDrink = new DefaultTableModel();
+    modelDrink.setColumnIdentifiers(columnNames);
+    modelappetizers = new DefaultTableModel();
+    modelappetizers.setColumnIdentifiers(columnNames);
+    modelmaincourse = new DefaultTableModel();
+    modelmaincourse.setColumnIdentifiers(columnNames);
+
+    // Link models to tables.
+    jTable1.setModel(modelDrink);
+    jTable2.setModel(modelappetizers);
+    jTable3.setModel(modelmaincourse);
+
+    if (startLoading) {
+      refreshAllTables();
+    }
+  }
 
   /**
    * @brief Reloads all product tables.
@@ -136,6 +167,24 @@ public class AdminProducts extends javax.swing.JFrame {
   }
 
   /**
+   * Synchronous variant of loadDrinks used by tests. Does not spawn new
+   * threads or use SwingUtilities; fills the model directly from the
+   * ProductService.
+   */
+  void loadDrinksSync() {
+    try {
+      List<Drink> drinks = productService.getAllDrinks();
+      modelDrink.setRowCount(0);
+      for (Drink drink : drinks) {
+        modelDrink.addRow(new Object[] { drink.getDrinksId(), drink.getItemDrinks(), drink.getDrinksPrice() });
+      }
+    } catch (Exception ex) {
+      // In tests we prefer to propagate exceptions; keep same behaviour as async but avoid dialogs.
+      throw new RuntimeException(ex);
+    }
+  }
+
+  /**
    * @brief Loads the list of appetizers from the backend asynchronously.
    *
    *        Clears the current table rows and fills them with fresh data from
@@ -163,6 +212,21 @@ public class AdminProducts extends javax.swing.JFrame {
   }
 
   /**
+   * Synchronous variant of loadAppetizer used by tests.
+   */
+  void loadAppetizerSync() {
+    try {
+      List<Appetizer> appetizers = productService.getAllAppetizers();
+      modelappetizers.setRowCount(0);
+      for (Appetizer appetizer : appetizers) {
+        modelappetizers.addRow(new Object[] { appetizer.getAppetizersId(), appetizer.getItemAppetizers(), appetizer.getAppetizersPrice() });
+      }
+    } catch (Exception ex) {
+      throw new RuntimeException(ex);
+    }
+  }
+
+  /**
    * @brief Loads the list of main courses from the backend asynchronously.
    *
    *        After retrieving the data, the rows of the main course table
@@ -187,6 +251,57 @@ public class AdminProducts extends javax.swing.JFrame {
             .invokeLater(() -> JOptionPane.showMessageDialog(null, "Error loading main courses: " + ex.getMessage()));
       }
     }).start();
+  }
+
+  /**
+   * Synchronous variant of loadmainCourse used by tests.
+   */
+  void loadmainCourseSync() {
+    try {
+      List<MainCourse> mainCourses = productService.getAllMainCourses();
+      modelmaincourse.setRowCount(0);
+      for (MainCourse mainCourse : mainCourses) {
+        modelmaincourse.addRow(new Object[] { mainCourse.getFoodId(), mainCourse.getItemFood(), mainCourse.getFoodPrice() });
+      }
+    } catch (Exception ex) {
+      throw new RuntimeException(ex);
+    }
+  }
+
+  /**
+   * Helper used in tests to synchronously select a drink row and populate
+   * the editable fields without spawning background threads.
+   *
+   * @param row index in the table model to select
+   */
+  void selectDrinkByRowSync(int row) {
+    if (row < 0 || row >= modelDrink.getRowCount())
+      return;
+    String idStr = modelDrink.getValueAt(row, 0).toString();
+    Long id = Long.valueOf(idStr);
+    Drink drink = productService.getDrinkById(id);
+    itemname.setText(drink.getItemDrinks());
+    itemprice.setText(String.valueOf(drink.getDrinksPrice()));
+  }
+
+  void selectAppetizerByRowSync(int row) {
+    if (row < 0 || row >= modelappetizers.getRowCount())
+      return;
+    String idStr = modelappetizers.getValueAt(row, 0).toString();
+    Long id = Long.valueOf(idStr);
+    Appetizer appetizer = productService.getAppetizerById(id);
+    itemname1.setText(appetizer.getItemAppetizers());
+    itemprice1.setText(String.valueOf(appetizer.getAppetizersPrice()));
+  }
+
+  void selectMainCourseByRowSync(int row) {
+    if (row < 0 || row >= modelmaincourse.getRowCount())
+      return;
+    String idStr = modelmaincourse.getValueAt(row, 0).toString();
+    Long id = Long.valueOf(idStr);
+    MainCourse mainCourse = productService.getMainCourseById(id);
+    itemname2.setText(mainCourse.getItemFood());
+    itemprice2.setText(String.valueOf(mainCourse.getFoodPrice()));
   }
 
   /**
@@ -999,72 +1114,72 @@ public class AdminProducts extends javax.swing.JFrame {
   // Sonarqube rule java:S1450 must be ignored here as these variables are
   // auto-generated by the Form Editor and need to remain as instance variables.
   /** Text field for the drink name (Drinks tab). */
-  private javax.swing.JTextField itemname;
+  javax.swing.JTextField itemname;
   /** Text field for the appetizer name (Appetizers tab). */
-  private javax.swing.JTextField itemname1;
+  javax.swing.JTextField itemname1;
   /** Text field for the main course name (MainCourse tab). */
-  private javax.swing.JTextField itemname2;
+  javax.swing.JTextField itemname2;
   /** Text field for the drink price (Drinks tab). */
-  private javax.swing.JTextField itemprice;
+  javax.swing.JTextField itemprice;
   /** Text field for the appetizer price (Appetizers tab). */
-  private javax.swing.JTextField itemprice1;
+  javax.swing.JTextField itemprice1;
   /** Text field for the main course price (MainCourse tab). */
-  private javax.swing.JTextField itemprice2;
+  javax.swing.JTextField itemprice2;
   /** Button to update an existing drink. */
-  private javax.swing.JButton jButton1;
+  javax.swing.JButton jButton1;
   /** Button to add a new drink. */
-  private javax.swing.JButton jButton2;
+  javax.swing.JButton jButton2;
   /** Button to go back to the admin main window. */
-  private javax.swing.JButton jButton3;
+  javax.swing.JButton jButton3;
   /** Button to update an existing appetizer. */
-  private javax.swing.JButton jButton4;
+  javax.swing.JButton jButton4;
   /** Button to add a new appetizer. */
-  private javax.swing.JButton jButton5;
+  javax.swing.JButton jButton5;
   /** Button to update an existing main course. */
-  private javax.swing.JButton jButton6;
+  javax.swing.JButton jButton6;
   /** Button to add a new main course. */
-  private javax.swing.JButton jButton7;
+  javax.swing.JButton jButton7;
   /** Main title label ("Items Prices Update Portal"). */
-  private javax.swing.JLabel jLabel1;
+  javax.swing.JLabel jLabel1;
   /** Helper label used in the MainCourse tab. */
-  private javax.swing.JLabel jLabel10;
+  javax.swing.JLabel jLabel10;
   /** Section title label for the Drinks tab. */
-  private javax.swing.JLabel jLabel2;
+  javax.swing.JLabel jLabel2;
   /** Helper label with hints for adding drinks. */
-  private javax.swing.JLabel jLabel3;
+  javax.swing.JLabel jLabel3;
   /** Helper label with hints for updating drinks. */
-  private javax.swing.JLabel jLabel4;
+  javax.swing.JLabel jLabel4;
   /** Helper label with hints for adding appetizers. */
-  private javax.swing.JLabel jLabel5;
+  javax.swing.JLabel jLabel5;
   /** Section title label for the Appetizers tab. */
-  private javax.swing.JLabel jLabel6;
+  javax.swing.JLabel jLabel6;
   /** Helper label with hints for updating appetizers. */
-  private javax.swing.JLabel jLabel7;
+  javax.swing.JLabel jLabel7;
   /** Helper label with hints for adding main courses. */
-  private javax.swing.JLabel jLabel8;
+  javax.swing.JLabel jLabel8;
   /** Section title label for the MainCourse tab. */
-  private javax.swing.JLabel jLabel9;
+  javax.swing.JLabel jLabel9;
   /** Main container panel of the window. */
-  private javax.swing.JPanel jPanel1;
+  javax.swing.JPanel jPanel1;
   /** Panel that contains the Drinks controls and table. */
-  private javax.swing.JPanel jPanel2;
+  javax.swing.JPanel jPanel2;
   /** Panel that contains the Appetizers controls and table. */
-  private javax.swing.JPanel jPanel3;
+  javax.swing.JPanel jPanel3;
   /** Panel that contains the MainCourse controls and table. */
-  private javax.swing.JPanel jPanel4;
+  javax.swing.JPanel jPanel4;
   /** Scroll pane wrapping the drinks table. */
-  private javax.swing.JScrollPane jScrollPane1;
+  javax.swing.JScrollPane jScrollPane1;
   /** Scroll pane wrapping the appetizers table. */
-  private javax.swing.JScrollPane jScrollPane2;
+  javax.swing.JScrollPane jScrollPane2;
   /** Scroll pane wrapping the main course table. */
-  private javax.swing.JScrollPane jScrollPane3;
+  javax.swing.JScrollPane jScrollPane3;
   /** Tabbed pane containing the three product categories. */
-  private javax.swing.JTabbedPane jTabbedPane1;
+  javax.swing.JTabbedPane jTabbedPane1;
   /** Table displaying drink items. */
-  private javax.swing.JTable jTable1;
+  javax.swing.JTable jTable1;
   /** Table displaying appetizer items. */
-  private javax.swing.JTable jTable2;
+  javax.swing.JTable jTable2;
   /** Table displaying main course items. */
-  private javax.swing.JTable jTable3;
+  javax.swing.JTable jTable3;
   // End of variables declaration//GEN-END:variables
 }
