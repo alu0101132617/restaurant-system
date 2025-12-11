@@ -93,6 +93,17 @@ public class CashierLogin extends javax.swing.JFrame {
   Supplier<? extends javax.swing.JFrame> orderSupplier = () -> new Order();
   Supplier<? extends javax.swing.JFrame> loginSupplier = () -> new Login();
 
+  /** Supplier for the top-level cashier window used by main(); tests can override it. */
+  private static Supplier<? extends javax.swing.JFrame> cashierSupplier = () -> new CashierLogin();
+
+  static void setCashierSupplier(Supplier<? extends javax.swing.JFrame> s) {
+    cashierSupplier = s;
+  }
+
+  static Supplier<? extends javax.swing.JFrame> getCashierSupplier() {
+    return cashierSupplier;
+  }
+
   /** Package-private setters used by tests to inject stub frames. */
   void setAboutUsSupplier(Supplier<? extends javax.swing.JFrame> s) {
     this.aboutUsSupplier = s;
@@ -221,7 +232,7 @@ public class CashierLogin extends javax.swing.JFrame {
         LOGGER.warn("Warning: Could not fetch cashier stats: {}", ex.getMessage());
       }
       SwingUtilities.invokeLater(() -> {
-        new AboutUs().setVisible(true);
+        aboutUsSupplier.get().setVisible(true);
         dispose();
       });
     }).start();
@@ -269,7 +280,7 @@ public class CashierLogin extends javax.swing.JFrame {
       }
 
       SwingUtilities.invokeLater(() -> {
-        new Order().setVisible(true);
+        orderSupplier.get().setVisible(true);
         dispose();
       });
     }).start();
@@ -302,7 +313,7 @@ public class CashierLogin extends javax.swing.JFrame {
    *            click.
    */
   private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-    new Login().setVisible(true);
+    loginSupplier.get().setVisible(true);
     dispose();
   }
 
@@ -344,7 +355,7 @@ public class CashierLogin extends javax.swing.JFrame {
       java.util.logging.Logger.getLogger(CashierLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
 
-    java.awt.EventQueue.invokeLater(() -> new CashierLogin().setVisible(true));
+    java.awt.EventQueue.invokeLater(() -> getCashierSupplier().get().setVisible(true));
   }
 
   /**

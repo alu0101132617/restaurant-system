@@ -25,6 +25,41 @@ public class Login extends javax.swing.JFrame {
   /** Service to handle authentication logic. */
   private final transient AuthService authService;
 
+  // --- Test seams: allow tests to inject frames and dialog handlers to avoid
+  // creating real UI windows or showing JOptionPane dialogs during unit tests.
+  java.util.function.Supplier<? extends javax.swing.JFrame> adminSupplier = () -> new AdminLogin();
+  java.util.function.Function<String, ? extends javax.swing.JFrame> cashierFactory = CashierLogin::new;
+
+  interface MessageDialog {
+    void showMessage(java.awt.Component parent, Object message);
+
+    void showMessage(java.awt.Component parent, Object message, String title, int messageType);
+  }
+
+  MessageDialog messageDialog = new MessageDialog() {
+    @Override
+    public void showMessage(java.awt.Component parent, Object message) {
+      JOptionPane.showMessageDialog(parent, message);
+    }
+
+    @Override
+    public void showMessage(java.awt.Component parent, Object message, String title, int messageType) {
+      JOptionPane.showMessageDialog(parent, message, title, messageType);
+    }
+  };
+
+  void setAdminSupplier(java.util.function.Supplier<? extends javax.swing.JFrame> s) {
+    this.adminSupplier = s;
+  }
+
+  void setCashierFactory(java.util.function.Function<String, ? extends javax.swing.JFrame> f) {
+    this.cashierFactory = f;
+  }
+
+  void setMessageDialog(MessageDialog md) {
+    this.messageDialog = md;
+  }
+
   /** Primary font used in the GUI. */
   private static final String PRIMARY_FONT = "Yu Gothic UI";
 
@@ -191,15 +226,14 @@ public class Login extends javax.swing.JFrame {
 
         SwingUtilities.invokeLater(() -> {
 
-          // Open the corresponding window based on user role.
+          // Open the corresponding window based on user role. Use the
+          // injectable factories so tests can substitute frames.
           if ("ADMIN".equalsIgnoreCase(loggedInUser.getRole())) {
-            // Open the admin window if the role user is ADMIN.
-            new AdminLogin().setVisible(true);
+            adminSupplier.get().setVisible(true);
           } else if ("CASHIER".equalsIgnoreCase(loggedInUser.getRole())) {
-            // Open the cashier window if the role user is CASHIER.
-            new CashierLogin(loggedInUser.getUsername()).setVisible(true);
+            cashierFactory.apply(loggedInUser.getUsername()).setVisible(true);
           } else {
-            JOptionPane.showMessageDialog(this, "Unknown Role: " + loggedInUser.getRole());
+            messageDialog.showMessage(this, "Unknown Role: " + loggedInUser.getRole());
             jButton1.setEnabled(true);
             jButton1.setText(LOGIN_STRING);
             return;
@@ -210,10 +244,7 @@ public class Login extends javax.swing.JFrame {
 
       } catch (Exception e) {
         SwingUtilities.invokeLater(() -> {
-          JOptionPane.showMessageDialog(this,
-              "Login failed: " + e.getMessage(),
-              "Login Error",
-              JOptionPane.ERROR_MESSAGE);
+          messageDialog.showMessage(this, "Login failed: " + e.getMessage(), "Login Error", JOptionPane.ERROR_MESSAGE);
 
           jButton1.setEnabled(true);
           jButton1.setText(LOGIN_STRING);
@@ -252,7 +283,18 @@ public class Login extends javax.swing.JFrame {
       java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
 
-    java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
+    java.awt.EventQueue.invokeLater(() -> getLoginFactory().get().setVisible(true));
+  }
+
+  // Test seam for main: allow tests to replace the constructor of Login
+  private static java.util.function.Supplier<Login> loginFactory = Login::new;
+
+  static void setLoginFactory(java.util.function.Supplier<Login> f) {
+    loginFactory = f;
+  }
+
+  static java.util.function.Supplier<Login> getLoginFactory() {
+    return loginFactory;
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables

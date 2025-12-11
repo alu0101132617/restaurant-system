@@ -61,6 +61,16 @@
       <scope>test</scope> <!-- Solo se usa en fase de test -->
     </dependency>
 
+    <!-- Mockito: mocking framework for tests (allows creating mocks of Login) -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.5.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- mockito-inline removed: not required after using suppliers as test seams -->
+
     <!-- Conector JDBC de MySQL: permite que la aplicación se conecte a una base de datos MySQL -->
     <dependency>
       <groupId>com.mysql</groupId>
