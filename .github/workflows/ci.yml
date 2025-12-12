@@ -33,6 +33,14 @@ jobs:
       - name: Maven Clean Verify
         run: mvn -B clean verify
 
+      - name: Publish Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Maven Surefire Tests
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+
       - name: SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
