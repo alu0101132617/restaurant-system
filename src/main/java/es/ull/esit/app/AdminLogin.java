@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import java.util.function.Supplier;
 
 /**
- * @brief Login window for authenticating administrators.
+ * @brief Login window for administrators.
  * 
  *        It is displayed after a successful login with role ADMIN.
  *        Shows a Swing form that lets administrators:

@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @brief Login window for authenticating cashiers.
+ * @brief Login window for cashiers.
  * 
  *        It is displayed after a successful login with role CASHIER.
  *        Shows a Swing form that lets cashiers:
