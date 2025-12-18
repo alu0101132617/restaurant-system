@@ -42,7 +42,7 @@ jobs:
       - name: Maven Clean Verify
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        run: mvn -B clean verify -Dtest='!es.ull.esit.app.OrderTest'
+        run: mvn -B clean verify
 
       - name: Publish Test Report (JDK ${{ matrix.java-version }})
         uses: dorny/test-reporter@v1
