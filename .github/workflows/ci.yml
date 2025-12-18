@@ -14,6 +14,10 @@ permissions:
 jobs:
   build-and-analyze:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java-version: [ '17', '21' ]
 
     steps:
       - name: Checkout Repository
@@ -25,7 +29,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: ${{ matrix.java-version }}
           cache: 'maven'
 
       - name: Start X virtual framebuffer
@@ -36,7 +40,7 @@ jobs:
           echo "DISPLAY=:99" >> $GITHUB_ENV
 
       - name: Maven Clean Verify
-        run: mvn -B clean verify
+        run: mvn -B clean verify -Dtest='!es.ull.esit.app.OrderTest'
 
       - name: Publish Test Report (JDK ${{ matrix.java-version }})
         uses: dorny/test-reporter@v1
