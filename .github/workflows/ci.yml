@@ -6,12 +6,14 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build-and-analyze:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        java: [17, 25]
 
     steps:
       - name: Checkout Repository
@@ -23,7 +25,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ matrix.java }}
+          java-version: '17'
           cache: 'maven'
 
       - name: Start X virtual framebuffer
@@ -36,7 +38,16 @@ jobs:
       - name: Maven Clean Verify
         run: mvn -B clean verify
 
+      - name: Publish Test Report (JDK ${{ matrix.java-version }})
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Maven Surefire Tests (JDK ${{ matrix.java-version }})
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+
       - name: SonarCloud Scan
+        if: matrix.java-version == '17'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: >
