@@ -9,6 +9,9 @@ on:
 jobs:
   build-and-analyze:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [17, 25]
 
     steps:
       - name: Checkout Repository
@@ -20,7 +23,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: ${{ matrix.java }}
           cache: 'maven'
 
       - name: Start X virtual framebuffer
