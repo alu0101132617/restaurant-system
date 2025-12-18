@@ -33,12 +33,7 @@ jobs:
           java-version: ${{ matrix.java-version }}
           cache: 'maven'
 
-      - name: Start X virtual framebuffer
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-          Xvfb :99 -screen 0 1920x1080x24 &>/dev/null &
-          echo "DISPLAY=:99" >> $GITHUB_ENV
+      
 
       - name: Maven Clean Compile
         env:
