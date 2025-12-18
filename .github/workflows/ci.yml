@@ -40,6 +40,8 @@ jobs:
           echo "DISPLAY=:99" >> $GITHUB_ENV
 
       - name: Maven Clean Verify
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: mvn -B clean verify -Dtest='!es.ull.esit.app.OrderTest'
 
       - name: Publish Test Report (JDK ${{ matrix.java-version }})

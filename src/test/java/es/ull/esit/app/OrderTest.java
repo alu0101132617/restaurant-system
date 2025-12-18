@@ -6,6 +6,7 @@ import es.ull.esit.app.middleware.model.Appetizer;
 import es.ull.esit.app.middleware.model.MainCourse;
 import javax.swing.table.DefaultTableModel;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -15,6 +16,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderTest {
+
+  private Order order;
 
   static class StubProductService extends ProductService {
     public StubProductService() { super(null); }
@@ -35,12 +38,20 @@ public class OrderTest {
     }
   }
 
+  @AfterEach
+  void tearDown() {
+    if (order != null) {
+      order.dispose();
+      order = null;
+    }
+  }
+
   @Test
   public void testFillSumPayAndNewReceipt() throws Exception {
     StubProductService stub = new StubProductService();
 
     // Use package-private constructor that avoids asynchronous loading
-    Order order = new Order(stub, false);
+    order = new Order(stub, false);
 
     // Call private fill methods to populate models
     Method fillDrinks = Order.class.getDeclaredMethod("fillDrinks", List.class);
@@ -116,7 +127,7 @@ public class OrderTest {
   @Test
   public void testSumFromModelStringFallbackAndResetQty() throws Exception {
     StubProductService stub = new StubProductService();
-    Order order = new Order(stub, false);
+    order = new Order(stub, false);
 
     // Prepare a model with string values to force the fallback parsing
     DefaultTableModel model = new DefaultTableModel(new Object[] {"ID","Item","Price (SR)","Qty"}, 0);
@@ -137,7 +148,7 @@ public class OrderTest {
   @Test
   public void testSaveReceiptNoBillDoesNotThrow() throws Exception {
     StubProductService stub = new StubProductService();
-    Order order = new Order(stub, false);
+    order = new Order(stub, false);
 
     // Ensure lastBill is null
     Field lastBillField = Order.class.getDeclaredField("lastBill");

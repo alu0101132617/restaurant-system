@@ -343,6 +343,9 @@
 
           <!-- Asegura el directorio de salida -->
           <outputDirectory>${project.build.directory}/dependency-check-report</outputDirectory>
+
+          <!-- NVD API Key para acelerar las actualizaciones de la base de datos de vulnerabilidades -->
+          <nvdApiKey>${env.NVD_API_KEY}</nvdApiKey>
         </configuration>
       
         <executions>
