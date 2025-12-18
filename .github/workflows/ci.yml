@@ -34,6 +34,7 @@ jobs:
           cache: 'maven'
 
       - name: Start X virtual framebuffer
+        if: runner.os == 'Linux' # En algunos casos, las pruebas fallan por el uso de comandos de BASH.
         run: |
           sudo apt-get update
           sudo apt-get install -y xvfb
