@@ -33,17 +33,12 @@ jobs:
           java-version: ${{ matrix.java-version }}
           cache: 'maven'
 
-      - name: Start X virtual framebuffer
-        if: runner.os == 'Linux' # En algunos casos, las pruebas fallan por el uso de comandos de BASH.
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-          Xvfb :99 -screen 0 1920x1080x24 &>/dev/null &
-          echo "DISPLAY=:99" >> $GITHUB_ENV
+      
 
       - name: Maven Clean Verify
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
         run: mvn -B clean verify -Dtest='!es.ull.esit.app.OrderTest'
 
       - name: Publish Test Report (JDK ${{ matrix.java-version }})
