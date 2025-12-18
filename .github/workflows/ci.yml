@@ -33,24 +33,36 @@ jobs:
           java-version: ${{ matrix.java-version }}
           cache: 'maven'
 
-      
+      - name: Start X virtual framebuffer
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          Xvfb :99 -screen 0 1920x1080x24 &>/dev/null &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
 
-      - name: Maven Clean Verify
+      - name: Maven Clean Verify (Linux - with GUI tests)
+        if: runner.os == 'Linux'
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-          JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
         run: mvn -B clean verify -Dtest='!es.ull.esit.app.OrderTest'
 
-      - name: Publish Test Report (JDK ${{ matrix.java-version }})
+      - name: Maven Clean Verify (Windows/macOS - without GUI tests)
+        if: runner.os != 'Linux'
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: mvn -B clean verify -Dtest='!es.ull.esit.app.*Test,es.ull.esit.app.middleware.**.*Test'
+
+      - name: Publish Test Report (${{ matrix.os }}, JDK ${{ matrix.java-version }})
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: Maven Surefire Tests (JDK ${{ matrix.java-version }})
+          name: Maven Surefire Tests (${{ matrix.os }}, JDK ${{ matrix.java-version }})
           path: target/surefire-reports/*.xml
           reporter: java-junit
 
       - name: SonarCloud Scan
-        if: matrix.java-version == '17'
+        if: matrix.java-version == '17' && matrix.os == 'ubuntu-latest'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: >
